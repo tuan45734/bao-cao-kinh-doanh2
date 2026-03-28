@@ -14,6 +14,25 @@ let bottomProductsChart = null;
 let topGrowthProductsChart = null;
 let bottomGrowthProductsChart = null;
 
+// Enable data labels for all charts
+if (typeof ChartDataLabels !== 'undefined') {
+    Chart.register(ChartDataLabels);
+    Chart.defaults.set('plugins.datalabels', {
+        color: '#35495e',
+        font: { weight: 'bold', size: 10 },
+        anchor: 'end',
+        align: 'top',
+        formatter: value => {
+            if (typeof value === 'number') {
+                return formatMoney(value);
+            }
+            return value;
+        },
+        clamp: true,
+        offset: 4,
+    });
+}
+
 let currentRevenueTotal = 0;
 let compareRevenueTotal = 0;
 
@@ -340,6 +359,17 @@ async function renderCategoryStructureChart() {
                             return `${context.label}: ${formatMoney(value)} (${percent}%)`;
                         } 
                     } 
+                },
+                datalabels: {
+                    color: '#ffffff',
+                    font: { weight: 'bold', size: 10 },
+                    anchor: 'center',
+                    align: 'center',
+                    formatter: function(value, ctx) {
+                        const total = ctx.dataset.data.reduce((sum, v) => sum + v, 0);
+                        const percent = total ? ((value / total) * 100).toFixed(1) : 0;
+                        return `${percent}%`;
+                    }
                 }
             }
         }
@@ -412,6 +442,25 @@ async function renderTopProductsLineChart() {
                             return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
                         } 
                     } 
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 10 },
+                    formatter: function(value, context) {
+                        return formatMoney(value);
+                    },
+                    anchor: function(context) {
+                        const currentValue = context.dataset.data[context.dataIndex];
+                        const compareValue = context.chart.data.datasets[1 - context.datasetIndex].data[context.dataIndex];
+                        return currentValue > compareValue ? 'end' : 'start';
+                    },
+                    align: function(context) {
+                        const currentValue = context.dataset.data[context.dataIndex];
+                        const compareValue = context.chart.data.datasets[1 - context.datasetIndex].data[context.dataIndex];
+                        return currentValue > compareValue ? 'top' : 'bottom';
+                    },
+                    offset: 6,
+                    clamp: true
                 }
             },
             scales: { 
@@ -494,6 +543,25 @@ async function renderBottomProductsLineChart() {
                             return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
                         } 
                     } 
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 10 },
+                    formatter: function(value, context) {
+                        return formatMoney(value);
+                    },
+                    anchor: function(context) {
+                        const currentValue = context.dataset.data[context.dataIndex];
+                        const compareValue = context.chart.data.datasets[1 - context.datasetIndex].data[context.dataIndex];
+                        return currentValue > compareValue ? 'end' : 'start';
+                    },
+                    align: function(context) {
+                        const currentValue = context.dataset.data[context.dataIndex];
+                        const compareValue = context.chart.data.datasets[1 - context.datasetIndex].data[context.dataIndex];
+                        return currentValue > compareValue ? 'top' : 'bottom';
+                    },
+                    offset: 6,
+                    clamp: true
                 }
             },
             scales: { 
@@ -570,6 +638,15 @@ async function renderTopGrowthProductsChart() {
                             ];
                         }
                     }
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 11 },
+                    anchor: 'end',
+                    align: 'right',
+                    formatter: function(value) {
+                        return `${value.toFixed(1)}%`;
+                    }
                 }
             },
             scales: {
@@ -645,6 +722,15 @@ async function renderBottomGrowthProductsChart() {
                                 `Doanh số so sánh: ${formatMoney(item.compareRevenue)}`
                             ];
                         }
+                    }
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 11 },
+                    anchor: 'end',
+                    align: 'right',
+                    formatter: function(value) {
+                        return `${value.toFixed(1)}%`;
                     }
                 }
             },
@@ -762,7 +848,7 @@ async function renderStatsCards() {
             <div class="stat-compare">Chênh lệch: ${formatMoney(Math.abs(revenueDiff))}</div>
         </div>
         <div class="stat-card">
-            <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng sản phẩm</div>
+            <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng ngành hàng</div>
             <div class="stat-value">${currentCategories.length}</div>
             <div class="stat-compare">Kỳ so sánh: ${compareCategories.length}</div>
         </div>

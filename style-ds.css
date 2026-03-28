@@ -19,7 +19,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #667eea, #ff8800);
+    background: linear-gradient(135deg,#ffc107, #fd7e14);
     border-radius: 20px;
     padding: 25px 30px;
     margin-bottom: 25px;
@@ -79,7 +79,7 @@ h1 i {
 }
 
 .filter-tab.active {
-    background: linear-gradient(135deg, #667eea, #ff8800);
+    background: linear-gradient(135deg,#ffc107, #fd7e14);
     color: white;
 }
 
@@ -122,7 +122,7 @@ h1 i {
 }
 
 .btn-compare {
-    background: linear-gradient(135deg, #667eea, #ff8800);
+    background: linear-gradient(135deg,#ffc107, #fd7e14);
     color: white;
     border: none;
     padding: 12px 32px;
@@ -230,7 +230,7 @@ h1 i {
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, #667eea, #ff8800);
+    background: linear-gradient(135deg,#ffc107, #fd7e14);
     color: white;
 }
 
@@ -422,7 +422,7 @@ canvas {
     gap: 8px;
     padding: 12px 18px;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg,#ffc107, #fd7e14);
     color: #fff;
     border-radius: 12px;
     border: none;

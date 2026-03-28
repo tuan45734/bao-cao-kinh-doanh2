@@ -1,5 +1,24 @@
 // script.js - Main application logic (FIXED - Bar colors based on positive/negative values)
 
+// Enable data labels for all charts
+if (typeof ChartDataLabels !== 'undefined') {
+    Chart.register(ChartDataLabels);
+    Chart.defaults.set('plugins.datalabels', {
+        color: '#35495e',
+        font: { weight: 'bold', size: 10 },
+        anchor: 'end',
+        align: 'top',
+        formatter: value => {
+            if (typeof value === 'number') {
+                return formatNumber(value);
+            }
+            return value;
+        },
+        clamp: true,
+        offset: 4,
+    });
+}
+
 // NPP Mapping with KV and Region
 const nppMapping = {
     'NPP Anh Minh HT': { kv: 'KV6', region: 'MB' },
@@ -346,6 +365,15 @@ function renderRevenueChart(currentRevenue, compareRevenue) {
                             return `${context.dataset.label}: ${formatNumber(context.raw)} VNĐ`; 
                         } 
                     } 
+                },
+                datalabels: {
+                    color: '#ffffff',
+                    font: { weight: 'bold', size: 12 },
+                    anchor: 'center',
+                    align: 'center',
+                    formatter: function(value) {
+                        return formatNumber(value);
+                    }
                 }
             },
             scales: { 
@@ -405,7 +433,16 @@ function renderGrowthChart() {
                         } 
                     } 
                 },
-                legend: { position: 'top' }
+                legend: { position: 'top' },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 10 },
+                    anchor: 'end',
+                    align: 'right',
+                    formatter: function(value) {
+                        return `${value.toFixed(1)}%`;
+                    }
+                }
             },
             scales: {
                 x: { 
@@ -463,6 +500,15 @@ function renderTopAreas() {
                             ];
                         }
                     }
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 10 },
+                    anchor: 'end',
+                    align: 'right',
+                    formatter: function(value) {
+                        return `${value.toFixed(1)}%`;
+                    }
                 }
             },
             scales: {
@@ -515,6 +561,15 @@ function renderBottomAreas() {
                                 `Doanh số so sánh: ${formatNumber(item.compareRevenue)}`
                             ];
                         }
+                    }
+                },
+                datalabels: {
+                    color: '#333',
+                    font: { weight: 'bold', size: 10 },
+                    anchor: 'end',
+                    align: 'right',
+                    formatter: function(value) {
+                        return `${value.toFixed(1)}%`;
                     }
                 }
             },
