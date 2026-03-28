@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo kinh doanh - So sánh doanh số cùng kỳ</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <i class="fas fa-chart-line"></i>
+                Báo cáo kinh doanh - So sánh doanh số cùng kỳ
+            </h1>
+            <div class="subtitle">Phân tích tăng trưởng doanh số | So sánh theo tháng, quý, năm</div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-type="month" onclick="switchComparisonType('month')">
+                    <i class="fas fa-calendar-alt"></i> So sánh tháng
+                </button>
+                <button class="filter-tab" data-type="quarter" onclick="switchComparisonType('quarter')">
+                    <i class="fas fa-chart-simple"></i> So sánh quý
+                </button>
+                <button class="filter-tab" data-type="year" onclick="switchComparisonType('year')">
+                    <i class="fas fa-calendar-year"></i> So sánh năm
+                </button>
+            </div>
+
+            <div class="filter-controls" id="filterControls">
+                <!-- Dynamic controls will be inserted here -->
+            </div>
+
+            <!-- Region Filter -->
+            <div class="region-filter" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Miền</label>
+                        <select id="regionSelect" onchange="onRegionChange()">
+                            <option value="">Tất cả miền</option>
+                            <option value="MB">Miền Bắc (MB)</option>
+                            <option value="MT" disabled style="color: #ccc;">Miền Trung (MT) - Chưa có dữ liệu</option>
+                            <option value="MN" disabled style="color: #ccc;">Miền Nam (MN) - Chưa có dữ liệu</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label><i class="fas fa-building"></i> Khu vực</label>
+                        <select id="areaSelect" onchange="onAreaChange()">
+                            <option value="">Tất cả khu vực</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Report Content -->
+        <div id="reportContent">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="switchTab('overview')">
+                    <i class="fas fa-chart-pie"></i> Tổng quan
+                </button>
+                <button class="tab-btn" onclick="switchTab('detail')">
+                    <i class="fas fa-table-list"></i> Chi tiết
+                </button>
+            </div>
+
+            <!-- Tab Overview -->
+            <div id="tabOverview" class="tab-content active">
+                <!-- Stats Cards -->
+                <div class="stats-grid" id="statsGrid"></div>
+
+                <!-- Charts -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3><i class="fas fa-chart-bar"></i> So sánh doanh số</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3><i class="fas fa-chart-line"></i> Tăng trưởng doanh số theo NPP</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="growthChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Performers -->
+                <div class="performers-grid">
+                    <div class="performer-card">
+                        <h3><i class="fas fa-chart-line"></i> Top 10 NPP tăng trưởng mạnh nhất</h3>
+                        <div class="chart-wrapper-small">
+                            <canvas id="topAreasChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="performer-card">
+                        <h3><i class="fas fa-chart-line"></i> Top 10 NPP tăng trưởng thấp nhất</h3>
+                        <div class="chart-wrapper-small">
+                            <canvas id="bottomAreasChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Detail -->
+            <div id="tabDetail" class="tab-content">
+                <div class="table-card">
+                    <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh số theo NPP</h3>
+                        <div class="filter-group" style="min-width: 250px; margin-bottom: 0;">
+                            <input type="text" id="searchNPP" placeholder="Nhập tên NPP cần tìm..." onkeyup="searchNPP()">
+                        </div>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table" id="detailTable">
+                            <thead>
+                                <tr>
+                                    <th>Nhà phân phối</th>
+                                    <th>Doanh số kỳ hiện tại</th>
+                                    <th>Doanh số kỳ so sánh</th>
+                                    <th>Chênh lệch</th>
+                                    <th>Tỷ lệ tăng trưởng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
