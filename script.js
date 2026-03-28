@@ -1,6 +1,23 @@
-// script.js - Main application logic (FIXED - Bar colors based on positive/negative values)
+// script.js - Main application logic with 6 charts and product detail
 
-// NPP Mapping with KV and Region
+let currentData = null;
+let currentRawData = null;      // Raw data for product filtering
+let compareRawData = null;      // Raw data for product filtering
+let currentType = 'month';
+let isLoading = false;
+
+// Chart instances
+let categoryComparisonChart = null;
+let categoryStructureChart = null;
+let topProductsChart = null;
+let bottomProductsChart = null;
+let topGrowthProductsChart = null;
+let bottomGrowthProductsChart = null;
+
+let currentRevenueTotal = 0;
+let compareRevenueTotal = 0;
+
+// NPP Mapping
 const nppMapping = {
     'NPP Anh Minh HT': { kv: 'KV6', region: 'MB' },
     'NPP Anh Đức': { kv: 'KV5', region: 'MB' },
@@ -72,42 +89,37 @@ const nppMapping = {
     'NPP Đức Oanh': { kv: 'KV4', region: 'MB' }
 };
 
-// Global variables
-let currentData = null;
-let compareData = null;
-let currentType = 'month';
-
-let revenueChart = null;
-let growthChart = null;
-let topAreasChart = null;
-let bottomAreasChart = null;
-
-let originalAreaData = [];
-let originalCompareAreaData = [];
-
-// Helper functions
 function getNPPInfo(nppName) {
     return nppMapping[nppName] || { kv: 'Khác', region: 'Khác' };
 }
 
 function formatNumber(num) {
     if (typeof num !== 'number') return num;
+    if (num >= 1e9) return (num / 1e9).toFixed(1) + ' tỷ';
+    if (num >= 1e6) return (num / 1e6).toFixed(1) + ' triệu';
     return new Intl.NumberFormat('vi-VN').format(num);
+}
+
+function formatMoney(num) {
+    if (typeof num !== 'number') return num;
+    return new Intl.NumberFormat('vi-VN').format(num) + ' ₫';
 }
 
 function calculateTotalRevenue(data) {
     return data.reduce((sum, item) => sum + (item.revenue || 0), 0);
 }
 
-function filterDataByRegion(data) {
-    if (!data) return [];
+// Filter raw data by region and area
+function filterRawDataByRegion(data) {
+    if (!data || !data.data) return data;
+    
     const selectedRegion = document.getElementById('regionSelect')?.value;
     const selectedArea = document.getElementById('areaSelect')?.value;
     
     if (!selectedRegion && !selectedArea) return data;
     
-    return data.filter(item => {
-        const nppInfo = getNPPInfo(item.name);
+    const filteredData = data.data.filter(item => {
+        const nppInfo = getNPPInfo(item.npp);
         if (!nppInfo) return true;
         
         if (selectedRegion && selectedArea) {
@@ -119,221 +131,139 @@ function filterDataByRegion(data) {
         }
         return true;
     });
+    
+    return { ...data, data: filteredData };
 }
 
-// Get NPP growth data based on current filters (for Top/Bottom charts)
-function getNPPGrowthData() {
-    const selectedRegion = document.getElementById('regionSelect')?.value;
-    const selectedArea = document.getElementById('areaSelect')?.value;
+// Load filtered product data
+async function loadFilteredProductData(year, month) {
+    const rawData = await loadRawData(year, month);
+    if (!rawData || !rawData.data) return [];
     
-    // Filter current and compare data based on selection
-    let currentList = currentData;
-    let compareList = compareData;
+    const filteredRaw = filterRawDataByRegion(rawData);
     
-    if (selectedRegion || selectedArea) {
-        currentList = filterDataByRegion(currentData);
-        compareList = filterDataByRegion(compareData);
+    const productMap = new Map();
+    filteredRaw.data.forEach(item => {
+        const productName = item.ten_sp;
+        const revenue = item.revenue || 0;
+        productMap.set(productName, (productMap.get(productName) || 0) + revenue);
+    });
+    
+    return Array.from(productMap.entries())
+        .map(([name, revenue]) => ({ name, revenue }))
+        .sort((a, b) => b.revenue - a.revenue);
+}
+
+// Load filtered category data
+async function loadFilteredCategoryData(year, month) {
+    const rawData = await loadRawData(year, month);
+    if (!rawData || !rawData.data) return [];
+    
+    const filteredRaw = filterRawDataByRegion(rawData);
+    
+    const categoryMap = new Map();
+    filteredRaw.data.forEach(item => {
+        const category = item.category || 'Khác';
+        const revenue = item.revenue || 0;
+        categoryMap.set(category, (categoryMap.get(category) || 0) + revenue);
+    });
+    
+    return Array.from(categoryMap.entries())
+        .map(([name, revenue]) => ({ name, revenue }))
+        .sort((a, b) => b.revenue - a.revenue);
+}
+
+function showLoading() {
+    isLoading = true;
+    const reportContent = document.getElementById('reportContent');
+    if (reportContent) {
+        reportContent.style.opacity = '0.5';
+        reportContent.style.pointerEvents = 'none';
     }
-    
-    // Calculate growth for each NPP
-    const compareMap = new Map();
-    compareList.forEach(item => compareMap.set(item.name, item.revenue));
-    
-    return currentList.map(item => {
-        const compareRevenue = compareMap.get(item.name) || 0;
-        const growth = compareRevenue > 0 ? ((item.revenue - compareRevenue) / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
-        return {
-            name: item.name,
-            currentRevenue: item.revenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
 }
 
-// Calculate growth by region (Miền) - for main growth chart
-function calculateGrowthByRegion(currentList, compareList) {
-    const currentMap = new Map();
-    const compareMap = new Map();
-    
-    currentList.forEach(item => {
-        const region = getNPPInfo(item.name).region;
-        if (region !== 'Khác') {
-            currentMap.set(region, (currentMap.get(region) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    compareList.forEach(item => {
-        const region = getNPPInfo(item.name).region;
-        if (region !== 'Khác') {
-            compareMap.set(region, (compareMap.get(region) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    const regions = new Set([...currentMap.keys(), ...compareMap.keys()]);
-    return Array.from(regions).map(region => {
-        const currentRevenue = currentMap.get(region) || 0;
-        const compareRevenue = compareMap.get(region) || 0;
-        const growth = compareRevenue > 0 ? ((currentRevenue - compareRevenue) / compareRevenue * 100) : (currentRevenue > 0 ? 100 : 0);
-        return {
-            name: region,
-            currentRevenue: currentRevenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
-}
-
-// Calculate growth by KV (Khu vực) within a region
-function calculateGrowthByKV(currentList, compareList, region) {
-    const currentMap = new Map();
-    const compareMap = new Map();
-    
-    currentList.forEach(item => {
-        const info = getNPPInfo(item.name);
-        if (info.region === region && info.kv !== 'Khác') {
-            currentMap.set(info.kv, (currentMap.get(info.kv) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    compareList.forEach(item => {
-        const info = getNPPInfo(item.name);
-        if (info.region === region && info.kv !== 'Khác') {
-            compareMap.set(info.kv, (compareMap.get(info.kv) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    const kvs = new Set([...currentMap.keys(), ...compareMap.keys()]);
-    return Array.from(kvs).map(kv => {
-        const currentRevenue = currentMap.get(kv) || 0;
-        const compareRevenue = compareMap.get(kv) || 0;
-        const growth = compareRevenue > 0 ? ((currentRevenue - compareRevenue) / compareRevenue * 100) : (currentRevenue > 0 ? 100 : 0);
-        return {
-            name: kv,
-            currentRevenue: currentRevenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
-}
-
-// Calculate growth by NPP within a KV
-function calculateGrowthByNPP(currentList, compareList, kv) {
-    const currentMap = new Map();
-    const compareMap = new Map();
-    
-    currentList.forEach(item => {
-        const info = getNPPInfo(item.name);
-        if (info.kv === kv) {
-            currentMap.set(item.name, (currentMap.get(item.name) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    compareList.forEach(item => {
-        const info = getNPPInfo(item.name);
-        if (info.kv === kv) {
-            compareMap.set(item.name, (compareMap.get(item.name) || 0) + (item.revenue || 0));
-        }
-    });
-    
-    const npps = new Set([...currentMap.keys(), ...compareMap.keys()]);
-    return Array.from(npps).map(npp => {
-        const currentRevenue = currentMap.get(npp) || 0;
-        const compareRevenue = compareMap.get(npp) || 0;
-        const growth = compareRevenue > 0 ? ((currentRevenue - compareRevenue) / compareRevenue * 100) : (currentRevenue > 0 ? 100 : 0);
-        return {
-            name: npp,
-            currentRevenue: currentRevenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
-}
-
-// Main function to get growth data based on current filters (for main growth chart)
-function getGrowthDataByLevel() {
-    const selectedRegion = document.getElementById('regionSelect')?.value;
-    const selectedArea = document.getElementById('areaSelect')?.value;
-    
-    // Level 1: No filter -> Show by Region (Miền)
-    if (!selectedRegion && !selectedArea) {
-        return calculateGrowthByRegion(currentData, compareData);
+function hideLoading() {
+    isLoading = false;
+    const reportContent = document.getElementById('reportContent');
+    if (reportContent) {
+        reportContent.style.opacity = '1';
+        reportContent.style.pointerEvents = 'auto';
     }
-    // Level 2: Only region selected -> Show by KV in that region
-    else if (selectedRegion && !selectedArea) {
-        return calculateGrowthByKV(currentData, compareData, selectedRegion);
-    }
-    // Level 3: Both region and KV selected -> Show by NPP in that KV
-    else if (selectedRegion && selectedArea) {
-        return calculateGrowthByNPP(currentData, compareData, selectedArea);
-    }
-    
-    return [];
 }
 
-// Get Y-axis title based on filter level
-function getYAxisTitle() {
-    const selectedRegion = document.getElementById('regionSelect')?.value;
-    const selectedArea = document.getElementById('areaSelect')?.value;
-    
-    if (!selectedRegion && !selectedArea) return 'Miền';
-    if (selectedRegion && !selectedArea) return 'Khu vực (KV)';
-    return 'Nhà phân phối (NPP)';
-}
-
-function renderReport() {
-    if (!currentData || !compareData) return;
-    
-    const filteredCurrent = filterDataByRegion(currentData);
-    const filteredCompare = filterDataByRegion(compareData);
-    
-    const currentRevenue = calculateTotalRevenue(filteredCurrent);
-    const compareRevenue = calculateTotalRevenue(filteredCompare);
-    const revenueDiff = currentRevenue - compareRevenue;
-    const revenueGrowth = compareRevenue > 0 ? (revenueDiff / compareRevenue * 100) : 0;
-    
-    const statsGrid = document.getElementById('statsGrid');
-    statsGrid.innerHTML = `
-        <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh số kỳ hiện tại</div>
-            <div class="stat-value">${formatNumber(currentRevenue)}</div>
-            <div class="stat-compare">Kỳ so sánh: ${formatNumber(compareRevenue)}</div>
-        </div>
-        <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh số</div>
-            <div class="stat-value ${revenueGrowth >= 0 ? 'trend-up' : 'trend-down'}">${revenueGrowth >= 0 ? '+' : ''}${revenueGrowth.toFixed(1)}%</div>
-            <div class="stat-compare">Chênh lệch: ${formatNumber(Math.abs(revenueDiff))}</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng NPP</div>
-            <div class="stat-value">${filteredCurrent.length}</div>
-            <div class="stat-compare">Kỳ so sánh: ${filteredCompare.length}</div>
-        </div>
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <i class="fas ${type === 'warning' ? 'fa-exclamation-triangle' : type === 'error' ? 'fa-times-circle' : 'fa-info-circle'}"></i>
+        <span>${message}</span>
     `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        background: ${type === 'warning' ? '#ff9800' : type === 'error' ? '#f44336' : '#2196f3'};
+        color: white;
+        border-radius: 8px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        animation: slideIn 0.3s ease;
+    `;
+    document.body.appendChild(notification);
     
-    renderRevenueChart(currentRevenue, compareRevenue);
-    renderGrowthChart();
-    renderTopAreas();
-    renderBottomAreas();
-    renderDetailTable();
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 }
 
-function renderRevenueChart(currentRevenue, compareRevenue) {
-    const ctx = document.getElementById('revenueChart').getContext('2d');
-    if (revenueChart) revenueChart.destroy();
+// ==================== 6 BIỂU ĐỒ CHÍNH ====================
+
+// Biểu đồ 1: So sánh doanh số ngành hàng (Bar chart)
+async function renderCategoryComparisonChart() {
+    const ctx = document.getElementById('categoryComparisonChart').getContext('2d');
+    if (categoryComparisonChart) categoryComparisonChart.destroy();
     
-    revenueChart = new Chart(ctx, {
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentCategories = await loadFilteredCategoryData(currentYear, currentMonth);
+    const compareCategories = await loadFilteredCategoryData(compareYear, compareMonth);
+    const compareMap = new Map(compareCategories.map(c => [c.name, c.revenue]));
+    
+    const topCategories = currentCategories.slice(0, 8);
+    const labels = topCategories.map(c => c.name);
+    const currentDataValues = topCategories.map(c => c.revenue);
+    const compareDataValues = topCategories.map(c => compareMap.get(c.name) || 0);
+    
+    categoryComparisonChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Kỳ hiện tại', 'Kỳ so sánh'],
-            datasets: [{
-                label: 'Doanh số (VNĐ)',
-                data: [currentRevenue, compareRevenue],
-                backgroundColor: ['rgba(102, 126, 234, 0.8)', 'rgba(118, 75, 162, 0.6)'],
-                borderColor: ['rgba(102, 126, 234, 1)', 'rgba(118, 75, 162, 1)'],
-                borderWidth: 2,
-                borderRadius: 10
-            }]
+            labels: labels,
+            datasets: [
+                {
+                    label: `${currentYear}/${currentMonth}`,
+                    data: currentDataValues,
+                    backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                    borderColor: 'rgba(102, 126, 234, 1)',
+                    borderWidth: 2,
+                    borderRadius: 8
+                },
+                {
+                    label: `${compareYear}/${compareMonth}`,
+                    data: compareDataValues,
+                    backgroundColor: 'rgba(118, 75, 162, 0.6)',
+                    borderColor: 'rgba(118, 75, 162, 1)',
+                    borderWidth: 2,
+                    borderRadius: 8
+                }
+            ]
         },
         options: {
             responsive: true,
@@ -343,49 +273,284 @@ function renderRevenueChart(currentRevenue, compareRevenue) {
                 tooltip: { 
                     callbacks: { 
                         label: function(context) { 
-                            return `${context.dataset.label}: ${formatNumber(context.raw)} VNĐ`; 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
                         } 
                     } 
                 }
             },
             scales: { 
                 y: { 
-                    ticks: { callback: value => formatNumber(value) }, 
-                    title: { display: true, text: 'Doanh số (VNĐ)' } 
-                } 
+                    ticks: { callback: value => formatMoney(value) }, 
+                    title: { display: true, text: 'Doanh số' } 
+                },
+                x: { title: { display: true, text: 'Ngành hàng' } }
             }
         }
     });
 }
 
-function renderGrowthChart() {
-    const ctx = document.getElementById('growthChart').getContext('2d');
-    if (growthChart) growthChart.destroy();
+// Biểu đồ 2: Cơ cấu ngành hàng (Donut chart)
+async function renderCategoryStructureChart() {
+    const ctx = document.getElementById('categoryStructureChart').getContext('2d');
+    if (categoryStructureChart) categoryStructureChart.destroy();
     
-    const growthData = getGrowthDataByLevel();
-    const yAxisTitle = getYAxisTitle();
-    const topGrowth = growthData.slice(0, 20);
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
     
-    if (topGrowth.length === 0) {
-        growthChart = new Chart(ctx, {
-            type: 'bar',
-            data: { labels: ['Không có dữ liệu'], datasets: [{ label: 'Tỷ lệ tăng trưởng (%)', data: [0] }] },
-            options: { responsive: true, maintainAspectRatio: false }
-        });
-        return;
+    const categories = await loadFilteredCategoryData(currentYear, currentMonth);
+    const topCategories = categories.slice(0, 8);
+    const otherRevenue = categories.slice(8).reduce((sum, c) => sum + c.revenue, 0);
+    
+    const labels = [...topCategories.map(c => c.name)];
+    const revenues = [...topCategories.map(c => c.revenue)];
+    
+    if (otherRevenue > 0) {
+        labels.push('Khác');
+        revenues.push(otherRevenue);
     }
     
-    growthChart = new Chart(ctx, {
+    const colors = [
+        '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', 
+        '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7C59F', '#C7B9FF'
+    ];
+    
+    categoryStructureChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: revenues,
+                backgroundColor: colors.slice(0, labels.length),
+                borderWidth: 0,
+                borderRadius: 8,
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'right', labels: { font: { size: 11 } } },
+                tooltip: { 
+                    callbacks: { 
+                        label: function(context) { 
+                            const value = context.raw;
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percent = (value / total * 100).toFixed(1);
+                            return `${context.label}: ${formatMoney(value)} (${percent}%)`;
+                        } 
+                    } 
+                }
+            }
+        }
+    });
+}
+
+// Biểu đồ 3: 10 sản phẩm bán chạy nhất (Line chart với 2 đường)
+async function renderTopProductsLineChart() {
+    const ctx = document.getElementById('topProductsLineChart').getContext('2d');
+    if (topProductsChart) topProductsChart.destroy();
+    
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
+    
+    const topProductsList = currentProducts.slice(0, 10);
+    const labels = topProductsList.map(p => p.name.length > 25 ? p.name.substring(0, 25) + '...' : p.name);
+    const currentRevenues = topProductsList.map(p => p.revenue);
+    const compareRevenues = topProductsList.map(p => compareMap.get(p.name) || 0);
+    
+    topProductsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: `${currentYear}/${currentMonth}`,
+                    data: currentRevenues,
+                    borderColor: 'rgba(102, 126, 234, 1)',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(102, 126, 234, 1)',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: `${compareYear}/${compareMonth}`,
+                    data: compareRevenues,
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(255, 159, 64, 1)',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    borderDash: [5, 5]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { 
+                    callbacks: { 
+                        label: function(context) { 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
+                        } 
+                    } 
+                }
+            },
+            scales: { 
+                y: { 
+                    ticks: { callback: value => formatMoney(value) }, 
+                    title: { display: true, text: 'Doanh số' } 
+                },
+                x: { title: { display: true, text: 'Sản phẩm' } }
+            }
+        }
+    });
+}
+
+// Biểu đồ 4: 10 sản phẩm bán kém nhất (Line chart với 2 đường)
+async function renderBottomProductsLineChart() {
+    const ctx = document.getElementById('bottomProductsLineChart').getContext('2d');
+    if (bottomProductsChart) bottomProductsChart.destroy();
+    
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
+    
+    // Lọc sản phẩm có doanh số > 0
+    const productsWithRevenue = currentProducts.filter(p => p.revenue > 0);
+    const bottomProductsList = productsWithRevenue.slice(-10).reverse();
+    
+    const labels = bottomProductsList.map(p => p.name.length > 25 ? p.name.substring(0, 25) + '...' : p.name);
+    const currentRevenues = bottomProductsList.map(p => p.revenue);
+    const compareRevenues = bottomProductsList.map(p => compareMap.get(p.name) || 0);
+    
+    bottomProductsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: `${currentYear}/${currentMonth}`,
+                    data: currentRevenues,
+                    borderColor: 'rgba(244, 67, 54, 1)',
+                    backgroundColor: 'rgba(244, 67, 54, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(244, 67, 54, 1)',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: `${compareYear}/${compareMonth}`,
+                    data: compareRevenues,
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(255, 159, 64, 1)',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    borderDash: [5, 5]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { 
+                    callbacks: { 
+                        label: function(context) { 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
+                        } 
+                    } 
+                }
+            },
+            scales: { 
+                y: { 
+                    ticks: { callback: value => formatMoney(value) }, 
+                    title: { display: true, text: 'Doanh số' } 
+                },
+                x: { title: { display: true, text: 'Sản phẩm' } }
+            }
+        }
+    });
+}
+
+// Biểu đồ 5: 10 sản phẩm tăng trưởng mạnh nhất (Horizontal bar)
+async function renderTopGrowthProductsChart() {
+    const ctx = document.getElementById('topGrowthProductsChart').getContext('2d');
+    if (topGrowthProductsChart) topGrowthProductsChart.destroy();
+    
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
+    
+    const growthData = currentProducts.map(p => {
+        const compareRevenue = compareMap.get(p.name) || 0;
+        const growth = compareRevenue > 0 ? ((p.revenue - compareRevenue) / compareRevenue * 100) : (p.revenue > 0 ? 100 : 0);
+        return { 
+            name: p.name, 
+            currentRevenue: p.revenue, 
+            compareRevenue: compareRevenue, 
+            growth: growth 
+        };
+    });
+    
+    const topGrowth = growthData
+        .filter(p => p.compareRevenue > 0)
+        .sort((a, b) => b.growth - a.growth)
+        .slice(0, 10);
+    
+    const labels = topGrowth.map(p => p.name.length > 30 ? p.name.substring(0, 30) + '...' : p.name);
+    const growthRates = topGrowth.map(p => p.growth);
+    
+    topGrowthProductsChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: topGrowth.map(a => a.name.length > 20 ? a.name.substring(0, 20) + '...' : a.name),
+            labels: labels,
             datasets: [{
                 label: 'Tỷ lệ tăng trưởng (%)',
-                data: topGrowth.map(a => a.growth),
-                backgroundColor: topGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 0.7)' : 'rgba(244, 67, 54, 0.7)'),
-                borderColor: topGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
-                borderWidth: 1,
-                borderRadius: 10
+                data: growthRates,
+                backgroundColor: 'rgba(76, 175, 80, 0.7)',
+                borderColor: 'rgba(76, 175, 80, 1)',
+                borderWidth: 2,
+                borderRadius: 8
             }]
         },
         options: {
@@ -393,56 +558,73 @@ function renderGrowthChart() {
             maintainAspectRatio: false,
             indexAxis: 'y',
             plugins: {
-                tooltip: { 
-                    callbacks: { 
-                        label: function(context) { 
+                legend: { position: 'top' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
                             const item = topGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)} VNĐ`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)} VNĐ`
+                                `Doanh số hiện tại: ${formatMoney(item.currentRevenue)}`,
+                                `Doanh số so sánh: ${formatMoney(item.compareRevenue)}`
                             ];
-                        } 
-                    } 
-                },
-                legend: { position: 'top' }
+                        }
+                    }
+                }
             },
             scales: {
                 x: { 
                     ticks: { callback: value => value + '%' }, 
                     title: { display: true, text: 'Tỷ lệ tăng trưởng (%)' } 
                 },
-                y: { 
-                    title: { display: true, text: yAxisTitle } 
-                }
+                y: { title: { display: true, text: 'Sản phẩm' } }
             }
         }
     });
 }
 
-function renderTopAreas() {
-    const ctx = document.getElementById('topAreasChart').getContext('2d');
-    if (topAreasChart) topAreasChart.destroy();
+// Biểu đồ 6: 10 sản phẩm tăng trưởng yếu nhất (Horizontal bar)
+async function renderBottomGrowthProductsChart() {
+    const ctx = document.getElementById('bottomGrowthProductsChart').getContext('2d');
+    if (bottomGrowthProductsChart) bottomGrowthProductsChart.destroy();
     
-    const growthData = getNPPGrowthData();
-    const topGrowth = growthData.filter(a => a.compareRevenue > 0).slice(0, 10);
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
     
-    if (topGrowth.length === 0) {
-        document.getElementById('topAreasChart').style.display = 'none';
-        return;
-    }
-    document.getElementById('topAreasChart').style.display = 'block';
+    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
-    topAreasChart = new Chart(ctx, {
+    const growthData = currentProducts.map(p => {
+        const compareRevenue = compareMap.get(p.name) || 0;
+        const growth = compareRevenue > 0 ? ((p.revenue - compareRevenue) / compareRevenue * 100) : (p.revenue > 0 ? 100 : -100);
+        return { 
+            name: p.name, 
+            currentRevenue: p.revenue, 
+            compareRevenue: compareRevenue, 
+            growth: growth 
+        };
+    });
+    
+    const bottomGrowth = growthData
+        .filter(p => p.compareRevenue > 0)
+        .sort((a, b) => a.growth - b.growth)
+        .slice(0, 10);
+    
+    const labels = bottomGrowth.map(p => p.name.length > 30 ? p.name.substring(0, 30) + '...' : p.name);
+    const growthRates = bottomGrowth.map(p => p.growth);
+    
+    bottomGrowthProductsChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: topGrowth.map(a => a.name.length > 25 ? a.name.substring(0, 25) + '...' : a.name),
+            labels: labels,
             datasets: [{
                 label: 'Tỷ lệ tăng trưởng (%)',
-                data: topGrowth.map(a => a.growth),
-                // SỬA: thay đổi màu theo giá trị
-                backgroundColor: topGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 0.7)' : 'rgba(244, 67, 54, 0.7)'),
-                borderColor: topGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
+                data: growthRates,
+                backgroundColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 0.7)' : 'rgba(244, 67, 54, 0.7)'),
+                borderColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
                 borderWidth: 2,
                 borderRadius: 8
             }]
@@ -452,122 +634,184 @@ function renderTopAreas() {
             maintainAspectRatio: false,
             indexAxis: 'y',
             plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const item = topGrowth[context.dataIndex];
-                            return [
-                                `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)}`
-                            ];
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: { ticks: { callback: value => value + '%' }, title: { display: true, text: 'Tỷ lệ tăng trưởng (%)' } },
-                y: { title: { display: true, text: 'Nhà phân phối (NPP)' } }
-            }
-        }
-    });
-}
-
-function renderBottomAreas() {
-    const ctx = document.getElementById('bottomAreasChart').getContext('2d');
-    if (bottomAreasChart) bottomAreasChart.destroy();
-    
-    const growthData = getNPPGrowthData();
-    const bottomGrowth = growthData.filter(a => a.compareRevenue > 0).sort((a, b) => a.growth - b.growth).slice(0, 10);
-    
-    if (bottomGrowth.length === 0) {
-        document.getElementById('bottomAreasChart').style.display = 'none';
-        return;
-    }
-    document.getElementById('bottomAreasChart').style.display = 'block';
-    
-    bottomAreasChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: bottomGrowth.map(a => a.name.length > 25 ? a.name.substring(0, 25) + '...' : a.name),
-            datasets: [{
-                label: 'Tỷ lệ tăng trưởng (%)',
-                data: bottomGrowth.map(a => a.growth),
-                // SỬA: thay đổi màu theo giá trị
-                backgroundColor: bottomGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 0.7)' : 'rgba(244, 67, 54, 0.7)'),
-                borderColor: bottomGrowth.map(a => a.growth >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
-                borderWidth: 2,
-                borderRadius: 8
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: 'y',
-            plugins: {
+                legend: { position: 'top' },
                 tooltip: {
                     callbacks: {
                         label: function(context) {
                             const item = bottomGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)}`
+                                `Doanh số hiện tại: ${formatMoney(item.currentRevenue)}`,
+                                `Doanh số so sánh: ${formatMoney(item.compareRevenue)}`
                             ];
                         }
                     }
                 }
             },
             scales: {
-                x: { ticks: { callback: value => value + '%' }, title: { display: true, text: 'Tỷ lệ tăng trưởng (%)' } },
-                y: { title: { display: true, text: 'Nhà phân phối (NPP)' } }
+                x: { 
+                    ticks: { callback: value => value + '%' }, 
+                    title: { display: true, text: 'Tỷ lệ tăng trưởng (%)' } 
+                },
+                y: { title: { display: true, text: 'Sản phẩm' } }
             }
         }
     });
 }
 
-function renderDetailTable() {
-    originalAreaData = [...currentData];
-    originalCompareAreaData = [...compareData];
-    renderDetailTableWithData(originalAreaData, originalCompareAreaData);
-}
+// ==================== TAB CHI TIẾT SẢN PHẨM ====================
 
-function renderDetailTableWithData(currentList, compareList) {
+// Render detail table for products
+async function renderProductDetailTable() {
     const tbody = document.getElementById('detailTableBody');
-    const compareMap = new Map();
-    compareList.forEach(item => compareMap.set(item.name, item.revenue));
     
-    if (currentList.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Không tìm thấy NPP</td></tr>';
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
+    
+    if (!currentProducts || currentProducts.length === 0) {
+        tbody.innerHTML = '编码<td colspan="5" style="text-align: center;">Không có dữ liệu sản phẩm</td> </div>';
         return;
     }
     
-    tbody.innerHTML = currentList.map(item => {
+    tbody.innerHTML = currentProducts.map(item => {
         const compareRevenue = compareMap.get(item.name) || 0;
         const diff = item.revenue - compareRevenue;
         const growthRate = compareRevenue > 0 ? (diff / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
         return `
             <tr>
                 <td><strong>${item.name}</strong></td>
-                <td>${formatNumber(item.revenue)}</td>
-                <td>${formatNumber(compareRevenue)}</td>
-                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(diff)}</td>
+                <td>${formatMoney(item.revenue)}</td>
+                <td>${formatMoney(compareRevenue)}</td>
+                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatMoney(Math.abs(diff))}</td>
                 <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
             </tr>
         `;
     }).join('');
 }
 
-function searchNPP() {
-    const searchTerm = document.getElementById('searchNPP').value.toLowerCase().trim();
-    if (!searchTerm) {
-        renderDetailTableWithData(originalAreaData, originalCompareAreaData);
-        return;
-    }
+function searchProduct() {
+    const searchTerm = document.getElementById('searchProduct').value.toLowerCase().trim();
+    const tbody = document.getElementById('detailTableBody');
     
-    const filteredCurrent = originalAreaData.filter(item => item.name.toLowerCase().includes(searchTerm));
-    const filteredCompare = originalCompareAreaData.filter(item => item.name.toLowerCase().includes(searchTerm));
-    renderDetailTableWithData(filteredCurrent, filteredCompare);
+    // Re-render with filter
+    (async () => {
+        const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+        const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+        const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+        const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+        
+        const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
+        const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+        const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
+        
+        const filteredProducts = currentProducts.filter(p => p.name.toLowerCase().includes(searchTerm));
+        
+        if (filteredProducts.length === 0) {
+            tbody.innerHTML = '编码<td colspan="5" style="text-align: center;">Không tìm thấy sản phẩm</td> </div>';
+            return;
+        }
+        
+        tbody.innerHTML = filteredProducts.map(item => {
+            const compareRevenue = compareMap.get(item.name) || 0;
+            const diff = item.revenue - compareRevenue;
+            const growthRate = compareRevenue > 0 ? (diff / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
+            return `
+                <tr>
+                    <td><strong>${item.name}</strong></td>
+                    <td>${formatMoney(item.revenue)}</td>
+                    <td>${formatMoney(compareRevenue)}</td>
+                    <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatMoney(Math.abs(diff))}</td>
+                    <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
+                </tr>
+            `;
+        }).join('');
+    })();
+}
+
+// Stats Cards
+async function renderStatsCards() {
+    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
+    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
+    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
+    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
+    
+    const currentCategories = await loadFilteredCategoryData(currentYear, currentMonth);
+    const compareCategories = await loadFilteredCategoryData(compareYear, compareMonth);
+    
+    currentRevenueTotal = calculateTotalRevenue(currentCategories);
+    compareRevenueTotal = calculateTotalRevenue(compareCategories);
+    const revenueDiff = currentRevenueTotal - compareRevenueTotal;
+    const revenueGrowth = compareRevenueTotal > 0 ? (revenueDiff / compareRevenueTotal * 100) : 0;
+    
+    const statsGrid = document.getElementById('statsGrid');
+    statsGrid.innerHTML = `
+        <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
+            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh số kỳ hiện tại</div>
+            <div class="stat-value">${formatMoney(currentRevenueTotal)}</div>
+            <div class="stat-compare">Kỳ so sánh: ${formatMoney(compareRevenueTotal)}</div>
+        </div>
+        <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
+            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh số</div>
+            <div class="stat-value ${revenueGrowth >= 0 ? 'trend-up' : 'trend-down'}">${revenueGrowth >= 0 ? '+' : ''}${revenueGrowth.toFixed(1)}%</div>
+            <div class="stat-compare">Chênh lệch: ${formatMoney(Math.abs(revenueDiff))}</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng sản phẩm</div>
+            <div class="stat-value">${currentCategories.length}</div>
+            <div class="stat-compare">Kỳ so sánh: ${compareCategories.length}</div>
+        </div>
+    `;
+}
+
+// Render all charts
+async function renderAllCharts() {
+    await renderCategoryComparisonChart();
+    await renderCategoryStructureChart();
+    await renderTopProductsLineChart();
+    await renderBottomProductsLineChart();
+    await renderTopGrowthProductsChart();
+    await renderBottomGrowthProductsChart();
+}
+
+// Main render function
+async function renderReport() {
+    await renderStatsCards();
+    await renderAllCharts();
+    await renderProductDetailTable();
+}
+
+// ==================== UI CONTROLS ====================
+
+function onRegionChange() {
+    const regionSelect = document.getElementById('regionSelect');
+    const areaSelect = document.getElementById('areaSelect');
+    const selectedRegion = regionSelect.value;
+    
+    const areas = getAreasByRegion(selectedRegion);
+    areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
+        areas.map(area => `<option value="${area}">${area}</option>`).join('');
+    
+    if (currentData) renderReport();
+}
+
+function onAreaChange() {
+    if (currentData) renderReport();
+}
+
+function getAreasByRegion(region) {
+    const areas = new Set();
+    Object.entries(nppMapping).forEach(([npp, info]) => {
+        if ((!region || info.region === region) && info.kv !== 'MB Chợ') {
+            areas.add(info.kv);
+        }
+    });
+    return Array.from(areas).sort();
 }
 
 function switchTab(tabName) {
@@ -581,32 +825,6 @@ function switchTab(tabName) {
         document.getElementById('tabOverview').classList.remove('active');
         document.getElementById('tabDetail').classList.add('active');
     }
-}
-
-function onRegionChange() {
-    const regionSelect = document.getElementById('regionSelect');
-    const areaSelect = document.getElementById('areaSelect');
-    const selectedRegion = regionSelect.value;
-    
-    const areas = getAreasByRegion(selectedRegion);
-    areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
-        areas.map(area => `<option value="${area}">${area}</option>`).join('');
-    
-    if (currentData && compareData) renderReport();
-}
-
-function onAreaChange() {
-    if (currentData && compareData) renderReport();
-}
-
-function getAreasByRegion(region) {
-    const areas = new Set();
-    Object.entries(nppMapping).forEach(([npp, info]) => {
-        if ((!region || info.region === region) && info.kv !== 'MB Chợ') {
-            areas.add(info.kv);
-        }
-    });
-    return Array.from(areas).sort();
 }
 
 function switchComparisonType(type) {
@@ -643,37 +861,100 @@ function switchComparisonType(type) {
     }
 }
 
-function loadCompareData() {
+async function loadCompareData() {
+    showLoading();
+    
     const currentYear = parseInt(document.getElementById('currentYear').value);
     const compareYear = parseInt(document.getElementById('compareYear').value);
     
-    if (currentType === 'month') {
-        const currentMonth = parseInt(document.getElementById('currentMonth').value);
-        const compareMonth = parseInt(document.getElementById('compareMonth').value);
-        currentData = getDataByMonth(currentYear, currentMonth);
-        compareData = getDataByMonth(compareYear, compareMonth);
-    } else if (currentType === 'quarter') {
-        const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
-        const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
-        currentData = getDataByQuarter(currentYear, currentQuarter);
-        compareData = getDataByQuarter(compareYear, compareQuarter);
-    } else {
-        currentData = getDataByYear(currentYear);
-        compareData = getDataByYear(compareYear);
+    try {
+        if (currentType === 'month') {
+            const currentMonth = parseInt(document.getElementById('currentMonth').value);
+            const compareMonth = parseInt(document.getElementById('compareMonth').value);
+            currentData = await loadRawData(currentYear, currentMonth);
+            compareData = await loadRawData(compareYear, compareMonth);
+        } else if (currentType === 'quarter') {
+            // For quarter, we need to aggregate raw data
+            const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
+            const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
+            // Load and aggregate quarter data
+            currentData = await loadRawDataForQuarter(currentYear, currentQuarter);
+            compareData = await loadRawDataForQuarter(compareYear, compareQuarter);
+        } else {
+            currentData = await loadRawDataForYear(currentYear);
+            compareData = await loadRawDataForYear(compareYear);
+        }
+        
+        await renderReport();
+    } catch (error) {
+        console.error('Error loading data:', error);
+        showNotification('Lỗi khi tải dữ liệu. Vui lòng thử lại.', 'error');
+    } finally {
+        hideLoading();
     }
-    
-    renderReport();
 }
 
+// Helper functions for quarter and year
+async function loadRawDataForQuarter(year, quarter) {
+    const months = {
+        1: [1, 2, 3],
+        2: [4, 5, 6],
+        3: [7, 8, 9],
+        4: [10, 11, 12]
+    };
+    
+    const allData = { data: [] };
+    for (const month of months[quarter]) {
+        const rawData = await loadRawData(year, month);
+        if (rawData && rawData.data) {
+            allData.data.push(...rawData.data);
+        }
+    }
+    return allData;
+}
+
+async function loadRawDataForYear(year) {
+    const allData = { data: [] };
+    for (let month = 1; month <= 12; month++) {
+        const rawData = await loadRawData(year, month);
+        if (rawData && rawData.data) {
+            allData.data.push(...rawData.data);
+        }
+    }
+    return allData;
+}
+
+// Animation styles
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     switchComparisonType('month');
+    
     const areaSelect = document.getElementById('areaSelect');
     areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
         getAreasByRegion('MB').map(area => `<option value="${area}">${area}</option>`).join('');
     
-    // Load default data (latest month)
-    currentData = getDataByMonth(2026, 2);
-    compareData = getDataByMonth(2025, 2);
-    renderReport();
+    showLoading();
+    try {
+        currentData = await loadRawData(2026, 3);
+        compareData = await loadRawData(2025, 3);
+        await renderReport();
+    } catch (error) {
+        console.error('Error loading default data:', error);
+        showNotification('Không thể tải dữ liệu mặc định', 'error');
+    } finally {
+        hideLoading();
+    }
 });

@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ</title>
+    <title>Báo cáo kinh doanh - So sánh doanh số cùng kỳ</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-ds.css">
 </head>
-
 <body>
     <div class="container">
         <div class="header">
             <h1>
                 <i class="fas fa-chart-line"></i>
-                Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ
+                Báo cáo kinh doanh - So sánh doanh số cùng kỳ
             </h1>
-            <div class="subtitle">Phân tích doanh số theo ngành hàng | Top sản phẩm | Tăng trưởng sản phẩm</div>
+            <div class="subtitle">Phân tích tăng trưởng doanh số | So sánh theo tháng, quý, năm</div>
         </div>
-
-        <a href="index-ds.html" class="report-link">
-            <div><--- Báo cáo doanh số</div>
+ <a href="index.html" class="report-link">
+            <div><--- Báo cáo sản phẩm</div>
         </a>
-
-
         <div class="filter-section">
             <div class="filter-tabs">
                 <button class="filter-tab active" data-type="month" onclick="switchComparisonType('month')">
@@ -72,7 +67,7 @@
                     <i class="fas fa-chart-pie"></i> Tổng quan
                 </button>
                 <button class="tab-btn" onclick="switchTab('detail')">
-                    <i class="fas fa-table-list"></i> Chi tiết sản phẩm
+                    <i class="fas fa-table-list"></i> Chi tiết
                 </button>
             </div>
 
@@ -81,71 +76,53 @@
                 <!-- Stats Cards -->
                 <div class="stats-grid" id="statsGrid"></div>
 
-                <!-- Charts Row 1: So sánh ngành hàng + Cơ cấu ngành hàng -->
+                <!-- Charts -->
                 <div class="charts-grid">
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-bar"></i> 1. So sánh doanh số ngành hàng</h3>
+                        <h3><i class="fas fa-chart-bar"></i> So sánh doanh số</h3>
                         <div class="chart-wrapper">
-                            <canvas id="categoryComparisonChart"></canvas>
+                            <canvas id="revenueChart"></canvas>
                         </div>
                     </div>
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-pie"></i> 2. Cơ cấu doanh số theo ngành hàng</h3>
+                        <h3><i class="fas fa-chart-line"></i> Tăng trưởng doanh số theo NPP</h3>
                         <div class="chart-wrapper">
-                            <canvas id="categoryStructureChart"></canvas>
+                            <canvas id="growthChart"></canvas>
                         </div>
                     </div>
                 </div>
 
-                <!-- Charts Row 2: Top 10 bán chạy + Bottom 10 bán kém (Line charts with 2 lines) -->
-                <div class="charts-grid">
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 3. Top 10 sản phẩm bán chạy nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="topProductsLineChart"></canvas>
+                <!-- Top Performers -->
+                <div class="performers-grid">
+                    <div class="performer-card">
+                        <h3><i class="fas fa-chart-line"></i> Top 10 NPP tăng trưởng mạnh nhất</h3>
+                        <div class="chart-wrapper-small">
+                            <canvas id="topAreasChart"></canvas>
                         </div>
                     </div>
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 4. Top 10 sản phẩm bán kém nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="bottomProductsLineChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Row 3: Tăng trưởng mạnh nhất + Tăng trưởng yếu nhất -->
-                <div class="charts-grid">
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 5. Top 10 sản phẩm tăng trưởng mạnh nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="topGrowthProductsChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 6. Top 10 sản phẩm tăng trưởng yếu nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="bottomGrowthProductsChart"></canvas>
+                    <div class="performer-card">
+                        <h3><i class="fas fa-chart-line"></i> Top 10 NPP tăng trưởng thấp nhất</h3>
+                        <div class="chart-wrapper-small">
+                            <canvas id="bottomAreasChart"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab Detail - Sản phẩm -->
+            <!-- Tab Detail -->
             <div id="tabDetail" class="tab-content">
                 <div class="table-card">
-                    <div class="table-header"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh số theo sản phẩm</h3>
-                        <div class="filter-group" style="min-width: 300px; margin-bottom: 0;">
-                            <input type="text" id="searchProduct" placeholder="Nhập tên sản phẩm cần tìm..."
-                                onkeyup="searchProduct()">
+                    <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh số theo NPP</h3>
+                        <div class="filter-group" style="min-width: 250px; margin-bottom: 0;">
+                            <input type="text" id="searchNPP" placeholder="Nhập tên NPP cần tìm..." onkeyup="searchNPP()">
                         </div>
                     </div>
                     <div style="overflow-x: auto;">
                         <table class="data-table" id="detailTable">
                             <thead>
                                 <tr>
-                                    <th>Sản phẩm</th>
+                                    <th>Nhà phân phối</th>
                                     <th>Doanh số kỳ hiện tại</th>
                                     <th>Doanh số kỳ so sánh</th>
                                     <th>Chênh lệch</th>
@@ -160,8 +137,7 @@
         </div>
     </div>
 
-    <script src="data-loader.js"></script>
-    <script src="script.js"></script>
+    <script src="data-ds.js"></script>
+    <script src="script-ds.js"></script>
 </body>
-
 </html>
