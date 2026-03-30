@@ -242,7 +242,7 @@ function showNotification(message, type = 'info') {
 
 // ==================== 6 BIỂU ĐỒ CHÍNH ====================
 
-// Biểu đồ 1: So sánh doanh số ngành hàng (Bar chart)
+// Biểu đồ 1: So sánh doanh thu ngành hàng (Bar chart)
 async function renderCategoryComparisonChart() {
     const ctx = document.getElementById('categoryComparisonChart').getContext('2d');
     if (categoryComparisonChart) categoryComparisonChart.destroy();
@@ -300,7 +300,7 @@ async function renderCategoryComparisonChart() {
             scales: { 
                 y: { 
                     ticks: { callback: value => formatMoney(value) }, 
-                    title: { display: true, text: 'Doanh số' } 
+                    title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Ngành hàng' } }
             }
@@ -466,7 +466,7 @@ async function renderTopProductsLineChart() {
             scales: { 
                 y: { 
                     ticks: { callback: value => formatMoney(value) }, 
-                    title: { display: true, text: 'Doanh số' } 
+                    title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Sản phẩm' } }
             }
@@ -488,7 +488,7 @@ async function renderBottomProductsLineChart() {
     const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
-    // Lọc sản phẩm có doanh số > 0
+    // Lọc sản phẩm có doanh thu > 0
     const productsWithRevenue = currentProducts.filter(p => p.revenue > 0);
     const bottomProductsList = productsWithRevenue.slice(-10).reverse();
     
@@ -567,7 +567,7 @@ async function renderBottomProductsLineChart() {
             scales: { 
                 y: { 
                     ticks: { callback: value => formatMoney(value) }, 
-                    title: { display: true, text: 'Doanh số' } 
+                    title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Sản phẩm' } }
             }
@@ -633,8 +633,8 @@ async function renderTopGrowthProductsChart() {
                             const item = topGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatMoney(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatMoney(item.compareRevenue)}`
+                                `Doanh thu hiện tại: ${formatMoney(item.currentRevenue)}`,
+                                `Doanh thu so sánh: ${formatMoney(item.compareRevenue)}`
                             ];
                         }
                     }
@@ -718,8 +718,8 @@ async function renderBottomGrowthProductsChart() {
                             const item = bottomGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatMoney(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatMoney(item.compareRevenue)}`
+                                `Doanh thu hiện tại: ${formatMoney(item.currentRevenue)}`,
+                                `Doanh thu so sánh: ${formatMoney(item.compareRevenue)}`
                             ];
                         }
                     }
@@ -838,12 +838,12 @@ async function renderStatsCards() {
     const statsGrid = document.getElementById('statsGrid');
     statsGrid.innerHTML = `
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh số kỳ hiện tại</div>
+            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh thu kỳ hiện tại</div>
             <div class="stat-value">${formatMoney(currentRevenueTotal)}</div>
             <div class="stat-compare">Kỳ so sánh: ${formatMoney(compareRevenueTotal)}</div>
         </div>
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh số</div>
+            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh thu</div>
             <div class="stat-value ${revenueGrowth >= 0 ? 'trend-up' : 'trend-down'}">${revenueGrowth >= 0 ? '+' : ''}${revenueGrowth.toFixed(1)}%</div>
             <div class="stat-compare">Chênh lệch: ${formatMoney(Math.abs(revenueDiff))}</div>
         </div>

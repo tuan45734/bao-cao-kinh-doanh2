@@ -18,11 +18,11 @@
                 <i class="fas fa-chart-line"></i>
                 Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ
             </h1>
-            <div class="subtitle">Phân tích doanh số theo ngành hàng | Top sản phẩm | Tăng trưởng sản phẩm</div>
+            <div class="subtitle">Phân tích doanh thu theo ngành hàng | Top sản phẩm | Tăng trưởng sản phẩm</div>
         </div>
 
         <a href="index-ds.html" class="report-link">
-            <div><--- Báo cáo doanh số</div>
+            <div><--- Báo cáo doanh thu</div>
         </a>
 
 
@@ -85,13 +85,13 @@
                 <!-- Charts Row 1: So sánh ngành hàng + Cơ cấu ngành hàng -->
                 <div class="charts-grid">
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-bar"></i> 1. So sánh doanh số ngành hàng</h3>
+                        <h3><i class="fas fa-chart-bar"></i> 1. So sánh doanh thu ngành hàng</h3>
                         <div class="chart-wrapper">
                             <canvas id="categoryComparisonChart"></canvas>
                         </div>
                     </div>
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-pie"></i> 2. Cơ cấu doanh số theo ngành hàng</h3>
+                        <h3><i class="fas fa-chart-pie"></i> 2. Cơ cấu doanh thu theo ngành hàng</h3>
                         <div class="chart-wrapper">
                             <canvas id="categoryStructureChart"></canvas>
                         </div>
@@ -136,7 +136,7 @@
                 <div class="table-card">
                     <div class="table-header"
                         style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh số theo sản phẩm</h3>
+                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh thu theo sản phẩm</h3>
                         <div class="filter-group" style="min-width: 300px; margin-bottom: 0;">
                             <input type="text" id="searchProduct" placeholder="Nhập tên sản phẩm cần tìm..."
                                 onkeyup="searchProduct()">
@@ -147,8 +147,8 @@
                             <thead>
                                 <tr>
                                     <th>Sản phẩm</th>
-                                    <th>Doanh số kỳ hiện tại</th>
-                                    <th>Doanh số kỳ so sánh</th>
+                                    <th>Doanh thu kỳ hiện tại</th>
+                                    <th>Doanh thu kỳ so sánh</th>
                                     <th>Chênh lệch</th>
                                     <th>Tỷ lệ tăng trưởng</th>
                                 </tr>
