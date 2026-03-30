@@ -6,6 +6,10 @@ let compareRawData = null;      // Raw data for product filtering
 let currentType = 'month';
 let isLoading = false;
 
+// Store aggregated data for quarter/year views
+let currentAggregatedData = null;
+let compareAggregatedData = null;
+
 // Chart instances
 let categoryComparisonChart = null;
 let categoryStructureChart = null;
@@ -128,6 +132,23 @@ function calculateTotalRevenue(data) {
     return data.reduce((sum, item) => sum + (item.revenue || 0), 0);
 }
 
+// Get current raw data (handles month/quarter/year)
+function getCurrentRawData() {
+    if (currentType === 'month') {
+        return currentData;
+    } else {
+        return currentAggregatedData;
+    }
+}
+
+function getCompareRawData() {
+    if (currentType === 'month') {
+        return compareData;
+    } else {
+        return compareAggregatedData;
+    }
+}
+
 // Filter raw data by region and area
 function filterRawDataByRegion(data) {
     if (!data || !data.data) return data;
@@ -154,9 +175,9 @@ function filterRawDataByRegion(data) {
     return { ...data, data: filteredData };
 }
 
-// Load filtered product data
-async function loadFilteredProductData(year, month) {
-    const rawData = await loadRawData(year, month);
+// Load filtered product data from current raw data
+async function getFilteredProductData(isCurrent = true) {
+    const rawData = isCurrent ? getCurrentRawData() : getCompareRawData();
     if (!rawData || !rawData.data) return [];
     
     const filteredRaw = filterRawDataByRegion(rawData);
@@ -173,9 +194,9 @@ async function loadFilteredProductData(year, month) {
         .sort((a, b) => b.revenue - a.revenue);
 }
 
-// Load filtered category data
-async function loadFilteredCategoryData(year, month) {
-    const rawData = await loadRawData(year, month);
+// Load filtered category data from current raw data
+async function getFilteredCategoryData(isCurrent = true) {
+    const rawData = isCurrent ? getCurrentRawData() : getCompareRawData();
     if (!rawData || !rawData.data) return [];
     
     const filteredRaw = filterRawDataByRegion(rawData);
@@ -247,13 +268,8 @@ async function renderCategoryComparisonChart() {
     const ctx = document.getElementById('categoryComparisonChart').getContext('2d');
     if (categoryComparisonChart) categoryComparisonChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentCategories = await loadFilteredCategoryData(currentYear, currentMonth);
-    const compareCategories = await loadFilteredCategoryData(compareYear, compareMonth);
+    const currentCategories = await getFilteredCategoryData(true);
+    const compareCategories = await getFilteredCategoryData(false);
     const compareMap = new Map(compareCategories.map(c => [c.name, c.revenue]));
     
     const topCategories = currentCategories.slice(0, 8);
@@ -267,7 +283,7 @@ async function renderCategoryComparisonChart() {
             labels: labels,
             datasets: [
                 {
-                    label: `${currentYear}/${currentMonth}`,
+                    label: `Kỳ hiện tại`,
                     data: currentDataValues,
                     backgroundColor: 'rgba(102, 126, 234, 0.8)',
                     borderColor: 'rgba(102, 126, 234, 1)',
@@ -275,7 +291,7 @@ async function renderCategoryComparisonChart() {
                     borderRadius: 8
                 },
                 {
-                    label: `${compareYear}/${compareMonth}`,
+                    label: `Kỳ so sánh`,
                     data: compareDataValues,
                     backgroundColor: 'rgba(118, 75, 162, 0.6)',
                     borderColor: 'rgba(118, 75, 162, 1)',
@@ -313,10 +329,7 @@ async function renderCategoryStructureChart() {
     const ctx = document.getElementById('categoryStructureChart').getContext('2d');
     if (categoryStructureChart) categoryStructureChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    
-    const categories = await loadFilteredCategoryData(currentYear, currentMonth);
+    const categories = await getFilteredCategoryData(true);
     const topCategories = categories.slice(0, 8);
     const otherRevenue = categories.slice(8).reduce((sum, c) => sum + c.revenue, 0);
     
@@ -381,13 +394,8 @@ async function renderTopProductsLineChart() {
     const ctx = document.getElementById('topProductsLineChart').getContext('2d');
     if (topProductsChart) topProductsChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const currentProducts = await getFilteredProductData(true);
+    const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
     const topProductsList = currentProducts.slice(0, 10);
@@ -401,7 +409,7 @@ async function renderTopProductsLineChart() {
             labels: labels,
             datasets: [
                 {
-                    label: `${currentYear}/${currentMonth}`,
+                    label: `Kỳ hiện tại`,
                     data: currentRevenues,
                     borderColor: 'rgba(102, 126, 234, 1)',
                     backgroundColor: 'rgba(102, 126, 234, 0.1)',
@@ -415,7 +423,7 @@ async function renderTopProductsLineChart() {
                     pointHoverRadius: 7
                 },
                 {
-                    label: `${compareYear}/${compareMonth}`,
+                    label: `Kỳ so sánh`,
                     data: compareRevenues,
                     borderColor: 'rgba(255, 159, 64, 1)',
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
@@ -479,13 +487,8 @@ async function renderBottomProductsLineChart() {
     const ctx = document.getElementById('bottomProductsLineChart').getContext('2d');
     if (bottomProductsChart) bottomProductsChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const currentProducts = await getFilteredProductData(true);
+    const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
     // Lọc sản phẩm có doanh thu > 0
@@ -502,7 +505,7 @@ async function renderBottomProductsLineChart() {
             labels: labels,
             datasets: [
                 {
-                    label: `${currentYear}/${currentMonth}`,
+                    label: `Kỳ hiện tại`,
                     data: currentRevenues,
                     borderColor: 'rgba(244, 67, 54, 1)',
                     backgroundColor: 'rgba(244, 67, 54, 0.1)',
@@ -516,7 +519,7 @@ async function renderBottomProductsLineChart() {
                     pointHoverRadius: 7
                 },
                 {
-                    label: `${compareYear}/${compareMonth}`,
+                    label: `Kỳ so sánh`,
                     data: compareRevenues,
                     borderColor: 'rgba(255, 159, 64, 1)',
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
@@ -580,13 +583,8 @@ async function renderTopGrowthProductsChart() {
     const ctx = document.getElementById('topGrowthProductsChart').getContext('2d');
     if (topGrowthProductsChart) topGrowthProductsChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const currentProducts = await getFilteredProductData(true);
+    const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
     const growthData = currentProducts.map(p => {
@@ -665,13 +663,8 @@ async function renderBottomGrowthProductsChart() {
     const ctx = document.getElementById('bottomGrowthProductsChart').getContext('2d');
     if (bottomGrowthProductsChart) bottomGrowthProductsChart.destroy();
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const currentProducts = await getFilteredProductData(true);
+    const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
     const growthData = currentProducts.map(p => {
@@ -751,17 +744,12 @@ async function renderBottomGrowthProductsChart() {
 async function renderProductDetailTable() {
     const tbody = document.getElementById('detailTableBody');
     
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-    const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+    const currentProducts = await getFilteredProductData(true);
+    const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
     if (!currentProducts || currentProducts.length === 0) {
-        tbody.innerHTML = '编码<td colspan="5" style="text-align: center;">Không có dữ liệu sản phẩm</td> </div>';
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Không có dữ liệu sản phẩm</td></tr>';
         return;
     }
     
@@ -787,19 +775,14 @@ function searchProduct() {
     
     // Re-render with filter
     (async () => {
-        const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-        const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-        const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-        const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-        
-        const currentProducts = await loadFilteredProductData(currentYear, currentMonth);
-        const compareProducts = await loadFilteredProductData(compareYear, compareMonth);
+        const currentProducts = await getFilteredProductData(true);
+        const compareProducts = await getFilteredProductData(false);
         const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
         
         const filteredProducts = currentProducts.filter(p => p.name.toLowerCase().includes(searchTerm));
         
         if (filteredProducts.length === 0) {
-            tbody.innerHTML = '编码<td colspan="5" style="text-align: center;">Không tìm thấy sản phẩm</td> </div>';
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Không tìm thấy sản phẩm</td></tr>';
             return;
         }
         
@@ -822,30 +805,50 @@ function searchProduct() {
 
 // Stats Cards
 async function renderStatsCards() {
-    const currentYear = parseInt(document.getElementById('currentYear')?.value || 2026);
-    const currentMonth = parseInt(document.getElementById('currentMonth')?.value || 3);
-    const compareYear = parseInt(document.getElementById('compareYear')?.value || 2025);
-    const compareMonth = parseInt(document.getElementById('compareMonth')?.value || 3);
-    
-    const currentCategories = await loadFilteredCategoryData(currentYear, currentMonth);
-    const compareCategories = await loadFilteredCategoryData(compareYear, compareMonth);
+    const currentCategories = await getFilteredCategoryData(true);
+    const compareCategories = await getFilteredCategoryData(false);
     
     currentRevenueTotal = calculateTotalRevenue(currentCategories);
     compareRevenueTotal = calculateTotalRevenue(compareCategories);
     const revenueDiff = currentRevenueTotal - compareRevenueTotal;
     const revenueGrowth = compareRevenueTotal > 0 ? (revenueDiff / compareRevenueTotal * 100) : 0;
     
+    // Get period labels for display
+    let currentLabel = '';
+    let compareLabel = '';
+    
+    if (currentType === 'month') {
+        const currentYear = document.getElementById('currentYear')?.value || 2026;
+        const currentMonth = document.getElementById('currentMonth')?.value || 3;
+        const compareYear = document.getElementById('compareYear')?.value || 2025;
+        const compareMonth = document.getElementById('compareMonth')?.value || 3;
+        currentLabel = `${currentYear}/${currentMonth}`;
+        compareLabel = `${compareYear}/${compareMonth}`;
+    } else if (currentType === 'quarter') {
+        const currentYear = document.getElementById('currentYear')?.value || 2026;
+        const currentQuarter = document.getElementById('currentQuarter')?.value || 4;
+        const compareYear = document.getElementById('compareYear')?.value || 2025;
+        const compareQuarter = document.getElementById('compareQuarter')?.value || 4;
+        currentLabel = `${currentYear} - Q${currentQuarter}`;
+        compareLabel = `${compareYear} - Q${compareQuarter}`;
+    } else {
+        const currentYear = document.getElementById('currentYear')?.value || 2026;
+        const compareYear = document.getElementById('compareYear')?.value || 2025;
+        currentLabel = `Năm ${currentYear}`;
+        compareLabel = `Năm ${compareYear}`;
+    }
+    
     const statsGrid = document.getElementById('statsGrid');
     statsGrid.innerHTML = `
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
             <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh thu kỳ hiện tại</div>
             <div class="stat-value">${formatMoney(currentRevenueTotal)}</div>
-            <div class="stat-compare">Kỳ so sánh: ${formatMoney(compareRevenueTotal)}</div>
+            <div class="stat-compare">${currentLabel}</div>
         </div>
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
             <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh thu</div>
             <div class="stat-value ${revenueGrowth >= 0 ? 'trend-up' : 'trend-down'}">${revenueGrowth >= 0 ? '+' : ''}${revenueGrowth.toFixed(1)}%</div>
-            <div class="stat-compare">Chênh lệch: ${formatMoney(Math.abs(revenueDiff))}</div>
+            <div class="stat-compare">So với ${compareLabel}</div>
         </div>
         <div class="stat-card">
             <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng ngành hàng</div>
@@ -883,11 +886,11 @@ function onRegionChange() {
     areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
         areas.map(area => `<option value="${area}">${area}</option>`).join('');
     
-    if (currentData) renderReport();
+    renderReport();
 }
 
 function onAreaChange() {
-    if (currentData) renderReport();
+    renderReport();
 }
 
 function getAreasByRegion(region) {
@@ -959,16 +962,20 @@ async function loadCompareData() {
             const compareMonth = parseInt(document.getElementById('compareMonth').value);
             currentData = await loadRawData(currentYear, currentMonth);
             compareData = await loadRawData(compareYear, compareMonth);
+            currentAggregatedData = null;
+            compareAggregatedData = null;
         } else if (currentType === 'quarter') {
-            // For quarter, we need to aggregate raw data
             const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
             const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
-            // Load and aggregate quarter data
-            currentData = await loadRawDataForQuarter(currentYear, currentQuarter);
-            compareData = await loadRawDataForQuarter(compareYear, compareQuarter);
+            currentAggregatedData = await loadRawDataForQuarter(currentYear, currentQuarter);
+            compareAggregatedData = await loadRawDataForQuarter(compareYear, compareQuarter);
+            currentData = null;
+            compareData = null;
         } else {
-            currentData = await loadRawDataForYear(currentYear);
-            compareData = await loadRawDataForYear(compareYear);
+            currentAggregatedData = await loadRawDataForYear(currentYear);
+            compareAggregatedData = await loadRawDataForYear(compareYear);
+            currentData = null;
+            compareData = null;
         }
         
         await renderReport();
@@ -1036,6 +1043,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         currentData = await loadRawData(2026, 3);
         compareData = await loadRawData(2025, 3);
+        currentAggregatedData = null;
+        compareAggregatedData = null;
         await renderReport();
     } catch (error) {
         console.error('Error loading default data:', error);
