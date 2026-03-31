@@ -2,9 +2,9 @@
   "metadata": {
     "year": 2026,
     "month": 3,
-    "total_records": 217607,
+    "total_records": 218772,
     "total_products": 1607,
-    "exported_at": "2026-03-31T01:58:13.019Z"
+    "exported_at": "2026-03-31T04:46:35.494Z"
   },
   "data": [
     {
@@ -71,13 +71,13 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 672.300000000001,
-      "revenue": 932480100,
+      "cases": 676.800000000001,
+      "revenue": 938721600,
       "npp": "NPP Ánh Thu",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 483
+      "count": 488
     },
     {
       "ma_sp": "HH00029",
@@ -107,25 +107,25 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 598.860000000004,
-      "revenue": 830618820,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
+      "cases": 605.1800000000002,
+      "revenue": 839384660,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 1019
+      "count": 634
     },
     {
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 587.8500000000003,
-      "revenue": 815347950,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
+      "cases": 602.2200000000039,
+      "revenue": 835279140,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
       "year": 2026,
       "month": 3,
-      "count": 614
+      "count": 1023
     },
     {
       "ma_sp": "HH00029",
@@ -155,13 +155,13 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 562.9249999999981,
-      "revenue": 780776975,
+      "cases": 562.6249999999981,
+      "revenue": 780360875,
       "npp": "NPP Dương Minh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 545
+      "count": 544
     },
     {
       "ma_sp": "HH00029",
@@ -203,6 +203,18 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
+      "cases": 552.0000000000023,
+      "revenue": 765624000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 528
+    },
+    {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
       "cases": 549.9799999999994,
       "revenue": 762822260,
       "npp": "NPP Thảo Xuân",
@@ -215,13 +227,25 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 542.1800000000021,
-      "revenue": 752003660,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
+      "cases": 523.9999999999991,
+      "revenue": 726788000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 517
+      "count": 459
+    },
+    {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 520.6399999999991,
+      "revenue": 722127680,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 732
     },
     {
       "ma_sp": "HH00015",
@@ -251,25 +275,13 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 514.9999999999992,
-      "revenue": 714305000,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 704
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 512.7000000000003,
-      "revenue": 711114900,
+      "cases": 514.0000000000001,
+      "revenue": 712918000,
       "npp": "NPP Hưng Thịnh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 501
+      "count": 506
     },
     {
       "ma_sp": "HH00029",
@@ -282,6 +294,30 @@
       "year": 2026,
       "month": 3,
       "count": 363
+    },
+    {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 508.4700000000026,
+      "revenue": 705247890,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 646
+    },
+    {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 503.4500000000018,
+      "revenue": 698285150,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 607
     },
     {
       "ma_sp": "HH00029",
@@ -311,25 +347,13 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 496.2600000000025,
-      "revenue": 688312620,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 637
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 484.6700000000007,
-      "revenue": 672237290,
+      "cases": 490.2700000000008,
+      "revenue": 680004490,
       "npp": "NPP Vũ Tấm",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 742
+      "count": 753
     },
     {
       "ma_sp": "HH00029",
@@ -354,18 +378,6 @@
       "year": 2026,
       "month": 3,
       "count": 504
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 479.41999999999894,
-      "revenue": 664955540,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 427
     },
     {
       "ma_sp": "HH00029",
@@ -443,18 +455,6 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 460.65000000000157,
-      "revenue": 638921550,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 572
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
       "cases": 455.1300000000008,
       "revenue": 631265310,
       "npp": "NPP Đức Oanh",
@@ -515,13 +515,25 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 420.80000000000035,
-      "revenue": 583649600,
+      "cases": 422.8000000000004,
+      "revenue": 586423600,
       "npp": "NPP Công Giang",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 347
+      "count": 349
+    },
+    {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 411.85999999999837,
+      "revenue": 571249820,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 377
     },
     {
       "ma_sp": "HH00029",
@@ -548,6 +560,18 @@
       "count": 398
     },
     {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 405.3050000000006,
+      "revenue": 562158035,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 650
+    },
+    {
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
@@ -558,18 +582,6 @@
       "year": 2026,
       "month": 3,
       "count": 625
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 398.83000000000055,
-      "revenue": 553177210,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 644
     },
     {
       "ma_sp": "HH00029",
@@ -623,25 +635,25 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 382.93999999999863,
-      "revenue": 531137780,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
+      "cases": 376.7400000000008,
+      "revenue": 522538380,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 350
+      "count": 398
     },
     {
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 366.75000000000017,
-      "revenue": 508682250,
+      "cases": 370.15000000000015,
+      "revenue": 513398050,
       "npp": "NPP Linh Trang",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 343
+      "count": 348
     },
     {
       "ma_sp": "HH00029",
@@ -671,37 +683,25 @@
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 354.0000000000013,
-      "revenue": 490998000,
+      "cases": 354.6000000000014,
+      "revenue": 491830200,
       "npp": "NPP Thảo Thắng",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 630
-    },
-    {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 325.9200000000004,
-      "revenue": 452051040,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 367
+      "count": 631
     },
     {
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 533.5187885985777,
-      "revenue": 449222820,
+      "cases": 534.852185273162,
+      "revenue": 450345540,
       "npp": "NPP Ánh Thu",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 459
+      "count": 462
     },
     {
       "ma_sp": "HH00029",
@@ -728,28 +728,40 @@
       "count": 259
     },
     {
+      "ma_sp": "HH00029",
+      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 297.66000000000065,
+      "revenue": 412854420,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 418
+    },
+    {
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 483.2312885985782,
-      "revenue": 406880745,
+      "cases": 483.73131235154733,
+      "revenue": 407301765,
       "npp": "NPP Hoàng Minh",
       "kv": "KV5",
       "year": 2026,
       "month": 3,
-      "count": 760
+      "count": 761
     },
     {
       "ma_sp": "HH00029",
       "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 292.14000000000067,
-      "revenue": 405198180,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
+      "cases": 287.9549999999997,
+      "revenue": 399393585,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 406
+      "count": 369
     },
     {
       "ma_sp": "HH00029",
@@ -968,18 +980,6 @@
       "count": 632
     },
     {
-      "ma_sp": "HH00029",
-      "ten_sp": "Chân gà rút xương bà Tuyết 26g (26g*200 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 222.45499999999956,
-      "revenue": 308545085,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 358
-    },
-    {
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
@@ -1019,13 +1019,13 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 334.23254394299465,
-      "revenue": 281423802,
+      "cases": 319.8985296912131,
+      "revenue": 269354562,
       "npp": "NPP Tuấn Huê",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 374
+      "count": 351
     },
     {
       "ma_sp": "HH00105",
@@ -1038,6 +1038,18 @@
       "year": 2026,
       "month": 3,
       "count": 481
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 317.1801187648463,
+      "revenue": 267065660,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 233
     },
     {
       "ma_sp": "HH00033",
@@ -1103,25 +1115,13 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 281.3450831353925,
-      "revenue": 236892560,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 213
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 275.3463657957257,
-      "revenue": 231841640,
+      "cases": 276.01306413301785,
+      "revenue": 232403000,
       "npp": "NPP Hưng Thịnh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 479
+      "count": 482
     },
     {
       "ma_sp": "HH00015",
@@ -1151,49 +1151,73 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 262.4458004750613,
-      "revenue": 220979364,
+      "cases": 267.44603800475244,
+      "revenue": 225189564,
       "npp": "NPP Thảo Nam",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 347
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 248.82492399049934,
-      "revenue": 209510586,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 227
+      "count": 352
     },
     {
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 149.99999999999994,
-      "revenue": 208050000,
+      "cases": 155.99999999999994,
+      "revenue": 216372000,
       "npp": "NPP Ngọc Thêu",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 190
+      "count": 203
     },
     {
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 237.1779334916875,
-      "revenue": 199703820,
+      "cases": 250.65834441805282,
+      "revenue": 211054326,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 231
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 246.34503562945474,
+      "revenue": 207422520,
       "npp": "NPP Ngọc Thêu",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 299
+      "count": 318
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 235.5088598574832,
+      "revenue": 198298460,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 392
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 235.38618171021417,
+      "revenue": 198195165,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 543
     },
     {
       "ma_sp": "HH00015",
@@ -1206,18 +1230,6 @@
       "year": 2026,
       "month": 3,
       "count": 213
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 233.67543942992972,
-      "revenue": 196754720,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 387
     },
     {
       "ma_sp": "HH00015",
@@ -1247,18 +1259,6 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 228.55252375296942,
-      "revenue": 192441225,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 525
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
       "cases": 226.77558669833792,
       "revenue": 190945044,
       "npp": "NPP Tân Hoa",
@@ -1280,6 +1280,18 @@
       "count": 603
     },
     {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 224.5856686460818,
+      "revenue": 189101133,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 531
+    },
+    {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -1290,18 +1302,6 @@
       "year": 2026,
       "month": 3,
       "count": 502
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 224.41899406175875,
-      "revenue": 188960793,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 530
     },
     {
       "ma_sp": "HH00033",
@@ -1331,13 +1331,25 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 221.71053206650942,
-      "revenue": 186680268,
+      "cases": 220.0104513064144,
+      "revenue": 185248800,
       "npp": "NPP Hoa Việt",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 305
+      "count": 304
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 219.32604038004803,
+      "revenue": 184672526,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 402
     },
     {
       "ma_sp": "HH00015",
@@ -1362,18 +1374,6 @@
       "year": 2026,
       "month": 3,
       "count": 342
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 209.3255653206655,
-      "revenue": 176252126,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 370
     },
     {
       "ma_sp": "HH00015",
@@ -1499,13 +1499,13 @@
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 108.35999999999989,
-      "revenue": 150295320,
+      "cases": 108.95999999999987,
+      "revenue": 151127520,
       "npp": "NPP Long Liên",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 122
+      "count": 126
     },
     {
       "ma_sp": "HH00033",
@@ -1547,6 +1547,18 @@
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
+      "cases": 104.34999999999974,
+      "revenue": 144733450,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 179
+    },
+    {
+      "ma_sp": "HH00033",
+      "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
+      "category": "Chân gà",
       "cases": 104.30500000000013,
       "revenue": 144671035,
       "npp": "NPP Dũng Béo",
@@ -1556,28 +1568,28 @@
       "count": 376
     },
     {
-      "ma_sp": "HH00033",
-      "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 103.74999999999974,
-      "revenue": 143901250,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
+      "cases": 171.47124940617636,
+      "revenue": 144378792,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 177
+      "count": 242
     },
     {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 329.66666666666686,
-      "revenue": 142416000,
+      "cases": 330.41666666666686,
+      "revenue": 142740000,
       "npp": "NPP Linh Trang",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 297
+      "count": 301
     },
     {
       "ma_sp": "HH00015",
@@ -1595,13 +1607,13 @@
       "ma_sp": "HH00015",
       "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
       "category": "Chân gà",
-      "cases": 163.13775771971547,
-      "revenue": 137361992,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
+      "cases": 163.00769596199564,
+      "revenue": 137252480,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 228
+      "count": 180
     },
     {
       "ma_sp": "HH00105",
@@ -1626,6 +1638,18 @@
       "year": 2026,
       "month": 3,
       "count": 177
+    },
+    {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 160.8359382422805,
+      "revenue": 135423860,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 251
     },
     {
       "ma_sp": "HH00071",
@@ -1686,30 +1710,6 @@
       "year": 2026,
       "month": 3,
       "count": 173
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 153.8359382422805,
-      "revenue": 129529860,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 247
-    },
-    {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 153.0072209026131,
-      "revenue": 128832080,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 174
     },
     {
       "ma_sp": "HH00015",
@@ -1940,6 +1940,18 @@
       "count": 212
     },
     {
+      "ma_sp": "HH00015",
+      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
+      "category": "Chân gà",
+      "cases": 110.47191448931119,
+      "revenue": 93017352,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 164
+    },
+    {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -1964,40 +1976,28 @@
       "count": 397
     },
     {
-      "ma_sp": "HH00015",
-      "ten_sp": "Chân gà tê cay bà Tuyết 40g (40g*120 gói/thùng)",
-      "category": "Chân gà",
-      "cases": 103.30490736342044,
-      "revenue": 86982732,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 151
-    },
-    {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 199.50000000000003,
-      "revenue": 86184000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 275
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 197.62499999999991,
-      "revenue": 85374000,
+      "cases": 204.29166666666657,
+      "revenue": 88254000,
       "npp": "NPP Hà Thanh",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 505
+      "count": 518
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 200.00000000000003,
+      "revenue": 86400000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 278
     },
     {
       "ma_sp": "HH00033",
@@ -2135,22 +2135,22 @@
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 173.95833333333312,
-      "revenue": 75150000,
-      "npp": "NPP Nguyễn Đình Hân",
-      "kv": "KV4",
+      "cases": 175.03333333333362,
+      "revenue": 75614400,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 393
+      "count": 404
     },
     {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 172.95000000000024,
-      "revenue": 74714400,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
+      "cases": 173.95833333333312,
+      "revenue": 75150000,
+      "npp": "NPP Nguyễn Đình Hân",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
       "count": 393
@@ -2171,13 +2171,13 @@
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 53.10500000000005,
-      "revenue": 73656635,
+      "cases": 53.30500000000005,
+      "revenue": 73934035,
       "npp": "NPP Vũ Tấm",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 158
+      "count": 160
     },
     {
       "ma_sp": "HH00033",
@@ -2192,6 +2192,18 @@
       "count": 48
     },
     {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 168.33333333333314,
+      "revenue": 72720000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 392
+    },
+    {
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
@@ -2202,18 +2214,6 @@
       "year": 2026,
       "month": 3,
       "count": 152
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 163.49999999999977,
-      "revenue": 70632000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 381
     },
     {
       "ma_sp": "HH00015",
@@ -2339,6 +2339,18 @@
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 148.5083333333334,
+      "revenue": 64155600,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 399
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 148.14999999999995,
       "revenue": 64000800,
       "npp": "NPP Tuấn Huyền",
@@ -2370,18 +2382,6 @@
       "year": 2026,
       "month": 3,
       "count": 319
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 143.25833333333344,
-      "revenue": 61887600,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 390
     },
     {
       "ma_sp": "HH00071",
@@ -2447,13 +2447,13 @@
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
-      "cases": 43.200000000000074,
-      "revenue": 59918400,
+      "cases": 43.80000000000007,
+      "revenue": 60750600,
       "npp": "NPP Hưng Thịnh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 155
+      "count": 157
     },
     {
       "ma_sp": "HH00033",
@@ -2564,6 +2564,18 @@
       "count": 107
     },
     {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 125.16666666666671,
+      "revenue": 54072000,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 224
+    },
+    {
       "ma_sp": "HH00033",
       "ten_sp": "Chân gà rút xương sả tắc 26g (26g*200 gói/thùng)",
       "category": "Chân gà",
@@ -2574,18 +2586,6 @@
       "year": 2026,
       "month": 3,
       "count": 116
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 124.16666666666669,
-      "revenue": 53640000,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
-      "year": 2026,
-      "month": 3,
-      "count": 222
     },
     {
       "ma_sp": "HH00063",
@@ -2651,13 +2651,13 @@
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 120.08333333333324,
-      "revenue": 51876000,
+      "cases": 120.41666666666657,
+      "revenue": 52020000,
       "npp": "NPP Ánh Thu",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 339
+      "count": 341
     },
     {
       "ma_sp": "HH00015",
@@ -2687,6 +2687,18 @@
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 112.91666666666671,
+      "revenue": 48780000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 254
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 112.9166666666667,
       "revenue": 48780000,
       "npp": "NPP Hùng Huệ",
@@ -2706,18 +2718,6 @@
       "year": 2026,
       "month": 3,
       "count": 31
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 111.91666666666671,
-      "revenue": 48348000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 251
     },
     {
       "ma_sp": "HH00033",
@@ -2927,6 +2927,18 @@
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 91.30833333333332,
+      "revenue": 39445200,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 431
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 90.83333333333337,
       "revenue": 39240000,
       "npp": "NPP Dũng Cúc",
@@ -2958,18 +2970,6 @@
       "year": 2026,
       "month": 3,
       "count": 127
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 88.1416666666667,
-      "revenue": 38077200,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 426
     },
     {
       "ma_sp": "HH00015",
@@ -3008,6 +3008,18 @@
       "count": 83
     },
     {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 87.04999999999991,
+      "revenue": 37605600,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 315
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -3030,18 +3042,6 @@
       "year": 2026,
       "month": 3,
       "count": 235
-    },
-    {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 85.79999999999991,
-      "revenue": 37065600,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 307
     },
     {
       "ma_sp": "HH00019",
@@ -3131,13 +3131,13 @@
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 80.6666666666666,
-      "revenue": 34848000,
+      "cases": 81.1666666666666,
+      "revenue": 35064000,
       "npp": "NPP Thảo Nam",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 197
+      "count": 198
     },
     {
       "ma_sp": "HH00072",
@@ -3164,6 +3164,30 @@
       "count": 280
     },
     {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 78.99166666666657,
+      "revenue": 34124400,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 463
+    },
+    {
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 77.5,
+      "revenue": 33480000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 84
+    },
+    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -3174,18 +3198,6 @@
       "year": 2026,
       "month": 3,
       "count": 286
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 77.32499999999995,
-      "revenue": 33404400,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 457
     },
     {
       "ma_sp": "HH00033",
@@ -3308,18 +3320,6 @@
       "count": 193
     },
     {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 74.49999999999999,
-      "revenue": 32184000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 82
-    },
-    {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -3330,6 +3330,18 @@
       "year": 2026,
       "month": 3,
       "count": 268
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 73.99999999999989,
+      "revenue": 31968000,
+      "npp": "NPP Anh Đức",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 261
     },
     {
       "ma_sp": "HH00072",
@@ -3354,18 +3366,6 @@
       "year": 2026,
       "month": 3,
       "count": 556
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 73.66666666666656,
-      "revenue": 31824000,
-      "npp": "NPP Anh Đức",
-      "kv": "KV5",
-      "year": 2026,
-      "month": 3,
-      "count": 260
     },
     {
       "ma_sp": "HH00072",
@@ -3443,13 +3443,37 @@
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 67.58333333333353,
-      "revenue": 29196000,
+      "cases": 68.01666666666686,
+      "revenue": 29383200,
       "npp": "NPP Ngọc Phúc",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 296
+      "count": 298
+    },
+    {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 67.91666666666666,
+      "revenue": 29340000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 249
+    },
+    {
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 67.33333333333336,
+      "revenue": 29088000,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 115
     },
     {
       "ma_sp": "HH00105",
@@ -3476,18 +3500,6 @@
       "count": 121
     },
     {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 66.83333333333333,
-      "revenue": 28872000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 245
-    },
-    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -3512,6 +3524,18 @@
       "count": 121
     },
     {
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 66.49999999999997,
+      "revenue": 28728000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 134
+    },
+    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -3522,6 +3546,18 @@
       "year": 2026,
       "month": 3,
       "count": 275
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 65.41666666666666,
+      "revenue": 28260000,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 82
     },
     {
       "ma_sp": "HH00056",
@@ -3548,28 +3584,16 @@
       "count": 92
     },
     {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 65.08333333333333,
-      "revenue": 28116000,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 81
-    },
-    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 65.06666666666669,
-      "revenue": 28108800,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
+      "cases": 65.18333333333337,
+      "revenue": 28159200,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 111
+      "count": 104
     },
     {
       "ma_sp": "HH00074",
@@ -3582,30 +3606,6 @@
       "year": 2026,
       "month": 3,
       "count": 211
-    },
-    {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 64.00000000000001,
-      "revenue": 27648000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 131
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 63.85000000000003,
-      "revenue": 27583200,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 100
     },
     {
       "ma_sp": "HH00071",
@@ -3647,25 +3647,25 @@
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 63.10000000000007,
-      "revenue": 27259200,
+      "cases": 63.50000000000007,
+      "revenue": 27432000,
       "npp": "NPP Hưng Thịnh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 235
+      "count": 237
     },
     {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 62.600000000000044,
-      "revenue": 27043200,
+      "cases": 63.100000000000044,
+      "revenue": 27259200,
       "npp": "NPP Ánh Thu",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 127
+      "count": 128
     },
     {
       "ma_sp": "HH00078",
@@ -3755,13 +3755,13 @@
       "ma_sp": "HH00062",
       "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 59.533333333333395,
-      "revenue": 25718400,
+      "cases": 60.033333333333395,
+      "revenue": 25934400,
       "npp": "NPP Vũ Tấm",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 185
+      "count": 186
     },
     {
       "ma_sp": "HH00078",
@@ -3932,6 +3932,30 @@
       "count": 265
     },
     {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 55.67500000000002,
+      "revenue": 24051600,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 393
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 55.416666666666664,
+      "revenue": 23940000,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 269
+    },
+    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -3954,18 +3978,6 @@
       "year": 2026,
       "month": 3,
       "count": 310
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 55.09166666666668,
-      "revenue": 23799600,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 386
     },
     {
       "ma_sp": "HH00077",
@@ -4019,18 +4031,6 @@
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 54.59166666666666,
-      "revenue": 23583600,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 429
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
       "cases": 54.58333333333331,
       "revenue": 23580000,
       "npp": "NPP Thành Thanh",
@@ -4038,6 +4038,18 @@
       "year": 2026,
       "month": 3,
       "count": 254
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 54.508333333333326,
+      "revenue": 23547600,
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 428
     },
     {
       "ma_sp": "HH00055",
@@ -4100,6 +4112,18 @@
       "count": 202
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 53.75000000000004,
+      "revenue": 23220000,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 173
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -4115,13 +4139,13 @@
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 53.58333333333334,
+      "cases": 53.58333333333338,
       "revenue": 23148000,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 259
+      "count": 398
     },
     {
       "ma_sp": "HH00056",
@@ -4136,16 +4160,16 @@
       "count": 313
     },
     {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 52.91666666666673,
-      "revenue": 22860000,
-      "npp": "NPP Hà Thanh",
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 52.9,
+      "revenue": 22852800,
+      "npp": "NPP Mạnh Hà 1",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 390
+      "count": 105
     },
     {
       "ma_sp": "HH00105",
@@ -4172,18 +4196,6 @@
       "count": 310
     },
     {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 52.75000000000004,
-      "revenue": 22788000,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 170
-    },
-    {
       "ma_sp": "HH00019",
       "ten_sp": "Cá cơm tê cay bà Tuyết 18g (18g/gói*200 gói/thùng)",
       "category": "Cá cơm",
@@ -4194,6 +4206,30 @@
       "year": 2026,
       "month": 3,
       "count": 143
+    },
+    {
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 52.61666666666665,
+      "revenue": 22730400,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 93
+    },
+    {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 51.99999999999993,
+      "revenue": 22464000,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 241
     },
     {
       "ma_sp": "HH00072",
@@ -4244,23 +4280,11 @@
       "count": 49
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 50.5,
-      "revenue": 21816000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 100
-    },
-    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 50.23333333333331,
-      "revenue": 21700800,
+      "cases": 50.16666666666665,
+      "revenue": 21672000,
       "npp": "NPP Linh Trang",
       "kv": "KV6",
       "year": 2026,
@@ -4271,25 +4295,13 @@
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 50.166666666666686,
-      "revenue": 21672000,
+      "cases": 50.00000000000002,
+      "revenue": 21600000,
       "npp": "NPP Hoa Việt",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 249
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 49.94999999999998,
-      "revenue": 21578400,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 85
+      "count": 248
     },
     {
       "ma_sp": "HH00073",
@@ -4316,16 +4328,16 @@
       "count": 116
     },
     {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 49.333333333333236,
-      "revenue": 21312000,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
+      "cases": 49.391666666666644,
+      "revenue": 21337200,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 227
+      "count": 393
     },
     {
       "ma_sp": "HH00079",
@@ -4338,6 +4350,18 @@
       "year": 2026,
       "month": 3,
       "count": 402
+    },
+    {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 48.91666666666665,
+      "revenue": 21132000,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 72
     },
     {
       "ma_sp": "HH00033",
@@ -4388,16 +4412,16 @@
       "count": 265
     },
     {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "ma_sp": "HH00071",
+      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 47.974999999999966,
-      "revenue": 20725200,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
+      "cases": 47.58333333333326,
+      "revenue": 20556000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 389
+      "count": 175
     },
     {
       "ma_sp": "HH00077",
@@ -4412,16 +4436,16 @@
       "count": 157
     },
     {
-      "ma_sp": "HH00071",
-      "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 47.24999999999993,
-      "revenue": 20412000,
-      "npp": "NPP Thảo Nam",
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 47.28666666666674,
+      "revenue": 20427840,
+      "npp": "NPP Vũ Tấm",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 174
+      "count": 203
     },
     {
       "ma_sp": "HH00075",
@@ -4446,18 +4470,6 @@
       "year": 2026,
       "month": 3,
       "count": 201
-    },
-    {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 47.08666666666674,
-      "revenue": 20341440,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 202
     },
     {
       "ma_sp": "HH00072",
@@ -4494,6 +4506,18 @@
       "year": 2026,
       "month": 3,
       "count": 127
+    },
+    {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 46.3333333333333,
+      "revenue": 20016000,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 294
     },
     {
       "ma_sp": "HH00062",
@@ -4568,6 +4592,18 @@
       "count": 250
     },
     {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 45.200000000000024,
+      "revenue": 19526400,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 105
+    },
+    {
       "ma_sp": "HH00071",
       "ten_sp": "Bim bim tăm cay (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -4590,30 +4626,6 @@
       "year": 2026,
       "month": 3,
       "count": 167
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 44.90000000000002,
-      "revenue": 19396800,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 104
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 44.833333333333265,
-      "revenue": 19368000,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
-      "year": 2026,
-      "month": 3,
-      "count": 292
     },
     {
       "ma_sp": "HH00071",
@@ -4712,16 +4724,28 @@
       "count": 243
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 43.37499999999997,
-      "revenue": 18738000,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
+      "cases": 43.5666666666667,
+      "revenue": 18820800,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 382
+      "count": 113
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 43.35000000000001,
+      "revenue": 18727200,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 130
     },
     {
       "ma_sp": "HH00077",
@@ -4736,6 +4760,18 @@
       "count": 241
     },
     {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 43.291666666666636,
+      "revenue": 18702000,
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 381
+    },
+    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -4746,30 +4782,6 @@
       "year": 2026,
       "month": 3,
       "count": 92
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 42.93333333333336,
-      "revenue": 18547200,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 110
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 42.833333333333336,
-      "revenue": 18504000,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 67
     },
     {
       "ma_sp": "HH00100",
@@ -4892,16 +4904,52 @@
       "count": 69
     },
     {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 41.58333333333333,
+      "revenue": 17964000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 170
+    },
+    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 41.50000000000002,
-      "revenue": 17928000,
+      "cases": 41.41666666666669,
+      "revenue": 17892000,
       "npp": "NPP Dương Minh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 351
+      "count": 350
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 41.30000000000006,
+      "revenue": 17841600,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 167
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 41.20000000000005,
+      "revenue": 17798400,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 148
     },
     {
       "ma_sp": "HH00065",
@@ -4916,18 +4964,6 @@
       "count": 302
     },
     {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 40.99999999999999,
-      "revenue": 17712000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 167
-    },
-    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -4938,18 +4974,6 @@
       "year": 2026,
       "month": 3,
       "count": 166
-    },
-    {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 40.90000000000006,
-      "revenue": 17668800,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 164
     },
     {
       "ma_sp": "HH00100",
@@ -4988,52 +5012,52 @@
       "count": 17
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 40.40000000000004,
+      "cases": 40.40000000000005,
       "revenue": 17452800,
-      "npp": "NPP Ngọc Thêu",
+      "npp": "NPP Thành Lụa",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 143
-    },
-    {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 40.10000000000001,
-      "revenue": 17323200,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 115
+      "count": 177
     },
     {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 40.083333333333336,
-      "revenue": 17316000,
+      "cases": 40.31666666666665,
+      "revenue": 17416800,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 249
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 40.166666666666664,
+      "revenue": 17352000,
       "npp": "NPP Duy Anh",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 194
+      "count": 195
     },
     {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 40.00000000000005,
-      "revenue": 17280000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
+      "cases": 40.10000000000001,
+      "revenue": 17323200,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 174
+      "count": 83
     },
     {
       "ma_sp": "HH00063",
@@ -5048,28 +5072,28 @@
       "count": 138
     },
     {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 39.89999999999998,
-      "revenue": 17236800,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 247
-    },
-    {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 39.80000000000001,
-      "revenue": 17193600,
-      "npp": "NPP Mạnh Hà 1",
+      "cases": 39.699999999999996,
+      "revenue": 17150400,
+      "npp": "NPP Linh Trang",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 82
+      "count": 59
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 39.62500000000003,
+      "revenue": 17118000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 123
     },
     {
       "ma_sp": "HH00067",
@@ -5132,18 +5156,6 @@
       "count": 55
     },
     {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 39.37500000000003,
-      "revenue": 17010000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 121
-    },
-    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -5154,6 +5166,18 @@
       "year": 2026,
       "month": 3,
       "count": 120
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 39.249999999999986,
+      "revenue": 16956000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 90
     },
     {
       "ma_sp": "HH00063",
@@ -5216,6 +5240,18 @@
       "count": 202
     },
     {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 38.83333333333337,
+      "revenue": 16776000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 299
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -5228,16 +5264,16 @@
       "count": 205
     },
     {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 38.749999999999986,
-      "revenue": 16740000,
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 38.7,
+      "revenue": 16718400,
       "npp": "NPP Mạnh Hà 1",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 89
+      "count": 87
     },
     {
       "ma_sp": "HH00063",
@@ -5324,6 +5360,18 @@
       "count": 103
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 38.33333333333335,
+      "revenue": 16560000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 215
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -5360,18 +5408,6 @@
       "count": 60
     },
     {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 37.916666666666714,
-      "revenue": 16380000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 297
-    },
-    {
       "ma_sp": "HH00062",
       "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -5382,6 +5418,18 @@
       "year": 2026,
       "month": 3,
       "count": 214
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.8666666666666,
+      "revenue": 16358400,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 343
     },
     {
       "ma_sp": "HH00072",
@@ -5418,6 +5466,18 @@
       "year": 2026,
       "month": 3,
       "count": 179
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.749999999999964,
+      "revenue": 16308000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 193
     },
     {
       "ma_sp": "HH00073",
@@ -5459,6 +5519,30 @@
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 37.58333333333333,
+      "revenue": 16236000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 147
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.58333333333338,
+      "revenue": 16236000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 263
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 37.58333333333332,
       "revenue": 16236000,
       "npp": "NPP Thảo Thắng",
@@ -5468,16 +5552,16 @@
       "count": 204
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 37.5,
-      "revenue": 16200000,
-      "npp": "NPP Mạnh Hà 1",
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.48333333333336,
+      "revenue": 16192800,
+      "npp": "NPP Hà Thanh",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 85
+      "count": 279
     },
     {
       "ma_sp": "HH00067",
@@ -5490,18 +5574,6 @@
       "year": 2026,
       "month": 3,
       "count": 224
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 37.40000000000003,
-      "revenue": 16156800,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 278
     },
     {
       "ma_sp": "HH00062",
@@ -5552,30 +5624,6 @@
       "count": 122
     },
     {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 37.24999999999999,
-      "revenue": 16092000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 145
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 37.24999999999997,
-      "revenue": 16092000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 191
-    },
-    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -5612,6 +5660,42 @@
       "count": 98
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.083333333333336,
+      "revenue": 16020000,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 219
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 37.0833333333334,
+      "revenue": 16020000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 158
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 37.00000000000012,
+      "revenue": 15984000,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 215
+    },
+    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -5622,6 +5706,18 @@
       "year": 2026,
       "month": 3,
       "count": 133
+    },
+    {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 36.66666666666671,
+      "revenue": 15840000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 296
     },
     {
       "ma_sp": "HH00057",
@@ -5687,61 +5783,13 @@
       "ma_sp": "HH00056",
       "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 36.58333333333338,
-      "revenue": 15804000,
+      "cases": 36.50000000000004,
+      "revenue": 15768000,
       "npp": "NPP Dương Minh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 309
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 36.58333333333334,
-      "revenue": 15804000,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 215
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 36.53333333333328,
-      "revenue": 15782400,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 339
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 36.49999999999998,
-      "revenue": 15768000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 201
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 36.500000000000036,
-      "revenue": 15768000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 260
+      "count": 308
     },
     {
       "ma_sp": "HH00072",
@@ -5756,16 +5804,28 @@
       "count": 173
     },
     {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 36.41666666666673,
+      "cases": 36.41666666666671,
       "revenue": 15732000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 151
+      "count": 257
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 36.40000000000007,
+      "revenue": 15724800,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 157
     },
     {
       "ma_sp": "HH00079",
@@ -5816,6 +5876,30 @@
       "count": 307
     },
     {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 36.16666666666671,
+      "revenue": 15624000,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 258
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 36.10000000000005,
+      "revenue": 15595200,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 194
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -5843,13 +5927,13 @@
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 35.90000000000005,
-      "revenue": 15508800,
-      "npp": "NPP Duy Anh",
+      "cases": 35.83333333333339,
+      "revenue": 15480000,
+      "npp": "NPP Hoa Việt",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 192
+      "count": 196
     },
     {
       "ma_sp": "HH00067",
@@ -5864,30 +5948,6 @@
       "count": 150
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 35.800000000000125,
-      "revenue": 15465600,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 210
-    },
-    {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 35.75000000000003,
-      "revenue": 15444000,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 249
-    },
-    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -5898,18 +5958,6 @@
       "year": 2026,
       "month": 3,
       "count": 148
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 35.666666666666714,
-      "revenue": 15408000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 293
     },
     {
       "ma_sp": "HH00057",
@@ -5948,40 +5996,28 @@
       "count": 234
     },
     {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 35.58333333333337,
+      "cases": 35.58333333333335,
       "revenue": 15372000,
-      "npp": "NPP Hà Thanh",
+      "npp": "NPP Mạnh Hà 1",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 251
-    },
-    {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 35.50000000000007,
-      "revenue": 15336000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 154
+      "count": 82
     },
     {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 35.333333333333336,
-      "revenue": 15264000,
+      "cases": 35.416666666666664,
+      "revenue": 15300000,
       "npp": "NPP Linh Trang",
       "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 90
+      "count": 91
     },
     {
       "ma_sp": "HH00100",
@@ -6020,18 +6056,6 @@
       "count": 87
     },
     {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 35.083333333333364,
-      "revenue": 15156000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 81
-    },
-    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -6068,18 +6092,6 @@
       "count": 34
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 34.933333333333394,
-      "revenue": 15091200,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 188
-    },
-    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -6092,6 +6104,18 @@
       "count": 285
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 34.91666666666667,
+      "revenue": 15084000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 159
+    },
+    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6102,18 +6126,6 @@
       "year": 2026,
       "month": 3,
       "count": 74
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 34.750000000000014,
-      "revenue": 15012000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 157
     },
     {
       "ma_sp": "HH00080",
@@ -6152,6 +6164,18 @@
       "count": 281
     },
     {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 34.43333333333343,
+      "revenue": 14875200,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 233
+    },
+    {
       "ma_sp": "HH00056",
       "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6176,18 +6200,6 @@
       "count": 271
     },
     {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 34.33333333333334,
-      "revenue": 14832000,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 249
-    },
-    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6203,13 +6215,25 @@
       "ma_sp": "HH00056",
       "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 34.08333333333334,
-      "revenue": 14724000,
+      "cases": 34.25000000000001,
+      "revenue": 14796000,
       "npp": "NPP Ánh Thu",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 184
+      "count": 186
+    },
+    {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 34.250000000000014,
+      "revenue": 14796000,
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 248
     },
     {
       "ma_sp": "HH00019",
@@ -6248,6 +6272,18 @@
       "count": 104
     },
     {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 33.866666666666696,
+      "revenue": 14630400,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 231
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6272,16 +6308,16 @@
       "count": 227
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 33.633333333333425,
-      "revenue": 14529600,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
+      "cases": 33.70000000000003,
+      "revenue": 14558400,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 225
+      "count": 220
     },
     {
       "ma_sp": "HH00078",
@@ -6296,16 +6332,16 @@
       "count": 79
     },
     {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 33.50000000000001,
+      "cases": 33.499999999999986,
       "revenue": 14472000,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 303
+      "count": 164
     },
     {
       "ma_sp": "HH00067",
@@ -6320,16 +6356,40 @@
       "count": 104
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 33.41666666666665,
+      "cases": 33.41666666666667,
       "revenue": 14436000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 163
+      "count": 302
+    },
+    {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 33.40000000000006,
+      "revenue": 14428800,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 150
+    },
+    {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 33.333333333333336,
+      "revenue": 14400000,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 252
     },
     {
       "ma_sp": "HH00072",
@@ -6380,18 +6440,6 @@
       "count": 57
     },
     {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 33.166666666666664,
-      "revenue": 14328000,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 250
-    },
-    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6440,6 +6488,18 @@
       "count": 38
     },
     {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 32.85000000000001,
+      "revenue": 14191200,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 80
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -6452,18 +6512,6 @@
       "count": 204
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 32.70000000000005,
-      "revenue": 14126400,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 148
-    },
-    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6474,6 +6522,30 @@
       "year": 2026,
       "month": 3,
       "count": 328
+    },
+    {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 32.583333333333286,
+      "revenue": 14076000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 208
+    },
+    {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 32.5833333333333,
+      "revenue": 14076000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 207
     },
     {
       "ma_sp": "HH00065",
@@ -6512,54 +6584,6 @@
       "count": 236
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 32.566666666666684,
-      "revenue": 14068800,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 218
-    },
-    {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 32.55000000000001,
-      "revenue": 14061600,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 79
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 32.50000000000002,
-      "revenue": 14040000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 208
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 32.43333333333334,
-      "revenue": 14011200,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 53
-    },
-    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6584,6 +6608,42 @@
       "count": 39
     },
     {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 32.34166666666664,
+      "revenue": 13971600,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 165
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 32.250000000000036,
+      "revenue": 13932000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 139
+    },
+    {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 32.166666666666686,
+      "revenue": 13896000,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 125
+    },
+    {
       "ma_sp": "HH00075",
       "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
       "category": "Hàng Ướt",
@@ -6606,6 +6666,30 @@
       "year": 2026,
       "month": 3,
       "count": 102
+    },
+    {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 32.10000000000008,
+      "revenue": 13867200,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 182
+    },
+    {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 32.100000000000044,
+      "revenue": 13867200,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 159
     },
     {
       "ma_sp": "HH00055",
@@ -6644,6 +6728,30 @@
       "count": 253
     },
     {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 31.999999999999982,
+      "revenue": 13824000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 222
+    },
+    {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 31.98333333333332,
+      "revenue": 13816800,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 165
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6656,52 +6764,16 @@
       "count": 171
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 31.833333333333314,
-      "revenue": 13752000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 220
-    },
-    {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 31.70000000000005,
-      "revenue": 13694400,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 156
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 31.666666666666703,
-      "revenue": 13680000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 136
-    },
-    {
       "ma_sp": "HH00062",
       "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 31.666666666666703,
-      "revenue": 13680000,
+      "cases": 31.766666666666705,
+      "revenue": 13723200,
       "npp": "NPP Ngọc Phúc",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 203
+      "count": 204
     },
     {
       "ma_sp": "HH00074",
@@ -6738,18 +6810,6 @@
       "year": 2026,
       "month": 3,
       "count": 165
-    },
-    {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 31.416666666666636,
-      "revenue": 13572000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 196
     },
     {
       "ma_sp": "HH00058",
@@ -6815,6 +6875,18 @@
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
+      "cases": 31.10000000000004,
+      "revenue": 13435200,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 152
+    },
+    {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
       "cases": 31.1,
       "revenue": 13435200,
       "npp": "NPP Mạnh Hà 1",
@@ -6822,6 +6894,18 @@
       "year": 2026,
       "month": 3,
       "count": 79
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 31.083333333333304,
+      "revenue": 13428000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 227
     },
     {
       "ma_sp": "HH00072",
@@ -6836,6 +6920,30 @@
       "count": 54
     },
     {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 30.93333333333331,
+      "revenue": 13363200,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 90
+    },
+    {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 30.91666666666667,
+      "revenue": 13356000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 74
+    },
+    {
       "ma_sp": "HH00065",
       "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -6846,30 +6954,6 @@
       "year": 2026,
       "month": 3,
       "count": 346
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.916666666666636,
-      "revenue": 13356000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 225
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 30.90000000000007,
-      "revenue": 13348800,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 177
     },
     {
       "ma_sp": "HH00062",
@@ -6887,6 +6971,18 @@
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 30.84166666666661,
+      "revenue": 13323600,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 207
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 30.8416666666667,
       "revenue": 13323600,
       "npp": "NPP Dũng Béo",
@@ -6896,16 +6992,16 @@
       "count": 139
     },
     {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 30.800000000000036,
-      "revenue": 13305600,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 30.833333333333307,
+      "revenue": 13320000,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 150
+      "count": 257
     },
     {
       "ma_sp": "HH00062",
@@ -6920,16 +7016,16 @@
       "count": 105
     },
     {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 30.666666666666615,
+      "cases": 30.666666666666668,
       "revenue": 13248000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 193
+      "count": 188
     },
     {
       "ma_sp": "HH00069",
@@ -6942,30 +7038,6 @@
       "year": 2026,
       "month": 3,
       "count": 17
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.58333333333331,
-      "revenue": 13212000,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 254
-    },
-    {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.50833333333331,
-      "revenue": 13179600,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 162
     },
     {
       "ma_sp": "HH00075",
@@ -7028,18 +7100,6 @@
       "count": 128
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.41666666666667,
-      "revenue": 13140000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 73
-    },
-    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7050,18 +7110,6 @@
       "year": 2026,
       "month": 3,
       "count": 21
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.316666666666645,
-      "revenue": 13096800,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 155
     },
     {
       "ma_sp": "HH00101",
@@ -7100,6 +7148,30 @@
       "count": 201
     },
     {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 30.166666666666643,
+      "revenue": 13032000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 77
+    },
+    {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 30.166666666666757,
+      "revenue": 13032000,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 181
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7110,18 +7182,6 @@
       "year": 2026,
       "month": 3,
       "count": 252
-    },
-    {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.166666666666703,
-      "revenue": 13032000,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 146
     },
     {
       "ma_sp": "HH00065",
@@ -7136,28 +7196,16 @@
       "count": 59
     },
     {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.116666666666674,
-      "revenue": 13010400,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 30.100000000000087,
+      "revenue": 13003200,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 155
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 30.066666666666645,
-      "revenue": 12988800,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
-      "year": 2026,
-      "month": 3,
-      "count": 87
+      "count": 180
     },
     {
       "ma_sp": "HH00059",
@@ -7172,16 +7220,28 @@
       "count": 167
     },
     {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 30,
+      "cases": 30.000000000000036,
       "revenue": 12960000,
       "npp": "NPP Hoa Việt",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 112
+      "count": 145
+    },
+    {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 29.950000000000006,
+      "revenue": 12938400,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 154
     },
     {
       "ma_sp": "HH00062",
@@ -7266,18 +7326,6 @@
       "year": 2026,
       "month": 3,
       "count": 150
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 29.583333333333332,
-      "revenue": 12780000,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 184
     },
     {
       "ma_sp": "HH00063",
@@ -7388,16 +7436,16 @@
       "count": 170
     },
     {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 29.333333333333314,
+      "cases": 29.333333333333286,
       "revenue": 12672000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 75
+      "count": 203
     },
     {
       "ma_sp": "HH00063",
@@ -7422,6 +7470,18 @@
       "year": 2026,
       "month": 3,
       "count": 196
+    },
+    {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 29.300000000000004,
+      "revenue": 12657600,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 184
     },
     {
       "ma_sp": "HH00080",
@@ -7458,30 +7518,6 @@
       "year": 2026,
       "month": 3,
       "count": 18
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 29.174999999999944,
-      "revenue": 12603600,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 194
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 29.166666666666615,
-      "revenue": 12600000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 201
     },
     {
       "ma_sp": "HH00059",
@@ -7544,18 +7580,6 @@
       "count": 131
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 29.06666666666674,
-      "revenue": 12556800,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 177
-    },
-    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7592,6 +7616,18 @@
       "count": 186
     },
     {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 29.000000000000036,
+      "revenue": 12528000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 153
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -7602,6 +7638,18 @@
       "year": 2026,
       "month": 3,
       "count": 167
+    },
+    {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 28.916666666666636,
+      "revenue": 12492000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 183
     },
     {
       "ma_sp": "HH00058",
@@ -7628,18 +7676,6 @@
       "count": 154
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 28.80000000000008,
-      "revenue": 12441600,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 175
-    },
-    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7664,16 +7700,28 @@
       "count": 130
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 28.600000000000033,
-      "revenue": 12355200,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 28.541666666666625,
+      "revenue": 12330000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 150
+      "count": 97
+    },
+    {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 28.500000000000025,
+      "revenue": 12312000,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 142
     },
     {
       "ma_sp": "HH00079",
@@ -7688,16 +7736,16 @@
       "count": 116
     },
     {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 28.45833333333329,
-      "revenue": 12294000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
+      "cases": 28.41666666666667,
+      "revenue": 12276000,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 96
+      "count": 52
     },
     {
       "ma_sp": "HH00071",
@@ -7724,28 +7772,16 @@
       "count": 95
     },
     {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 28.240000000000066,
-      "revenue": 12199680,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 237
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 28.20000000000002,
-      "revenue": 12182400,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
+      "cases": 28.208333333333293,
+      "revenue": 12186000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 140
+      "count": 112
     },
     {
       "ma_sp": "HH00079",
@@ -7796,16 +7832,16 @@
       "count": 91
     },
     {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 28.124999999999957,
-      "revenue": 12150000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 28.140000000000065,
+      "revenue": 12156480,
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 111
+      "count": 236
     },
     {
       "ma_sp": "HH00073",
@@ -7830,18 +7866,6 @@
       "year": 2026,
       "month": 3,
       "count": 42
-    },
-    {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 27.999999999999986,
-      "revenue": 12096000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 173
     },
     {
       "ma_sp": "HH00063",
@@ -7880,6 +7904,18 @@
       "count": 49
     },
     {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 27.900000000000077,
+      "revenue": 12052800,
+      "npp": "NPP Hà Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 168
+    },
+    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7904,16 +7940,16 @@
       "count": 255
     },
     {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 27.666666666666643,
-      "revenue": 11952000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
+      "cases": 27.699999999999964,
+      "revenue": 11966400,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 171
+      "count": 301
     },
     {
       "ma_sp": "HH00063",
@@ -7940,18 +7976,6 @@
       "count": 97
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 27.616666666666628,
-      "revenue": 11930400,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 300
-    },
-    {
       "ma_sp": "HH00055",
       "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7976,6 +8000,18 @@
       "count": 218
     },
     {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 27.500000000000064,
+      "revenue": 11880000,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 241
+    },
+    {
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7988,6 +8024,18 @@
       "count": 104
     },
     {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 27.416666666666618,
+      "revenue": 11844000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 187
+    },
+    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -7998,6 +8046,18 @@
       "year": 2026,
       "month": 3,
       "count": 173
+    },
+    {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 27.40000000000004,
+      "revenue": 11836800,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 138
     },
     {
       "ma_sp": "HH00079",
@@ -8048,6 +8108,18 @@
       "count": 38
     },
     {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 27.26666666666667,
+      "revenue": 11779200,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 170
+    },
+    {
       "ma_sp": "HH00079",
       "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8084,6 +8156,18 @@
       "count": 79
     },
     {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 27.249999999999957,
+      "revenue": 11772000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 145
+    },
+    {
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8108,6 +8192,18 @@
       "count": 11
     },
     {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 27.166666666666643,
+      "revenue": 11736000,
+      "npp": "NPP Vũ Tấm",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 93
+    },
+    {
       "ma_sp": "HH00065",
       "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8118,18 +8214,6 @@
       "year": 2026,
       "month": 3,
       "count": 135
-    },
-    {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 27.083333333333286,
-      "revenue": 11700000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 143
     },
     {
       "ma_sp": "HH00067",
@@ -8156,6 +8240,18 @@
       "count": 87
     },
     {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 26.999999999999982,
+      "revenue": 11664000,
+      "npp": "NPP Hoàng Minh",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 3,
+      "count": 83
+    },
+    {
       "ma_sp": "HH00058",
       "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8166,18 +8262,6 @@
       "year": 2026,
       "month": 3,
       "count": 164
-    },
-    {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 26.99999999999998,
-      "revenue": 11664000,
-      "npp": "NPP Vũ Tấm",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 92
     },
     {
       "ma_sp": "HH00062",
@@ -8202,18 +8286,6 @@
       "year": 2026,
       "month": 3,
       "count": 201
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 26.900000000000055,
-      "revenue": 11620800,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 235
     },
     {
       "ma_sp": "HH00059",
@@ -8264,30 +8336,6 @@
       "count": 165
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 26.80000000000007,
-      "revenue": 11577600,
-      "npp": "NPP Hà Thanh",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 164
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 26.700000000000042,
-      "revenue": 11534400,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 136
-    },
-    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8298,18 +8346,6 @@
       "year": 2026,
       "month": 3,
       "count": 184
-    },
-    {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 26.700000000000053,
-      "revenue": 11534400,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 222
     },
     {
       "ma_sp": "HH00062",
@@ -8336,6 +8372,18 @@
       "count": 120
     },
     {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 26.60000000000005,
+      "revenue": 11491200,
+      "npp": "NPP Dương Minh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 221
+    },
+    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8346,6 +8394,18 @@
       "year": 2026,
       "month": 3,
       "count": 230
+    },
+    {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 26.466666666666722,
+      "revenue": 11433600,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 217
     },
     {
       "ma_sp": "HH00055",
@@ -8384,6 +8444,18 @@
       "count": 17
     },
     {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 26.316666666666613,
+      "revenue": 11368800,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 258
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8408,18 +8480,6 @@
       "count": 242
     },
     {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 26.23333333333328,
-      "revenue": 11332800,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 257
-    },
-    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8432,28 +8492,16 @@
       "count": 187
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 26.166666666666718,
-      "revenue": 11304000,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 214
-    },
-    {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 26.13333333333332,
-      "revenue": 11289600,
-      "npp": "NPP Hoàng Minh",
-      "kv": "KV5",
+      "cases": 26.16666666666667,
+      "revenue": 11304000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
       "year": 2026,
       "month": 3,
-      "count": 80
+      "count": 52
     },
     {
       "ma_sp": "HH00077",
@@ -8466,6 +8514,18 @@
       "year": 2026,
       "month": 3,
       "count": 266
+    },
+    {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 26.05333333333339,
+      "revenue": 11255040,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
+      "year": 2026,
+      "month": 3,
+      "count": 228
     },
     {
       "ma_sp": "HH00079",
@@ -8502,18 +8562,6 @@
       "year": 2026,
       "month": 3,
       "count": 119
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 25.749999999999964,
-      "revenue": 11124000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 174
     },
     {
       "ma_sp": "HH00055",
@@ -8564,18 +8612,6 @@
       "count": 138
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 25.553333333333384,
-      "revenue": 11039040,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 223
-    },
-    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8624,18 +8660,6 @@
       "count": 150
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 25.366666666666674,
-      "revenue": 10958400,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 153
-    },
-    {
       "ma_sp": "HH00075",
       "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8670,18 +8694,6 @@
       "year": 2026,
       "month": 3,
       "count": 79
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 25.333333333333332,
-      "revenue": 10944000,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 48
     },
     {
       "ma_sp": "HH00074",
@@ -8732,16 +8744,16 @@
       "count": 16
     },
     {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 25.16666666666667,
-      "revenue": 10872000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 25.11333333333339,
+      "revenue": 10848960,
+      "npp": "NPP Long Hải",
+      "kv": "KV3",
       "year": 2026,
       "month": 3,
-      "count": 51
+      "count": 219
     },
     {
       "ma_sp": "HH00057",
@@ -8756,18 +8768,6 @@
       "count": 29
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 25.01333333333339,
-      "revenue": 10805760,
-      "npp": "NPP Long Hải",
-      "kv": "KV3",
-      "year": 2026,
-      "month": 3,
-      "count": 218
-    },
-    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8778,6 +8778,18 @@
       "year": 2026,
       "month": 3,
       "count": 138
+    },
+    {
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 24.916666666666668,
+      "revenue": 10764000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 60
     },
     {
       "ma_sp": "HH00059",
@@ -8852,6 +8864,18 @@
       "count": 171
     },
     {
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 24.666666666666647,
+      "revenue": 10656000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 75
+    },
+    {
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8912,18 +8936,6 @@
       "count": 18
     },
     {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 24.416666666666668,
-      "revenue": 10548000,
-      "npp": "NPP Mạnh Hà 1",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 59
-    },
-    {
       "ma_sp": "HH00079",
       "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -8972,6 +8984,18 @@
       "count": 233
     },
     {
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 24.166666666666632,
+      "revenue": 10440000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 159
+    },
+    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -8996,18 +9020,6 @@
       "count": 86
     },
     {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 23.999999999999968,
-      "revenue": 10368000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 157
-    },
-    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -9020,6 +9032,18 @@
       "count": 134
     },
     {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 23.916666666666632,
+      "revenue": 10332000,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 162
+    },
+    {
       "ma_sp": "HH00065",
       "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -9030,18 +9054,6 @@
       "year": 2026,
       "month": 3,
       "count": 135
-    },
-    {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 23.74999999999996,
-      "revenue": 10260000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 160
     },
     {
       "ma_sp": "HH00055",
@@ -9176,6 +9188,18 @@
       "count": 220
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 23.499999999999996,
+      "revenue": 10152000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 101
+    },
+    {
       "ma_sp": "HH00072",
       "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -9234,30 +9258,6 @@
       "year": 2026,
       "month": 3,
       "count": 116
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 23.333333333333318,
-      "revenue": 10080000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 71
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 23.33333333333333,
-      "revenue": 10080000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 100
     },
     {
       "ma_sp": "HH00058",
@@ -9512,6 +9512,18 @@
       "count": 224
     },
     {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 22.333333333333307,
+      "revenue": 9648000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 181
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -9632,6 +9644,18 @@
       "count": 117
     },
     {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 21.75,
+      "revenue": 9396000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 112
+    },
+    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -9654,6 +9678,30 @@
       "year": 2026,
       "month": 3,
       "count": 41
+    },
+    {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 21.66666666666667,
+      "revenue": 9360000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 106
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 21.666666666666686,
+      "revenue": 9360000,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 122
     },
     {
       "ma_sp": "HH00073",
@@ -9716,30 +9764,6 @@
       "count": 67
     },
     {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 21.499999999999996,
-      "revenue": 9288000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 110
-    },
-    {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 21.436666666666703,
-      "revenue": 9260640,
-      "npp": "NPP Dương Minh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 179
-    },
-    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -9776,16 +9800,16 @@
       "count": 108
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 21.36666666666668,
-      "revenue": 9230400,
-      "npp": "NPP Hưng Thịnh",
+      "cases": 21.3366666666667,
+      "revenue": 9217440,
+      "npp": "NPP Dương Minh",
       "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 121
+      "count": 178
     },
     {
       "ma_sp": "HH00073",
@@ -9882,18 +9906,6 @@
       "year": 2026,
       "month": 3,
       "count": 72
-    },
-    {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 21.083333333333304,
-      "revenue": 9108000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 172
     },
     {
       "ma_sp": "HH00059",
@@ -10064,6 +10076,30 @@
       "count": 75
     },
     {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 20.916666666666668,
+      "revenue": 9036000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 107
+    },
+    {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 20.916666666666654,
+      "revenue": 9036000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 173
+    },
+    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10112,6 +10148,18 @@
       "count": 344
     },
     {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 20.800000000000022,
+      "revenue": 8985600,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 119
+    },
+    {
       "ma_sp": "HH00055",
       "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10134,18 +10182,6 @@
       "year": 2026,
       "month": 3,
       "count": 76
-    },
-    {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 20.666666666666675,
-      "revenue": 8928000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 103
     },
     {
       "ma_sp": "HH00063",
@@ -10172,18 +10208,6 @@
       "count": 134
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 20.500000000000018,
-      "revenue": 8856000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 117
-    },
-    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10206,6 +10230,18 @@
       "year": 2026,
       "month": 3,
       "count": 65
+    },
+    {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 20.39999999999999,
+      "revenue": 8812800,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 110
     },
     {
       "ma_sp": "HH00069",
@@ -10266,30 +10302,6 @@
       "year": 2026,
       "month": 3,
       "count": 120
-    },
-    {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 20.133333333333347,
-      "revenue": 8697600,
-      "npp": "NPP Hoa Việt",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 119
-    },
-    {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 20.08333333333332,
-      "revenue": 8676000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 166
     },
     {
       "ma_sp": "HH00078",
@@ -10388,28 +10400,28 @@
       "count": 137
     },
     {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 19.916666666666664,
-      "revenue": 8604000,
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 19.97666666666667,
+      "revenue": 8629920,
       "npp": "NPP Cường Thịnh",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 104
+      "count": 116
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 19.899999999999995,
-      "revenue": 8596800,
-      "npp": "NPP Ngọc Thêu",
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 19.96666666666668,
+      "revenue": 8625600,
+      "npp": "NPP Hoa Việt",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 105
+      "count": 118
     },
     {
       "ma_sp": "HH00079",
@@ -10446,6 +10458,18 @@
       "year": 2026,
       "month": 3,
       "count": 29
+    },
+    {
+      "ma_sp": "HH00077",
+      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 19.890000000000008,
+      "revenue": 8592480,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 134
     },
     {
       "ma_sp": "HH00057",
@@ -10580,18 +10604,6 @@
       "count": 20
     },
     {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 19.390000000000004,
-      "revenue": 8376480,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 130
-    },
-    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10614,6 +10626,18 @@
       "year": 2026,
       "month": 3,
       "count": 112
+    },
+    {
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 19.291666666666647,
+      "revenue": 8334000,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 210
     },
     {
       "ma_sp": "HH00065",
@@ -10664,18 +10688,6 @@
       "count": 32
     },
     {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 19.208333333333314,
-      "revenue": 8298000,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 209
-    },
-    {
       "ma_sp": "HH00075",
       "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
       "category": "Hàng Ướt",
@@ -10722,6 +10734,18 @@
       "year": 2026,
       "month": 3,
       "count": 97
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 19.083333333333325,
+      "revenue": 8244000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 121
     },
     {
       "ma_sp": "HH00067",
@@ -10794,18 +10818,6 @@
       "year": 2026,
       "month": 3,
       "count": 41
-    },
-    {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 18.833333333333325,
-      "revenue": 8136000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 118
     },
     {
       "ma_sp": "HH00069",
@@ -10904,6 +10916,18 @@
       "count": 107
     },
     {
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 18.500000000000004,
+      "revenue": 7992000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 148
+    },
+    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10950,6 +10974,18 @@
       "year": 2026,
       "month": 3,
       "count": 145
+    },
+    {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 18.416666666666664,
+      "revenue": 7956000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 148
     },
     {
       "ma_sp": "HH00075",
@@ -11084,6 +11120,18 @@
       "count": 110
     },
     {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 18.08333333333334,
+      "revenue": 7812000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 157
+    },
+    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -11178,6 +11226,18 @@
       "year": 2026,
       "month": 3,
       "count": 115
+    },
+    {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 17.933333333333323,
+      "revenue": 7747200,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 135
     },
     {
       "ma_sp": "HH00069",
@@ -11276,6 +11336,18 @@
       "count": 114
     },
     {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 17.66666666666667,
+      "revenue": 7632000,
+      "npp": "NPP Hoa Việt",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 124
+    },
+    {
       "ma_sp": "HH00081",
       "ten_sp": "Bim bim tăm cay lạc hồng vr2 (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -11300,16 +11372,16 @@
       "count": 108
     },
     {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 17.583333333333346,
-      "revenue": 7596000,
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 17.599999999999977,
+      "revenue": 7603200,
       "npp": "NPP Ngọc Thêu",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 138
+      "count": 104
     },
     {
       "ma_sp": "HH00058",
@@ -11322,18 +11394,6 @@
       "year": 2026,
       "month": 3,
       "count": 117
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 17.58333333333334,
-      "revenue": 7596000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 151
     },
     {
       "ma_sp": "HH00082",
@@ -11360,16 +11420,28 @@
       "count": 82
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 17.533333333333324,
-      "revenue": 7574400,
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 17.500000000000014,
+      "revenue": 7560000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 154
+    },
+    {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 17.458333333333336,
+      "revenue": 7542000,
       "npp": "NPP Long Liên",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 132
+      "count": 66
     },
     {
       "ma_sp": "HH00079",
@@ -11420,18 +11492,6 @@
       "count": 34
     },
     {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 17.375000000000004,
-      "revenue": 7506000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 65
-    },
-    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -11442,18 +11502,6 @@
       "year": 2026,
       "month": 3,
       "count": 119
-    },
-    {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 17.33333333333334,
-      "revenue": 7488000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 138
     },
     {
       "ma_sp": "HH00074",
@@ -11504,6 +11552,18 @@
       "count": 118
     },
     {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 17.19999999999999,
+      "revenue": 7430400,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 120
+    },
+    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -11516,28 +11576,16 @@
       "count": 114
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 17.166666666666664,
-      "revenue": 7416000,
-      "npp": "NPP Hoa Việt",
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 17.08333333333333,
+      "revenue": 7380000,
+      "npp": "NPP Duy Anh",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 120
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 17.099999999999984,
-      "revenue": 7387200,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 99
+      "count": 98
     },
     {
       "ma_sp": "HH00055",
@@ -11600,18 +11648,6 @@
       "count": 79
     },
     {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 16.999999999999993,
-      "revenue": 7344000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 97
-    },
-    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -11648,18 +11684,6 @@
       "count": 109
     },
     {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 16.916666666666682,
-      "revenue": 7308000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 152
-    },
-    {
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -11672,18 +11696,6 @@
       "count": 61
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 16.89999999999999,
-      "revenue": 7300800,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 118
-    },
-    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -11694,6 +11706,18 @@
       "year": 2026,
       "month": 3,
       "count": 136
+    },
+    {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 16.833333333333357,
+      "revenue": 7272000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 150
     },
     {
       "ma_sp": "HH00057",
@@ -11730,18 +11754,6 @@
       "year": 2026,
       "month": 3,
       "count": 44
-    },
-    {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 16.75000000000002,
-      "revenue": 7236000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 149
     },
     {
       "ma_sp": "HH00019",
@@ -11816,6 +11828,18 @@
       "count": 97
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 16.50000000000002,
+      "revenue": 7128000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 127
+    },
+    {
       "ma_sp": "HH00077",
       "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -11862,18 +11886,6 @@
       "year": 2026,
       "month": 3,
       "count": 12
-    },
-    {
-      "ma_sp": "HH00077",
-      "ten_sp": "Snack Nem nướng phên (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 16.409999999999975,
-      "revenue": 7089120,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 107
     },
     {
       "ma_sp": "HH00062",
@@ -11960,6 +11972,30 @@
       "count": 139
     },
     {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 16.166666666666668,
+      "revenue": 6984000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 83
+    },
+    {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 16.133333333333304,
+      "revenue": 6969600,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 130
+    },
+    {
       "ma_sp": "HH00058",
       "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12044,16 +12080,16 @@
       "count": 96
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 15.833333333333304,
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.833333333333329,
       "revenue": 6840000,
-      "npp": "NPP Long Liên",
+      "npp": "NPP Thảo Nam",
       "kv": "KV1",
       "year": 2026,
       "month": 3,
-      "count": 127
+      "count": 51
     },
     {
       "ma_sp": "HH00074",
@@ -12080,6 +12116,18 @@
       "count": 73
     },
     {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.750000000000004,
+      "revenue": 6804000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 75
+    },
+    {
       "ma_sp": "HH00055",
       "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12092,6 +12140,18 @@
       "count": 83
     },
     {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.700000000000003,
+      "revenue": 6782400,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 47
+    },
+    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -12102,18 +12162,6 @@
       "year": 2026,
       "month": 3,
       "count": 108
-    },
-    {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 15.666666666666663,
-      "revenue": 6768000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 50
     },
     {
       "ma_sp": "HH00079",
@@ -12138,18 +12186,6 @@
       "year": 2026,
       "month": 3,
       "count": 86
-    },
-    {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 15.583333333333337,
-      "revenue": 6732000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 74
     },
     {
       "ma_sp": "HH00077",
@@ -12200,18 +12236,6 @@
       "count": 36
     },
     {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 15.500000000000004,
-      "revenue": 6696000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 46
-    },
-    {
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -12222,6 +12246,18 @@
       "year": 2026,
       "month": 3,
       "count": 97
+    },
+    {
+      "ma_sp": "HH00063",
+      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.41666666666669,
+      "revenue": 6660000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 130
     },
     {
       "ma_sp": "HH00057",
@@ -12323,6 +12359,42 @@
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
+      "cases": 15.199999999999985,
+      "revenue": 6566400,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 88
+    },
+    {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.166666666666655,
+      "revenue": 6552000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 52
+    },
+    {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 15.166666666666643,
+      "revenue": 6552000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 110
+    },
+    {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
       "cases": 15.099999999999962,
       "revenue": 6523200,
       "npp": "NPP Thành Hân",
@@ -12330,18 +12402,6 @@
       "year": 2026,
       "month": 3,
       "count": 144
-    },
-    {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 15.083333333333355,
-      "revenue": 6516000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 126
     },
     {
       "ma_sp": "HH00067",
@@ -12392,18 +12452,6 @@
       "count": 98
     },
     {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 15.066666666666643,
-      "revenue": 6508800,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 109
-    },
-    {
       "ma_sp": "HH00075",
       "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
       "category": "Hàng Ướt",
@@ -12428,18 +12476,6 @@
       "count": 107
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 14.999999999999986,
-      "revenue": 6480000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 86
-    },
-    {
       "ma_sp": "HH00062",
       "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12450,18 +12486,6 @@
       "year": 2026,
       "month": 3,
       "count": 29
-    },
-    {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.999999999999988,
-      "revenue": 6480000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 51
     },
     {
       "ma_sp": "HH00055",
@@ -12584,18 +12608,6 @@
       "count": 94
     },
     {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.916666666666677,
-      "revenue": 6444000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 123
-    },
-    {
       "ma_sp": "HH00075",
       "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
       "category": "Hàng Ướt",
@@ -12620,6 +12632,18 @@
       "count": 129
     },
     {
+      "ma_sp": "HH00067",
+      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.833333333333336,
+      "revenue": 6408000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 78
+    },
+    {
       "ma_sp": "HH00055",
       "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12642,6 +12666,30 @@
       "year": 2026,
       "month": 3,
       "count": 65
+    },
+    {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 14.799999999999983,
+      "revenue": 6393600,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 93
+    },
+    {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.791666666666668,
+      "revenue": 6390000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 55
     },
     {
       "ma_sp": "HH00019",
@@ -12692,6 +12740,18 @@
       "count": 15
     },
     {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.699999999999998,
+      "revenue": 6350400,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 49
+    },
+    {
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -12716,28 +12776,16 @@
       "count": 76
     },
     {
-      "ma_sp": "HH00063",
-      "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.666666666666668,
-      "revenue": 6336000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 14.633333333333308,
+      "revenue": 6321600,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 79
-    },
-    {
-      "ma_sp": "HH00067",
-      "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.66666666666667,
-      "revenue": 6336000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 77
+      "count": 103
     },
     {
       "ma_sp": "HH00057",
@@ -12788,18 +12836,6 @@
       "count": 99
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 14.499999999999982,
-      "revenue": 6264000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 90
-    },
-    {
       "ma_sp": "HH00065",
       "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12834,18 +12870,6 @@
       "year": 2026,
       "month": 3,
       "count": 29
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.458333333333334,
-      "revenue": 6246000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 52
     },
     {
       "ma_sp": "HH00065",
@@ -12968,6 +12992,18 @@
       "count": 123
     },
     {
+      "ma_sp": "HH00057",
+      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.333333333333355,
+      "revenue": 6192000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 128
+    },
+    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -12990,18 +13026,6 @@
       "year": 2026,
       "month": 3,
       "count": 55
-    },
-    {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 14.333333333333309,
-      "revenue": 6192000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 101
     },
     {
       "ma_sp": "HH00055",
@@ -13074,6 +13098,18 @@
       "year": 2026,
       "month": 3,
       "count": 6
+    },
+    {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.250000000000009,
+      "revenue": 6156000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 68
     },
     {
       "ma_sp": "HH00079",
@@ -13160,6 +13196,18 @@
       "count": 81
     },
     {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 14.08333333333335,
+      "revenue": 6084000,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 132
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -13172,18 +13220,6 @@
       "count": 76
     },
     {
-      "ma_sp": "HH00057",
-      "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.083333333333352,
-      "revenue": 6084000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 125
-    },
-    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -13194,30 +13230,6 @@
       "year": 2026,
       "month": 3,
       "count": 16
-    },
-    {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.000000000000009,
-      "revenue": 6048000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 67
-    },
-    {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 14.000000000000016,
-      "revenue": 6048000,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 131
     },
     {
       "ma_sp": "HH00101",
@@ -13242,6 +13254,18 @@
       "year": 2026,
       "month": 3,
       "count": 120
+    },
+    {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 13.843333333333312,
+      "revenue": 5980320,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 89
     },
     {
       "ma_sp": "HH00065",
@@ -13271,6 +13295,18 @@
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
+      "cases": 13.79999999999998,
+      "revenue": 5961600,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 80
+    },
+    {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
       "cases": 13.799999999999992,
       "revenue": 5961600,
       "npp": "NPP Ngọc Kiên",
@@ -13295,18 +13331,6 @@
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 13.743333333333313,
-      "revenue": 5937120,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 88
-    },
-    {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
       "cases": 13.713333333333305,
       "revenue": 5924160,
       "npp": "NPP Tân Hoa",
@@ -13314,6 +13338,18 @@
       "year": 2026,
       "month": 3,
       "count": 162
+    },
+    {
+      "ma_sp": "HH00101",
+      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 13.66666666666666,
+      "revenue": 5904000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 50
     },
     {
       "ma_sp": "HH00073",
@@ -13328,6 +13364,18 @@
       "count": 74
     },
     {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 13.633333333333308,
+      "revenue": 5889600,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 91
+    },
+    {
       "ma_sp": "HH00019",
       "ten_sp": "Cá cơm tê cay bà Tuyết 18g (18g/gói*200 gói/thùng)",
       "category": "Cá cơm",
@@ -13340,16 +13388,16 @@
       "count": 29
     },
     {
-      "ma_sp": "HH00101",
-      "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 13.499999999999995,
+      "ma_sp": "HH00075",
+      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 13.5,
       "revenue": 5832000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 49
+      "count": 37
     },
     {
       "ma_sp": "HH00058",
@@ -13374,18 +13422,6 @@
       "year": 2026,
       "month": 3,
       "count": 128
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 13.399999999999997,
-      "revenue": 5788800,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 45
     },
     {
       "ma_sp": "HH00058",
@@ -13448,6 +13484,18 @@
       "count": 42
     },
     {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 13.166666666666679,
+      "revenue": 5688000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 108
+    },
+    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -13496,6 +13544,18 @@
       "count": 45
     },
     {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 13.066666666666656,
+      "revenue": 5644800,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 70
+    },
+    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -13506,18 +13566,6 @@
       "year": 2026,
       "month": 3,
       "count": 122
-    },
-    {
-      "ma_sp": "HH00075",
-      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 13,
-      "revenue": 5616000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 35
     },
     {
       "ma_sp": "HH00055",
@@ -13554,18 +13602,6 @@
       "year": 2026,
       "month": 3,
       "count": 74
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 12.933333333333323,
-      "revenue": 5587200,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 69
     },
     {
       "ma_sp": "HH00063",
@@ -13640,6 +13676,18 @@
       "count": 85
     },
     {
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 12.76999999999998,
+      "revenue": 5516640,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 80
+    },
+    {
       "ma_sp": "HH00067",
       "ten_sp": "Bim bim mái tôn (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -13650,18 +13698,6 @@
       "year": 2026,
       "month": 3,
       "count": 108
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 12.750000000000012,
-      "revenue": 5508000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 103
     },
     {
       "ma_sp": "HH00063",
@@ -13676,16 +13712,16 @@
       "count": 87
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "ma_sp": "HH00079",
+      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 12.599999999999984,
+      "cases": 12.59999999999998,
       "revenue": 5443200,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 78
+      "count": 82
     },
     {
       "ma_sp": "HH00077",
@@ -13806,18 +13842,6 @@
       "year": 2026,
       "month": 3,
       "count": 112
-    },
-    {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 12.299999999999983,
-      "revenue": 5313600,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 81
     },
     {
       "ma_sp": "HH00080",
@@ -13964,6 +13988,18 @@
       "count": 115
     },
     {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 11.949999999999985,
+      "revenue": 5162400,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 82
+    },
+    {
       "ma_sp": "HH00069",
       "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -14082,18 +14118,6 @@
       "year": 2026,
       "month": 3,
       "count": 10
-    },
-    {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 11.649999999999986,
-      "revenue": 5032800,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 80
     },
     {
       "ma_sp": "HH00067",
@@ -14216,6 +14240,18 @@
       "count": 88
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 11.33333333333334,
+      "revenue": 4896000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 107
+    },
+    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -14322,18 +14358,6 @@
       "year": 2026,
       "month": 3,
       "count": 52
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 11.083333333333336,
-      "revenue": 4788000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 104
     },
     {
       "ma_sp": "HH00065",
@@ -14444,6 +14468,18 @@
       "count": 99
     },
     {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 10.916666666666673,
+      "revenue": 4716000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 98
+    },
+    {
       "ma_sp": "HH00081",
       "ten_sp": "Bim bim tăm cay lạc hồng vr2 (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -14552,16 +14588,16 @@
       "count": 16
     },
     {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "ma_sp": "HH00058",
+      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 10.666666666666673,
+      "cases": 10.666666666666675,
       "revenue": 4608000,
       "npp": "NPP Thành Lụa",
       "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 95
+      "count": 83
     },
     {
       "ma_sp": "HH00069",
@@ -14574,6 +14610,18 @@
       "year": 2026,
       "month": 3,
       "count": 12
+    },
+    {
+      "ma_sp": "HH00074",
+      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 10.649999999999986,
+      "revenue": 4600800,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 77
     },
     {
       "ma_sp": "HH00073",
@@ -14672,28 +14720,16 @@
       "count": 93
     },
     {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
-      "cases": 10.349999999999989,
-      "revenue": 4471200,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
+      "cases": 10.299999999999988,
+      "revenue": 4449600,
+      "npp": "NPP Ánh Thu",
+      "kv": "KV4",
       "year": 2026,
       "month": 3,
-      "count": 75
-    },
-    {
-      "ma_sp": "HH00058",
-      "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 10.333333333333341,
-      "revenue": 4464000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 80
+      "count": 72
     },
     {
       "ma_sp": "HH00063",
@@ -14718,6 +14754,18 @@
       "year": 2026,
       "month": 3,
       "count": 88
+    },
+    {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 10.16666666666665,
+      "revenue": 4392000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 69
     },
     {
       "ma_sp": "HH00065",
@@ -14780,16 +14828,16 @@
       "count": 71
     },
     {
-      "ma_sp": "HH00074",
-      "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 10.066666666666656,
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 10.06666666666666,
       "revenue": 4348800,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 82
+      "count": 57
     },
     {
       "ma_sp": "HH00073",
@@ -14814,6 +14862,18 @@
       "year": 2026,
       "month": 3,
       "count": 104
+    },
+    {
+      "ma_sp": "HH00065",
+      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 9.999999999999996,
+      "revenue": 4320000,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 43
     },
     {
       "ma_sp": "HH00073",
@@ -14876,18 +14936,6 @@
       "count": 56
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 9.999999999999988,
-      "revenue": 4320000,
-      "npp": "NPP Ánh Thu",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 70
-    },
-    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -14936,18 +14984,6 @@
       "count": 17
     },
     {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 9.96666666666666,
-      "revenue": 4305600,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 56
-    },
-    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -14994,6 +15030,18 @@
       "year": 2026,
       "month": 3,
       "count": 17
+    },
+    {
+      "ma_sp": "HH00080",
+      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 9.766666666666655,
+      "revenue": 4219200,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 55
     },
     {
       "ma_sp": "HH00062",
@@ -15056,30 +15104,6 @@
       "count": 13
     },
     {
-      "ma_sp": "HH00079",
-      "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 9.703333333333324,
-      "revenue": 4191840,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 72
-    },
-    {
-      "ma_sp": "HH00065",
-      "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 9.666666666666663,
-      "revenue": 4176000,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 41
-    },
-    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -15126,6 +15150,18 @@
       "year": 2026,
       "month": 3,
       "count": 84
+    },
+    {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 9.566666666666668,
+      "revenue": 4132800,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 42
     },
     {
       "ma_sp": "HH00055",
@@ -15296,6 +15332,18 @@
       "count": 65
     },
     {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 9.133333333333326,
+      "revenue": 3945600,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 72
+    },
+    {
       "ma_sp": "HH00079",
       "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -15342,18 +15390,6 @@
       "year": 2026,
       "month": 3,
       "count": 26
-    },
-    {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 9.033333333333324,
-      "revenue": 3902400,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 71
     },
     {
       "ma_sp": "HH00058",
@@ -15488,6 +15524,18 @@
       "count": 60
     },
     {
+      "ma_sp": "HH00056",
+      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 8.783333333333335,
+      "revenue": 3794400,
+      "npp": "NPP Hưng Thịnh",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 81
+    },
+    {
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -15510,18 +15558,6 @@
       "year": 2026,
       "month": 3,
       "count": 92
-    },
-    {
-      "ma_sp": "HH00056",
-      "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 8.7,
-      "revenue": 3758400,
-      "npp": "NPP Hưng Thịnh",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 80
     },
     {
       "ma_sp": "HH00057",
@@ -15570,18 +15606,6 @@
       "year": 2026,
       "month": 3,
       "count": 81
-    },
-    {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 8.566666666666666,
-      "revenue": 3700800,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 39
     },
     {
       "ma_sp": "HH00073",
@@ -15800,18 +15824,6 @@
       "count": 64
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 8.099999999999993,
-      "revenue": 3499200,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 62
-    },
-    {
       "ma_sp": "HH00080",
       "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -15944,6 +15956,18 @@
       "count": 58
     },
     {
+      "ma_sp": "HH00055",
+      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 7.833333333333335,
+      "revenue": 3384000,
+      "npp": "NPP Cường Thịnh",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 42
+    },
+    {
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -16004,18 +16028,6 @@
       "count": 52
     },
     {
-      "ma_sp": "HH00080",
-      "ten_sp": "Snack Cột Điện (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 7.699999999999997,
-      "revenue": 3326400,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 48
-    },
-    {
       "ma_sp": "HH00057",
       "ten_sp": "Đùi gà phô mai (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -16038,18 +16050,6 @@
       "year": 2026,
       "month": 3,
       "count": 55
-    },
-    {
-      "ma_sp": "HH00055",
-      "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 7.583333333333334,
-      "revenue": 3276000,
-      "npp": "NPP Cường Thịnh",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 41
     },
     {
       "ma_sp": "HH00082",
@@ -16376,6 +16376,18 @@
       "count": 29
     },
     {
+      "ma_sp": "HH00059",
+      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 6.833333333333326,
+      "revenue": 2952000,
+      "npp": "NPP Thành Lụa",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 63
+    },
+    {
       "ma_sp": "HH00056",
       "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -16484,6 +16496,18 @@
       "count": 47
     },
     {
+      "ma_sp": "HH00078",
+      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 6.599999999999999,
+      "revenue": 2851200,
+      "npp": "NPP Thảo Nam",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 35
+    },
+    {
       "ma_sp": "HH00074",
       "ten_sp": "Snack Sashimi (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -16571,18 +16595,6 @@
       "ma_sp": "HH00059",
       "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
-      "cases": 6.499999999999994,
-      "revenue": 2808000,
-      "npp": "NPP Thành Lụa",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 59
-    },
-    {
-      "ma_sp": "HH00059",
-      "ten_sp": "Đùi gà tê cay (32gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
       "cases": 6.499999999999997,
       "revenue": 2808000,
       "npp": "NPP Đức Nam Tiến",
@@ -16640,16 +16652,16 @@
       "count": 56
     },
     {
-      "ma_sp": "HH00078",
-      "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 6.3999999999999995,
-      "revenue": 2764800,
-      "npp": "NPP Thảo Nam",
-      "kv": "KV1",
+      "ma_sp": "HH00072",
+      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 6.333333333333333,
+      "revenue": 2736000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
       "year": 2026,
       "month": 3,
-      "count": 34
+      "count": 15
     },
     {
       "ma_sp": "HH00056",
@@ -16907,6 +16919,18 @@
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
+      "cases": 5.666666666666668,
+      "revenue": 2448000,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 30
+    },
+    {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
       "cases": 5.666666666666667,
       "revenue": 2448000,
       "npp": "NPP Vũ Đức Nam",
@@ -16914,18 +16938,6 @@
       "year": 2026,
       "month": 3,
       "count": 20
-    },
-    {
-      "ma_sp": "HH00072",
-      "ten_sp": "Bim bim tăm cay (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 5.666666666666666,
-      "revenue": 2448000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 12
     },
     {
       "ma_sp": "HH00101",
@@ -16974,18 +16986,6 @@
       "year": 2026,
       "month": 3,
       "count": 14
-    },
-    {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 5.566666666666668,
-      "revenue": 2404800,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 29
     },
     {
       "ma_sp": "HH00065",
@@ -17276,6 +17276,18 @@
       "count": 33
     },
     {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 4.833333333333335,
+      "revenue": 2088000,
+      "npp": "NPP Ngọc Thêu",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 27
+    },
+    {
       "ma_sp": "HH00101",
       "ten_sp": "Bim bim Tăm Cay bà Tuyết vị Tiêu Đen (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -17418,18 +17430,6 @@
       "year": 2026,
       "month": 3,
       "count": 37
-    },
-    {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 4.500000000000001,
-      "revenue": 1944000,
-      "npp": "NPP Ngọc Thêu",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 26
     },
     {
       "ma_sp": "HH00056",
@@ -17924,6 +17924,18 @@
       "count": 8
     },
     {
+      "ma_sp": "HH00075",
+      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 3.5,
+      "revenue": 1512000,
+      "npp": "NPP Long Liên",
+      "kv": "KV1",
+      "year": 2026,
+      "month": 3,
+      "count": 10
+    },
+    {
       "ma_sp": "HH00056",
       "ten_sp": "Đùi gà phô mai ngô (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -18044,6 +18056,18 @@
       "count": 9
     },
     {
+      "ma_sp": "HH00075",
+      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
+      "category": "Hàng Ướt",
+      "cases": 3.2,
+      "revenue": 1382400,
+      "npp": "NPP Ngọc Phúc",
+      "kv": "KV4",
+      "year": 2026,
+      "month": 3,
+      "count": 11
+    },
+    {
       "ma_sp": "HH00083",
       "ten_sp": "Cá cơm ngon ngọt bà Tuyết 18g (18g/gói *200gói/lốc)",
       "category": "Cá cơm",
@@ -18054,6 +18078,18 @@
       "year": 2026,
       "month": 3,
       "count": 3
+    },
+    {
+      "ma_sp": "HH00073",
+      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 3.1666666666666665,
+      "revenue": 1368000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 13
     },
     {
       "ma_sp": "HH00075",
@@ -18078,18 +18114,6 @@
       "year": 2026,
       "month": 3,
       "count": 32
-    },
-    {
-      "ma_sp": "HH00075",
-      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 3,
-      "revenue": 1296000,
-      "npp": "NPP Long Liên",
-      "kv": "KV1",
-      "year": 2026,
-      "month": 3,
-      "count": 9
     },
     {
       "ma_sp": "HH00055",
@@ -18164,18 +18188,6 @@
       "count": 5
     },
     {
-      "ma_sp": "HH00075",
-      "ten_sp": "Snack Gân rồng hấp sả (85gram*60 gói/thùng)",
-      "category": "Hàng Ướt",
-      "cases": 2.95,
-      "revenue": 1274400,
-      "npp": "NPP Ngọc Phúc",
-      "kv": "KV4",
-      "year": 2026,
-      "month": 3,
-      "count": 10
-    },
-    {
       "ma_sp": "HH00078",
       "ten_sp": "Snack Bìa Catton (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -18210,6 +18222,18 @@
       "year": 2026,
       "month": 3,
       "count": 1
+    },
+    {
+      "ma_sp": "HH00062",
+      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 2.833333333333333,
+      "revenue": 1224000,
+      "npp": "NPP Duy Anh",
+      "kv": "KV2",
+      "year": 2026,
+      "month": 3,
+      "count": 12
     },
     {
       "ma_sp": "HH00059",
@@ -18452,30 +18476,6 @@
       "count": 8
     },
     {
-      "ma_sp": "HH00062",
-      "ten_sp": "Đùi gà Mix 7 vị (64gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 2,
-      "revenue": 864000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 8
-    },
-    {
-      "ma_sp": "HH00073",
-      "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 2,
-      "revenue": 864000,
-      "npp": "NPP Duy Anh",
-      "kv": "KV2",
-      "year": 2026,
-      "month": 3,
-      "count": 8
-    },
-    {
       "ma_sp": "HH00058",
       "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -18632,6 +18632,18 @@
       "count": 7
     },
     {
+      "ma_sp": "HH00069",
+      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
+      "category": "Bim Quẩy",
+      "cases": 1.4666666666666663,
+      "revenue": 633600,
+      "npp": "NPP Linh Trang",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 3,
+      "count": 12
+    },
+    {
       "ma_sp": "HH00065",
       "ten_sp": "Bim bim mái bờ lô (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -18750,18 +18762,6 @@
       "year": 2026,
       "month": 3,
       "count": 6
-    },
-    {
-      "ma_sp": "HH00069",
-      "ten_sp": "Bim bim Chịu (25gram*120 gói/thùng)",
-      "category": "Bim Quẩy",
-      "cases": 0.9666666666666667,
-      "revenue": 417600,
-      "npp": "NPP Linh Trang",
-      "kv": "KV6",
-      "year": 2026,
-      "month": 3,
-      "count": 8
     },
     {
       "ma_sp": "HH00080",
