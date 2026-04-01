@@ -364,7 +364,7 @@ const STATIC_DATA = {
    "NPP Dũng Cúc": 531861985,
    "NPP Dương Minh": 1949574690,
    "NPP Hikoji": 1831757940,
-   "NPP Hiền Cường": "1,20E+09",
+   "NPP Hiền Cường": 1201656920,
    "NPP Hoa Việt": 1510813020,
    "NPP Hoàng Minh": 2010117065,
    "NPP Hà Thanh": 1292746986,
