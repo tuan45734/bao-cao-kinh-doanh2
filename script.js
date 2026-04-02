@@ -43,6 +43,7 @@ let compareRevenueTotal = 0;
 // NPP Mapping
 const nppMapping = {
     'NPP Anh Minh HT': { kv: 'KV6', region: 'MB' },
+    'NPP Đồng Lợi': { kv: 'KV5', region: 'MB' },
     'NPP Anh Đức': { kv: 'KV5', region: 'MB' },
     'NPP Bảo Cường': { kv: 'KV3', region: 'MB' },
     'NPP Bảo Lâm': { kv: 'KV1', region: 'MB' },
