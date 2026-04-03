@@ -111,7 +111,32 @@ function getNPPInfo(nppName) {
 
 function formatNumber(num) {
     if (typeof num !== 'number') return num;
-    return new Intl.NumberFormat('vi-VN').format(num);
+    
+    const isNegative = num < 0;
+    const absNum = Math.abs(num);
+    
+    // Tỷ (>= 1 tỷ)
+    if (absNum >= 1e9) {
+        const value = absNum / 1e9;
+        // Cắt bớt, không làm tròn: giữ 1 chữ số thập phân nhưng không làm tròn
+        const billionValue = Math.floor(value * 10) / 10;
+        if (billionValue === Math.floor(billionValue)) {
+            return (isNegative ? '-' : '') + billionValue + ' tỷ';
+        }
+        return (isNegative ? '-' : '') + billionValue.toFixed(1) + ' tỷ';
+    }
+    
+    // Triệu (>= 1 triệu)
+    if (absNum >= 1e6) {
+        const value = absNum / 1e6;
+        const millionValue = Math.floor(value * 10) / 10;
+        if (millionValue === Math.floor(millionValue)) {
+            return (isNegative ? '-' : '') + millionValue + ' tr';
+        }
+        return (isNegative ? '-' : '') + millionValue.toFixed(1) + ' tr';
+    }
+    
+    return new Intl.NumberFormat('vi-VN').format(absNum);
 }
 
 function calculateTotalRevenue(data) {
