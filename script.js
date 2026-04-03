@@ -1,8 +1,8 @@
 // script.js - Main application logic with 6 charts and product detail
 
 let currentData = null;
-let currentRawData = null;      // Raw data for product filtering
-let compareRawData = null;      // Raw data for product filtering
+let currentRawData = null;
+let compareRawData = null;
 let currentType = 'month';
 let isLoading = false;
 
@@ -27,7 +27,7 @@ if (typeof ChartDataLabels !== 'undefined') {
         align: 'top',
         formatter: value => {
             if (typeof value === 'number') {
-                return formatNumberShort(value);  // ĐÃ SỬA: dùng formatNumberShort
+                return formatNumberShort(value);
             }
             return value;
         },
@@ -116,7 +116,7 @@ function getNPPInfo(nppName) {
     return nppMapping[nppName] || { kv: 'Khác', region: 'Khác' };
 }
 
-// Thay thế hàm formatNumber và formatMoney bằng các hàm sau:
+// ==================== HÀM FORMAT SỐ ====================
 
 function formatNumber(num) {
     if (typeof num !== 'number') return num;
@@ -124,46 +124,36 @@ function formatNumber(num) {
     const isNegative = num < 0;
     const absNum = Math.abs(num);
     
-    // Tỷ (>= 1 tỷ)
     if (absNum >= 1e9) {
         const value = absNum / 1e9;
-        // Cắt bớt, không làm tròn: giữ 1 chữ số thập phân
-        // Lấy phần nguyên, sau đó lấy phần thập phân cắt bớt
         const integerPart = Math.floor(value);
         const decimalPart = Math.floor((value - integerPart) * 10);
-        
         if (decimalPart === 0) {
             return (isNegative ? '-' : '') + integerPart + ' tỷ';
         }
         return (isNegative ? '-' : '') + integerPart + ',' + decimalPart + ' tỷ';
     }
     
-    // Triệu (>= 1 triệu)
     if (absNum >= 1e6) {
         const value = absNum / 1e6;
         const integerPart = Math.floor(value);
         const decimalPart = Math.floor((value - integerPart) * 10);
-        
         if (decimalPart === 0) {
             return (isNegative ? '-' : '') + integerPart + ' tr';
         }
         return (isNegative ? '-' : '') + integerPart + ',' + decimalPart + ' tr';
     }
     
-    // Dưới 1 triệu
     return new Intl.NumberFormat('vi-VN').format(absNum);
 }
 
-// formatMoney giữ nguyên cho tooltip khi cần hiển thị đầy đủ
 function formatMoney(num) {
     if (typeof num !== 'number') return num;
     return new Intl.NumberFormat('vi-VN').format(num) + ' ₫';
 }
 
-// Hàm formatNumberShort dùng cho datalabels trên chart (không có đơn vị)
 function formatNumberShort(num) {
     if (typeof num !== 'number') return num;
-    
     const absNum = Math.abs(num);
     
     if (absNum >= 1e9) {
@@ -189,7 +179,6 @@ function calculateTotalRevenue(data) {
     return data.reduce((sum, item) => sum + (item.revenue || 0), 0);
 }
 
-// Get current raw data (handles month/quarter/year)
 function getCurrentRawData() {
     if (currentType === 'month') {
         return currentData;
@@ -206,7 +195,6 @@ function getCompareRawData() {
     }
 }
 
-// Filter raw data by region and area
 function filterRawDataByRegion(data) {
     if (!data || !data.data) return data;
     
@@ -232,7 +220,6 @@ function filterRawDataByRegion(data) {
     return { ...data, data: filteredData };
 }
 
-// Load filtered product data from current raw data
 async function getFilteredProductData(isCurrent = true) {
     const rawData = isCurrent ? getCurrentRawData() : getCompareRawData();
     if (!rawData || !rawData.data) return [];
@@ -251,7 +238,6 @@ async function getFilteredProductData(isCurrent = true) {
         .sort((a, b) => b.revenue - a.revenue);
 }
 
-// Load filtered category data from current raw data
 async function getFilteredCategoryData(isCurrent = true) {
     const rawData = isCurrent ? getCurrentRawData() : getCompareRawData();
     if (!rawData || !rawData.data) return [];
@@ -320,7 +306,7 @@ function showNotification(message, type = 'info') {
 
 // ==================== 6 BIỂU ĐỒ CHÍNH ====================
 
-// Biểu đồ 1: So sánh doanh thu ngành hàng (Bar chart)
+// Biểu đồ 1: So sánh doanh thu ngành hàng
 async function renderCategoryComparisonChart() {
     const ctx = document.getElementById('categoryComparisonChart').getContext('2d');
     if (categoryComparisonChart) categoryComparisonChart.destroy();
@@ -365,14 +351,14 @@ async function renderCategoryComparisonChart() {
                 tooltip: { 
                     callbacks: { 
                         label: function(context) { 
-                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`;
                         } 
                     } 
                 }
             },
             scales: { 
                 y: { 
-                    ticks: { callback: value => formatMoney(value) }, 
+                    ticks: { callback: value => formatNumber(value) },
                     title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Ngành hàng' } }
@@ -381,7 +367,7 @@ async function renderCategoryComparisonChart() {
     });
 }
 
-// Biểu đồ 2: Cơ cấu ngành hàng (Donut chart)
+// Biểu đồ 2: Cơ cấu ngành hàng (Donut chart) - ĐÃ SỬA HOVER FORMAT
 async function renderCategoryStructureChart() {
     const ctx = document.getElementById('categoryStructureChart').getContext('2d');
     if (categoryStructureChart) categoryStructureChart.destroy();
@@ -422,11 +408,12 @@ async function renderCategoryStructureChart() {
                 legend: { position: 'right', labels: { font: { size: 11 } } },
                 tooltip: { 
                     callbacks: { 
-                        label: function(context) { 
+                        label: function(context) {
                             const value = context.raw;
                             const total = context.dataset.data.reduce((a, b) => a + b, 0);
                             const percent = (value / total * 100).toFixed(1);
-                            return `${context.label}: ${formatMoney(value)} (${percent}%)`;
+                            // ĐÃ SỬA: dùng formatNumber thay vì formatMoney
+                            return `${context.label}: ${formatNumber(value)} (${percent}%)`;
                         } 
                     } 
                 },
@@ -446,7 +433,7 @@ async function renderCategoryStructureChart() {
     });
 }
 
-// Biểu đồ 3: 10 sản phẩm bán chạy nhất (Line chart với 2 đường)
+// Biểu đồ 3: 10 sản phẩm bán chạy nhất
 async function renderTopProductsLineChart() {
     const ctx = document.getElementById('topProductsLineChart').getContext('2d');
     if (topProductsChart) topProductsChart.destroy();
@@ -504,15 +491,15 @@ async function renderTopProductsLineChart() {
                 tooltip: { 
                     callbacks: { 
                         label: function(context) { 
-                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`;
                         } 
                     } 
                 },
                 datalabels: {
                     color: '#333',
                     font: { weight: 'bold', size: 10 },
-                    formatter: function(value, context) {
-                        return formatMoney(value);
+                    formatter: function(value) {
+                        return formatNumberShort(value);
                     },
                     anchor: function(context) {
                         const currentValue = context.dataset.data[context.dataIndex];
@@ -530,7 +517,7 @@ async function renderTopProductsLineChart() {
             },
             scales: { 
                 y: { 
-                    ticks: { callback: value => formatMoney(value) }, 
+                    ticks: { callback: value => formatNumber(value) },
                     title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Sản phẩm' } }
@@ -539,7 +526,7 @@ async function renderTopProductsLineChart() {
     });
 }
 
-// Biểu đồ 4: 10 sản phẩm bán kém nhất (Line chart với 2 đường)
+// Biểu đồ 4: 10 sản phẩm bán kém nhất
 async function renderBottomProductsLineChart() {
     const ctx = document.getElementById('bottomProductsLineChart').getContext('2d');
     if (bottomProductsChart) bottomProductsChart.destroy();
@@ -548,7 +535,6 @@ async function renderBottomProductsLineChart() {
     const compareProducts = await getFilteredProductData(false);
     const compareMap = new Map(compareProducts.map(p => [p.name, p.revenue]));
     
-    // Lọc sản phẩm có doanh thu > 0
     const productsWithRevenue = currentProducts.filter(p => p.revenue > 0);
     const bottomProductsList = productsWithRevenue.slice(-10).reverse();
     
@@ -600,15 +586,15 @@ async function renderBottomProductsLineChart() {
                 tooltip: { 
                     callbacks: { 
                         label: function(context) { 
-                            return `${context.dataset.label}: ${formatMoney(context.raw)}`; 
+                            return `${context.dataset.label}: ${formatMoney(context.raw)}`;
                         } 
                     } 
                 },
                 datalabels: {
                     color: '#333',
                     font: { weight: 'bold', size: 10 },
-                    formatter: function(value, context) {
-                        return formatMoney(value);
+                    formatter: function(value) {
+                        return formatNumberShort(value);
                     },
                     anchor: function(context) {
                         const currentValue = context.dataset.data[context.dataIndex];
@@ -626,7 +612,7 @@ async function renderBottomProductsLineChart() {
             },
             scales: { 
                 y: { 
-                    ticks: { callback: value => formatMoney(value) }, 
+                    ticks: { callback: value => formatNumber(value) },
                     title: { display: true, text: 'Doanh thu' } 
                 },
                 x: { title: { display: true, text: 'Sản phẩm' } }
@@ -635,7 +621,7 @@ async function renderBottomProductsLineChart() {
     });
 }
 
-// Biểu đồ 5: 10 sản phẩm tăng trưởng mạnh nhất (Horizontal bar)
+// Biểu đồ 5: 10 sản phẩm tăng trưởng mạnh nhất (Màu xanh dương, đỏ âm)
 async function renderTopGrowthProductsChart() {
     const ctx = document.getElementById('topGrowthProductsChart').getContext('2d');
     if (topGrowthProductsChart) topGrowthProductsChart.destroy();
@@ -670,8 +656,8 @@ async function renderTopGrowthProductsChart() {
             datasets: [{
                 label: 'Tỷ lệ tăng trưởng (%)',
                 data: growthRates,
-                backgroundColor: 'rgba(76, 175, 80, 0.7)',
-                borderColor: 'rgba(76, 175, 80, 1)',
+                backgroundColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 0.8)' : 'rgba(244, 67, 54, 0.8)'),
+                borderColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
                 borderWidth: 2,
                 borderRadius: 8
             }]
@@ -715,7 +701,7 @@ async function renderTopGrowthProductsChart() {
     });
 }
 
-// Biểu đồ 6: 10 sản phẩm tăng trưởng yếu nhất (Horizontal bar)
+// Biểu đồ 6: 10 sản phẩm tăng trưởng yếu nhất (Màu xanh dương, đỏ âm)
 async function renderBottomGrowthProductsChart() {
     const ctx = document.getElementById('bottomGrowthProductsChart').getContext('2d');
     if (bottomGrowthProductsChart) bottomGrowthProductsChart.destroy();
@@ -750,7 +736,7 @@ async function renderBottomGrowthProductsChart() {
             datasets: [{
                 label: 'Tỷ lệ tăng trưởng (%)',
                 data: growthRates,
-                backgroundColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 0.7)' : 'rgba(244, 67, 54, 0.7)'),
+                backgroundColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 0.8)' : 'rgba(244, 67, 54, 0.8)'),
                 borderColor: growthRates.map(g => g >= 0 ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)'),
                 borderWidth: 2,
                 borderRadius: 8
@@ -797,7 +783,6 @@ async function renderBottomGrowthProductsChart() {
 
 // ==================== TAB CHI TIẾT SẢN PHẨM ====================
 
-// Render detail table for products
 async function renderProductDetailTable() {
     const tbody = document.getElementById('detailTableBody');
     
@@ -817,9 +802,9 @@ async function renderProductDetailTable() {
         return `
             <tr>
                 <td><strong>${item.name}</strong></td>
-                <td>${formatNumber(item.revenue)}</td>        <!-- ĐÃ SỬA -->
-                <td>${formatNumber(compareRevenue)}</td>      <!-- ĐÃ SỬA -->
-                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>  <!-- ĐÃ SỬA -->
+                <td>${formatNumber(item.revenue)}</td>
+                <td>${formatNumber(compareRevenue)}</td>
+                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>
                 <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
             </tr>
         `;
@@ -849,9 +834,9 @@ function searchProduct() {
             return `
                 <tr>
                     <td><strong>${item.name}</strong></td>
-                    <td>${formatNumber(item.revenue)}</td>        <!-- ĐÃ SỬA -->
-                    <td>${formatNumber(compareRevenue)}</td>      <!-- ĐÃ SỬA -->
-                    <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>  <!-- ĐÃ SỬA -->
+                    <td>${formatNumber(item.revenue)}</td>
+                    <td>${formatNumber(compareRevenue)}</td>
+                    <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>
                     <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
                 </tr>
             `;
@@ -869,7 +854,6 @@ async function renderStatsCards() {
     const revenueDiff = currentRevenueTotal - compareRevenueTotal;
     const revenueGrowth = compareRevenueTotal > 0 ? (revenueDiff / compareRevenueTotal * 100) : 0;
     
-    // Get period labels for display
     let currentLabel = '';
     let compareLabel = '';
     
@@ -898,7 +882,7 @@ async function renderStatsCards() {
     statsGrid.innerHTML = `
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
             <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh thu kỳ hiện tại</div>
-            <div class="stat-value">${formatNumber(currentRevenueTotal)}</div>  <!-- ĐÃ SỬA: formatNumber -->
+            <div class="stat-value">${formatNumber(currentRevenueTotal)}</div>
             <div class="stat-compare">${currentLabel}</div>
         </div>
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
@@ -914,7 +898,6 @@ async function renderStatsCards() {
     `;
 }
 
-// Render all charts
 async function renderAllCharts() {
     await renderCategoryComparisonChart();
     await renderCategoryStructureChart();
@@ -924,7 +907,6 @@ async function renderAllCharts() {
     await renderBottomGrowthProductsChart();
 }
 
-// Main render function
 async function renderReport() {
     await renderStatsCards();
     await renderAllCharts();
@@ -1043,7 +1025,6 @@ async function loadCompareData() {
     }
 }
 
-// Helper functions for quarter and year
 async function loadRawDataForQuarter(year, quarter) {
     const months = {
         1: [1, 2, 3],
@@ -1097,8 +1078,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     showLoading();
     try {
-        currentData = await loadRawData(2026, 3);
-        compareData = await loadRawData(2025, 3);
+        currentData = await loadRawData(2026, 4);
+        compareData = await loadRawData(2025, 4);
         currentAggregatedData = null;
         compareAggregatedData = null;
         await renderReport();
