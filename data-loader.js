@@ -36,7 +36,7 @@ async function loadRawData(year, month) {
 }
 
 /**
- * Lấy dữ liệu doanh số theo NPP
+ * Lấy dữ liệu doanh thu theo NPP
  */
 async function loadDataByMonth(year, month) {
     const rawData = await loadRawData(year, month);
@@ -56,7 +56,7 @@ async function loadDataByMonth(year, month) {
 }
 
 /**
- * Lấy dữ liệu doanh số theo danh mục sản phẩm (Category)
+ * Lấy dữ liệu doanh thu theo danh mục sản phẩm (Category)
  */
 async function loadDataByCategory(year, month) {
     const rawData = await loadRawData(year, month);
@@ -75,7 +75,7 @@ async function loadDataByCategory(year, month) {
 }
 
 /**
- * Lấy dữ liệu doanh số theo sản phẩm (Product)
+ * Lấy dữ liệu doanh thu theo sản phẩm (Product)
  */
 async function loadDataByProduct(year, month) {
     const rawData = await loadRawData(year, month);
@@ -102,7 +102,7 @@ async function loadDataByProduct(year, month) {
 }
 
 /**
- * Lấy dữ liệu doanh số theo sản phẩm trong một danh mục cụ thể
+ * Lấy dữ liệu doanh thu theo sản phẩm trong một danh mục cụ thể
  */
 async function loadDataByProductInCategory(year, month, category) {
     const rawData = await loadRawData(year, month);
@@ -140,7 +140,7 @@ async function loadProductComparison(currentYear, currentMonth, compareYear, com
         compareData = compareRaw.data.filter(item => item.ten_sp === selectedProduct);
     }
     
-    // Tính tổng doanh số theo NPP cho sản phẩm được chọn
+    // Tính tổng doanh thu theo NPP cho sản phẩm được chọn
     const currentMap = new Map();
     const compareMap = new Map();
     
@@ -202,7 +202,7 @@ async function getProductsByCategory(year, month, category) {
 }
 
 /**
- * Lấy danh sách tất cả sản phẩm (top 50 theo doanh số)
+ * Lấy danh sách tất cả sản phẩm (top 50 theo doanh thu)
  */
 async function getTopProducts(year, month, limit = 50) {
     const products = await loadDataByProduct(year, month);

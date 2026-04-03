@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo cáo kinh doanh - So sánh doanh số cùng kỳ</title>
+    <title>Báo cáo kinh doanh - So sánh doanh thu cùng kỳ</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,9 +14,9 @@
         <div class="header">
             <h1>
                 <i class="fas fa-chart-line"></i>
-                Báo cáo kinh doanh - So sánh doanh số cùng kỳ
+                Báo cáo kinh doanh - So sánh doanh thu cùng kỳ
             </h1>
-            <div class="subtitle">Phân tích tăng trưởng doanh số | So sánh theo tháng, quý, năm</div>
+            <div class="subtitle">Phân tích tăng trưởng doanh thu | So sánh theo tháng, quý, năm</div>
         </div>
  <a href="index.html" class="report-link">
             <div><--- Báo cáo sản phẩm</div>
@@ -80,13 +80,13 @@
                 <!-- Charts -->
                 <div class="charts-grid">
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-bar"></i> So sánh doanh số</h3>
+                        <h3><i class="fas fa-chart-bar"></i> So sánh doanh thu</h3>
                         <div class="chart-wrapper">
                             <canvas id="revenueChart"></canvas>
                         </div>
                     </div>
                     <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> Tăng trưởng doanh số theo NPP</h3>
+                        <h3><i class="fas fa-chart-line"></i> Tăng trưởng doanh thu theo NPP</h3>
                         <div class="chart-wrapper">
                             <canvas id="growthChart"></canvas>
                         </div>
@@ -114,7 +114,7 @@
             <div id="tabDetail" class="tab-content">
                 <div class="table-card">
                     <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh số theo NPP</h3>
+                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh thu theo NPP</h3>
                         <div class="filter-group" style="min-width: 250px; margin-bottom: 0;">
                             <input type="text" id="searchNPP" placeholder="Nhập tên NPP cần tìm..." onkeyup="searchNPP()">
                         </div>
@@ -124,8 +124,8 @@
                             <thead>
                                 <tr>
                                     <th>Nhà phân phối</th>
-                                    <th>Doanh số kỳ hiện tại</th>
-                                    <th>Doanh số kỳ so sánh</th>
+                                    <th>Doanh thu kỳ hiện tại</th>
+                                    <th>Doanh thu kỳ so sánh</th>
                                     <th>Chênh lệch</th>
                                     <th>Tỷ lệ tăng trưởng</th>
                                 </tr>

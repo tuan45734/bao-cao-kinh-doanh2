@@ -339,12 +339,12 @@ function renderReport() {
     const statsGrid = document.getElementById('statsGrid');
     statsGrid.innerHTML = `
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh số kỳ hiện tại</div>
+            <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh thu kỳ hiện tại</div>
             <div class="stat-value">${formatNumber(currentRevenue)}</div>
             <div class="stat-compare">Kỳ so sánh: ${formatNumber(compareRevenue)}</div>
         </div>
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
-            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh số</div>
+            <div class="stat-title"><i class="fas fa-chart-line"></i> Tăng trưởng doanh thu</div>
             <div class="stat-value ${revenueGrowth >= 0 ? 'trend-up' : 'trend-down'}">${revenueGrowth >= 0 ? '+' : ''}${revenueGrowth.toFixed(1)}%</div>
             <div class="stat-compare">Chênh lệch: ${formatNumber(Math.abs(revenueDiff))}</div>
         </div>
@@ -371,7 +371,7 @@ function renderRevenueChart(currentRevenue, compareRevenue) {
         data: {
             labels: ['Kỳ hiện tại', 'Kỳ so sánh'],
             datasets: [{
-                label: 'Doanh số (VNĐ)',
+                label: 'Doanh thu (VNĐ)',
                 data: [currentRevenue, compareRevenue],
                 backgroundColor: ['rgba(102, 126, 234, 0.8)', 'rgba(118, 75, 162, 0.6)'],
                 borderColor: ['rgba(102, 126, 234, 1)', 'rgba(118, 75, 162, 1)'],
@@ -404,7 +404,7 @@ function renderRevenueChart(currentRevenue, compareRevenue) {
             scales: { 
                 y: { 
                     ticks: { callback: value => formatNumber(value) }, 
-                    title: { display: true, text: 'Doanh số (VNĐ)' } 
+                    title: { display: true, text: 'Doanh thu (VNĐ)' } 
                 } 
             }
         }
@@ -452,8 +452,8 @@ function renderGrowthChart() {
                             const item = topGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)} VNĐ`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)} VNĐ`
+                                `Doanh thu hiện tại: ${formatNumber(item.currentRevenue)} VNĐ`,
+                                `Doanh thu so sánh: ${formatNumber(item.compareRevenue)} VNĐ`
                             ];
                         } 
                     } 
@@ -520,8 +520,8 @@ function renderTopAreas() {
                             const item = topGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)}`
+                                `Doanh thu hiện tại: ${formatNumber(item.currentRevenue)}`,
+                                `Doanh thu so sánh: ${formatNumber(item.compareRevenue)}`
                             ];
                         }
                     }
@@ -582,8 +582,8 @@ function renderBottomAreas() {
                             const item = bottomGrowth[context.dataIndex];
                             return [
                                 `Tăng trưởng: ${context.raw.toFixed(1)}%`,
-                                `Doanh số hiện tại: ${formatNumber(item.currentRevenue)}`,
-                                `Doanh số so sánh: ${formatNumber(item.compareRevenue)}`
+                                `Doanh thu hiện tại: ${formatNumber(item.currentRevenue)}`,
+                                `Doanh thu so sánh: ${formatNumber(item.compareRevenue)}`
                             ];
                         }
                     }
