@@ -5,7 +5,7 @@ const dataCache = new Map();
 // Danh sách các tháng có dữ liệu
 const AVAILABLE_MONTHS = [
     '2025_10', '2025_11', '2025_12',
-    '2026_01', '2026_02', '2026_03'
+    '2026_01', '2026_02', '2026_03', '2026_04'
 ];
 
 /**

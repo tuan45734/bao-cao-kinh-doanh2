@@ -18,7 +18,6 @@ let bottomProductsChart = null;
 let topGrowthProductsChart = null;
 let bottomGrowthProductsChart = null;
 
-// Enable data labels for all charts
 if (typeof ChartDataLabels !== 'undefined') {
     Chart.register(ChartDataLabels);
     Chart.defaults.set('plugins.datalabels', {
@@ -28,7 +27,7 @@ if (typeof ChartDataLabels !== 'undefined') {
         align: 'top',
         formatter: value => {
             if (typeof value === 'number') {
-                return formatMoney(value);
+                return formatNumberShort(value);  // ĐÃ SỬA: dùng formatNumberShort
             }
             return value;
         },
@@ -117,6 +116,8 @@ function getNPPInfo(nppName) {
     return nppMapping[nppName] || { kv: 'Khác', region: 'Khác' };
 }
 
+// Thay thế hàm formatNumber và formatMoney bằng các hàm sau:
+
 function formatNumber(num) {
     if (typeof num !== 'number') return num;
     
@@ -126,30 +127,62 @@ function formatNumber(num) {
     // Tỷ (>= 1 tỷ)
     if (absNum >= 1e9) {
         const value = absNum / 1e9;
-        // Cắt bớt, không làm tròn: giữ 1 chữ số thập phân nhưng không làm tròn
-        const billionValue = Math.floor(value * 10) / 10;
-        if (billionValue === Math.floor(billionValue)) {
-            return (isNegative ? '-' : '') + billionValue + ' tỷ';
+        // Cắt bớt, không làm tròn: giữ 1 chữ số thập phân
+        // Lấy phần nguyên, sau đó lấy phần thập phân cắt bớt
+        const integerPart = Math.floor(value);
+        const decimalPart = Math.floor((value - integerPart) * 10);
+        
+        if (decimalPart === 0) {
+            return (isNegative ? '-' : '') + integerPart + ' tỷ';
         }
-        return (isNegative ? '-' : '') + billionValue.toFixed(1) + ' tỷ';
+        return (isNegative ? '-' : '') + integerPart + ',' + decimalPart + ' tỷ';
     }
     
     // Triệu (>= 1 triệu)
     if (absNum >= 1e6) {
         const value = absNum / 1e6;
-        const millionValue = Math.floor(value * 10) / 10;
-        if (millionValue === Math.floor(millionValue)) {
-            return (isNegative ? '-' : '') + millionValue + ' tr';
+        const integerPart = Math.floor(value);
+        const decimalPart = Math.floor((value - integerPart) * 10);
+        
+        if (decimalPart === 0) {
+            return (isNegative ? '-' : '') + integerPart + ' tr';
         }
-        return (isNegative ? '-' : '') + millionValue.toFixed(1) + ' tr';
+        return (isNegative ? '-' : '') + integerPart + ',' + decimalPart + ' tr';
     }
     
+    // Dưới 1 triệu
     return new Intl.NumberFormat('vi-VN').format(absNum);
 }
 
+// formatMoney giữ nguyên cho tooltip khi cần hiển thị đầy đủ
 function formatMoney(num) {
     if (typeof num !== 'number') return num;
     return new Intl.NumberFormat('vi-VN').format(num) + ' ₫';
+}
+
+// Hàm formatNumberShort dùng cho datalabels trên chart (không có đơn vị)
+function formatNumberShort(num) {
+    if (typeof num !== 'number') return num;
+    
+    const absNum = Math.abs(num);
+    
+    if (absNum >= 1e9) {
+        const value = absNum / 1e9;
+        const integerPart = Math.floor(value);
+        const decimalPart = Math.floor((value - integerPart) * 10);
+        if (decimalPart === 0) return integerPart + ' tỷ';
+        return integerPart + ',' + decimalPart + ' tỷ';
+    }
+    
+    if (absNum >= 1e6) {
+        const value = absNum / 1e6;
+        const integerPart = Math.floor(value);
+        const decimalPart = Math.floor((value - integerPart) * 10);
+        if (decimalPart === 0) return integerPart + ' tr';
+        return integerPart + ',' + decimalPart + ' tr';
+    }
+    
+    return new Intl.NumberFormat('vi-VN').format(absNum);
 }
 
 function calculateTotalRevenue(data) {
@@ -784,9 +817,9 @@ async function renderProductDetailTable() {
         return `
             <tr>
                 <td><strong>${item.name}</strong></td>
-                <td>${formatMoney(item.revenue)}</td>
-                <td>${formatMoney(compareRevenue)}</td>
-                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatMoney(Math.abs(diff))}</td>
+                <td>${formatNumber(item.revenue)}</td>        <!-- ĐÃ SỬA -->
+                <td>${formatNumber(compareRevenue)}</td>      <!-- ĐÃ SỬA -->
+                <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>  <!-- ĐÃ SỬA -->
                 <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
             </tr>
         `;
@@ -797,7 +830,6 @@ function searchProduct() {
     const searchTerm = document.getElementById('searchProduct').value.toLowerCase().trim();
     const tbody = document.getElementById('detailTableBody');
     
-    // Re-render with filter
     (async () => {
         const currentProducts = await getFilteredProductData(true);
         const compareProducts = await getFilteredProductData(false);
@@ -817,9 +849,9 @@ function searchProduct() {
             return `
                 <tr>
                     <td><strong>${item.name}</strong></td>
-                    <td>${formatMoney(item.revenue)}</td>
-                    <td>${formatMoney(compareRevenue)}</td>
-                    <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatMoney(Math.abs(diff))}</td>
+                    <td>${formatNumber(item.revenue)}</td>        <!-- ĐÃ SỬA -->
+                    <td>${formatNumber(compareRevenue)}</td>      <!-- ĐÃ SỬA -->
+                    <td class="${diff >= 0 ? 'positive-change' : 'negative-change'}">${diff >= 0 ? '+' : ''}${formatNumber(Math.abs(diff))}</td>  <!-- ĐÃ SỬA -->
                     <td class="${growthRate >= 0 ? 'positive-change' : 'negative-change'}">${growthRate >= 0 ? '+' : ''}${growthRate.toFixed(1)}%</td>
                 </tr>
             `;
@@ -866,7 +898,7 @@ async function renderStatsCards() {
     statsGrid.innerHTML = `
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
             <div class="stat-title"><i class="fas fa-dollar-sign"></i> Doanh thu kỳ hiện tại</div>
-            <div class="stat-value">${formatMoney(currentRevenueTotal)}</div>
+            <div class="stat-value">${formatNumber(currentRevenueTotal)}</div>  <!-- ĐÃ SỬA: formatNumber -->
             <div class="stat-compare">${currentLabel}</div>
         </div>
         <div class="stat-card ${revenueGrowth >= 0 ? 'positive' : 'negative'}">
