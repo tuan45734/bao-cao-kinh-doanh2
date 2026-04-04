@@ -4,7 +4,7 @@
 const STATIC_DATA = {
     "2025_10": {
         "NPP Anh Minh HT": 748254007,
-        "NPP Anh Đức": 187043400,
+        "NPP Anh Đức (Nghỉ)": 187043400,
         "NPP Bảo Cường": 0,
         "NPP Bảo Lâm": 940196160,
         "NPP Công Giang": 260033060,
@@ -74,7 +74,7 @@ const STATIC_DATA = {
     },
     "2025_11": {
         "NPP Anh Minh HT": 760151575,
-        "NPP Anh Đức": 209982510,
+        "NPP Anh Đức (Nghỉ)": 209982510,
         "NPP Bảo Cường": 259612370,
         "NPP Bảo Lâm": 1240130203,
         "NPP Công Giang": 414352920,
@@ -144,7 +144,7 @@ const STATIC_DATA = {
     },
     "2025_12": {
         "NPP Anh Minh HT": 972701859,
-        "NPP Anh Đức": 261607190,
+        "NPP Anh Đức (Nghỉ)": 261607190,
         "NPP Bảo Cường": 695760922,
         "NPP Bảo Lâm": 1233418041,
         "NPP Công Giang": 712748890,
@@ -214,7 +214,7 @@ const STATIC_DATA = {
     },
     "2026_01": {
         "NPP Anh Minh HT": 1342254480,
-        "NPP Anh Đức": 683622760,
+        "NPP Anh Đức (Nghỉ)": 683622760,
         "NPP Bảo Cường": 1358652370,
         "NPP Bảo Lâm": 1728457604,
         "NPP Công Giang": 1109121740,
@@ -284,7 +284,7 @@ const STATIC_DATA = {
     },
     "2026_02": {
         "NPP Anh Minh HT": 776517188,
-        "NPP Anh Đức": 535287189,
+        "NPP Anh Đức (Nghỉ)": 535287189,
         "NPP Bảo Cường": 941250881,
         "NPP Bảo Lâm": 1010703752,
         "NPP Công Giang": 486399840,
@@ -353,7 +353,7 @@ const STATIC_DATA = {
         "NPP Đức Oanh": 843610170
     },
     "2026_03": {
-         "NPP Anh Minh HT": 1389103304, "NPP Anh Đức": 891833951, "NPP Bảo Cường": 1462417909, "NPP Bảo Lâm": 2001700943, "NPP Công Giang": 1046230355, "NPP Cường Thịnh": 783222415, "NPP Duy Anh": 1014763508, "NPP Dũng Béo": 1385307718, "NPP Dũng Cúc": 531861985, "NPP Dương Minh": 1949574690, "NPP Hikoji": 1831757940, "NPP Hiền Cường": 1201656920, "NPP Hoa Việt": 1510813020, "NPP Hoàng Minh": 2010117065, "NPP Hà Thanh": 1292746986, "NPP Hùng Huệ": 915491523, "NPP Hưng Thịnh": 1354596490, "NPP Hải Hằng": 1581595892, "NPP Hồng Đức": 441485849, "NPP Linh Trang": 992491690, "NPP Long Châm": 1011417445, "NPP Long Hải": 1303099235, "NPP Long Liên": 1405523486, "NPP Lâm Hạ": 765995680, "NPP Minh Châu": 1152196274, "NPP Minh Lộc": 553375330, "NPP Mạnh Hà 1": 1268462960, "NPP Mạnh Hà 2": 649262080, "NPP Nguyên Vũ": 1498245827, "NPP Nguyễn Đình Hân": 1750333416, "NPP Ngọc Kiên": 1460892504, "NPP Ngọc Phúc": 1152724533, "NPP Ngọc Thêu": 1622122000, "NPP Nhung Tùng": 1687974283, "NPP Oanh Định": 652427432, "NPP Phong Hiền": 1011655746, "NPP Phúc Thịnh": 1027103332, "NPP Phương Hà": 1456853544, "NPP Phương Đông": 4303654698, "NPP Sơn Lâm": 931012404, "NPP Thanh Bình": 780277460, "NPP Thành Hân": 2262811340, "NPP Thành Lụa": 909980042, "NPP Thành Thanh": 1402199490, "NPP Thái Hoà": 1920714204, "NPP Thông Thơm": 514609870, "NPP Thăng Hương": 403882510, "NPP Thảo Nam": 1354197720, "NPP Thảo Thắng": 1296359793, "NPP Thảo Xuân": 1134200310, "NPP Thắng Lợi": 1652392430, "NPP Tiên Lan": 1197372228, "NPP Tiến Thịnh": 1323221136, "NPP Trường Hằng": 700193260, "NPP Tuấn Huyền": 827166740, "NPP Tuấn Huê": 1680711372, "NPP Tuấn Vân": 1052112920, "NPP Tuấn Yến": 974492310, "NPP Tân Bích An": 543040630, "NPP Tân Hoa": 1324697616, "NPP Tân Thúy": 2887703668, "NPP Tây Đô": 1780877800, "NPP Tùng Phương": 953639009, "NPP Vũ Tấm": 1369910045, "NPP Vũ Đức Nam": 755751626, "NPP Ánh Thu": 1976281630, "NPP Đức Nam Tiến": 1056611722, "NPP Đức Oanh": 1274571260 
+         "NPP Anh Minh HT": 1389103304, "NPP Anh Đức (Nghỉ)": 891833951, "NPP Bảo Cường": 1462417909, "NPP Bảo Lâm": 2001700943, "NPP Công Giang": 1046230355, "NPP Cường Thịnh": 783222415, "NPP Duy Anh": 1014763508, "NPP Dũng Béo": 1385307718, "NPP Dũng Cúc": 531861985, "NPP Dương Minh": 1949574690, "NPP Hikoji": 1831757940, "NPP Hiền Cường": 1201656920, "NPP Hoa Việt": 1510813020, "NPP Hoàng Minh": 2010117065, "NPP Hà Thanh": 1292746986, "NPP Hùng Huệ": 915491523, "NPP Hưng Thịnh": 1354596490, "NPP Hải Hằng": 1581595892, "NPP Hồng Đức": 441485849, "NPP Linh Trang": 992491690, "NPP Long Châm": 1011417445, "NPP Long Hải": 1303099235, "NPP Long Liên": 1405523486, "NPP Lâm Hạ": 765995680, "NPP Minh Châu": 1152196274, "NPP Minh Lộc": 553375330, "NPP Mạnh Hà 1": 1268462960, "NPP Mạnh Hà 2": 649262080, "NPP Nguyên Vũ": 1498245827, "NPP Nguyễn Đình Hân": 1750333416, "NPP Ngọc Kiên": 1460892504, "NPP Ngọc Phúc": 1152724533, "NPP Ngọc Thêu": 1622122000, "NPP Nhung Tùng": 1687974283, "NPP Oanh Định": 652427432, "NPP Phong Hiền": 1011655746, "NPP Phúc Thịnh": 1027103332, "NPP Phương Hà": 1456853544, "NPP Phương Đông": 4303654698, "NPP Sơn Lâm": 931012404, "NPP Thanh Bình": 780277460, "NPP Thành Hân": 2262811340, "NPP Thành Lụa": 909980042, "NPP Thành Thanh": 1402199490, "NPP Thái Hoà": 1920714204, "NPP Thông Thơm": 514609870, "NPP Thăng Hương": 403882510, "NPP Thảo Nam": 1354197720, "NPP Thảo Thắng": 1296359793, "NPP Thảo Xuân": 1134200310, "NPP Thắng Lợi": 1652392430, "NPP Tiên Lan": 1197372228, "NPP Tiến Thịnh": 1323221136, "NPP Trường Hằng": 700193260, "NPP Tuấn Huyền": 827166740, "NPP Tuấn Huê": 1680711372, "NPP Tuấn Vân": 1052112920, "NPP Tuấn Yến": 974492310, "NPP Tân Bích An": 543040630, "NPP Tân Hoa": 1324697616, "NPP Tân Thúy": 2887703668, "NPP Tây Đô": 1780877800, "NPP Tùng Phương": 953639009, "NPP Vũ Tấm": 1369910045, "NPP Vũ Đức Nam": 755751626, "NPP Ánh Thu": 1976281630, "NPP Đức Nam Tiến": 1056611722, "NPP Đức Oanh": 1274571260 
     },
     "2026_04": {
    "NPP Anh Minh HT": 99985696,
@@ -424,7 +424,7 @@ const STATIC_DATA = {
    "NPP Đồng Lợi": 130177620,
    "NPP Đức Nam Tiến": 43404220,
    "NPP Đức Oanh": 155865120,
-   "NPP Anh Đức": 0
+   "NPP Anh Đức (Nghỉ)": 0
  }
 };
 

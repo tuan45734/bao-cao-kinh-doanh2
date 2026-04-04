@@ -22,7 +22,7 @@ if (typeof ChartDataLabels !== 'undefined') {
 // NPP Mapping with KV and Region
 const nppMapping = {
     'NPP Anh Minh HT': { kv: 'KV6', region: 'MB' },
-    'NPP Anh Đức': { kv: 'KV5', region: 'MB' },
+    'NPP Anh Đức (Nghỉ)': { kv: 'KV5', region: 'MB' },
     'NPP Bảo Cường': { kv: 'KV3', region: 'MB' },
     'NPP Bảo Lâm': { kv: 'KV1', region: 'MB' },
     'NPP Công Giang': { kv: 'KV1', region: 'MB' },
