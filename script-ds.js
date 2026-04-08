@@ -653,9 +653,14 @@ function renderBottomAreas() {
 }
 
 function renderDetailTable() {
-    originalAreaData = [...currentData];
-    originalCompareAreaData = [...compareData];
-    renderDetailTableWithData(originalAreaData, originalCompareAreaData);
+    // Dùng dữ liệu đã lọc từ renderReport
+    if (window.filteredCurrentData && window.filteredCompareData) {
+        renderDetailTableWithData(window.filteredCurrentData, window.filteredCompareData);
+    } else {
+        originalAreaData = [...currentData];
+        originalCompareAreaData = [...compareData];
+        renderDetailTableWithData(originalAreaData, originalCompareAreaData);
+    }
 }
 
 function renderDetailTableWithData(currentList, compareList) {
