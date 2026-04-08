@@ -180,20 +180,26 @@ function getNPPGrowthData() {
         compareList = filterDataByRegion(compareData);
     }
     
+    // Lọc bỏ NPP có doanh thu = 0 ở cả 2 kỳ
+    const validCurrentList = filterOutZeroBothPeriods(currentList, compareList);
+    const validCompareList = filterOutZeroBothPeriods(compareList, currentList);
+    
     // Calculate growth for each NPP
     const compareMap = new Map();
-    compareList.forEach(item => compareMap.set(item.name, item.revenue));
+    validCompareList.forEach(item => compareMap.set(item.name, item.revenue));
     
-    return currentList.map(item => {
-        const compareRevenue = compareMap.get(item.name) || 0;
-        const growth = compareRevenue > 0 ? ((item.revenue - compareRevenue) / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
-        return {
-            name: item.name,
-            currentRevenue: item.revenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
+    return validCurrentList
+        .map(item => {
+            const compareRevenue = compareMap.get(item.name) || 0;
+            const growth = compareRevenue > 0 ? ((item.revenue - compareRevenue) / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
+            return {
+                name: item.name,
+                currentRevenue: item.revenue,
+                compareRevenue: compareRevenue,
+                growth: growth
+            };
+        })
+        .sort((a, b) => b.growth - a.growth);
 }
 
 // Calculate growth by region (Miền) - for main growth chart
@@ -262,6 +268,19 @@ function calculateGrowthByKV(currentList, compareList, region) {
     }).sort((a, b) => b.growth - a.growth);
 }
 
+// Lọc bỏ các NPP có doanh thu = 0 ở cả 2 kỳ
+function filterOutZeroBothPeriods(currentList, compareList) {
+    const compareMap = new Map();
+    compareList.forEach(item => compareMap.set(item.name, item.revenue));
+    
+    return currentList.filter(item => {
+        const currentRevenue = item.revenue || 0;
+        const compareRevenue = compareMap.get(item.name) || 0;
+        // Chỉ giữ lại NPP nếu ít nhất 1 trong 2 kỳ có doanh thu > 0
+        return currentRevenue > 0 || compareRevenue > 0;
+    });
+}
+
 // Calculate growth by NPP within a KV
 function calculateGrowthByNPP(currentList, compareList, kv) {
     const currentMap = new Map();
@@ -282,17 +301,25 @@ function calculateGrowthByNPP(currentList, compareList, kv) {
     });
     
     const npps = new Set([...currentMap.keys(), ...compareMap.keys()]);
-    return Array.from(npps).map(npp => {
-        const currentRevenue = currentMap.get(npp) || 0;
-        const compareRevenue = compareMap.get(npp) || 0;
-        const growth = compareRevenue > 0 ? ((currentRevenue - compareRevenue) / compareRevenue * 100) : (currentRevenue > 0 ? 100 : 0);
-        return {
-            name: npp,
-            currentRevenue: currentRevenue,
-            compareRevenue: compareRevenue,
-            growth: growth
-        };
-    }).sort((a, b) => b.growth - a.growth);
+    return Array.from(npps)
+        .filter(npp => {
+            const currentRevenue = currentMap.get(npp) || 0;
+            const compareRevenue = compareMap.get(npp) || 0;
+            // Chỉ giữ lại NPP nếu ít nhất 1 trong 2 kỳ có doanh thu > 0
+            return currentRevenue > 0 || compareRevenue > 0;
+        })
+        .map(npp => {
+            const currentRevenue = currentMap.get(npp) || 0;
+            const compareRevenue = compareMap.get(npp) || 0;
+            const growth = compareRevenue > 0 ? ((currentRevenue - compareRevenue) / compareRevenue * 100) : (currentRevenue > 0 ? 100 : 0);
+            return {
+                name: npp,
+                currentRevenue: currentRevenue,
+                compareRevenue: compareRevenue,
+                growth: growth
+            };
+        })
+        .sort((a, b) => b.growth - a.growth);
 }
 
 // Main function to get growth data based on current filters (for main growth chart)
@@ -329,11 +356,25 @@ function getYAxisTitle() {
 function renderReport() {
     if (!currentData || !compareData) return;
     
-    const filteredCurrent = filterDataByRegion(currentData);
-    const filteredCompare = filterDataByRegion(compareData);
+    const filteredCurrentRaw = filterDataByRegion(currentData);
+    const filteredCompareRaw = filterDataByRegion(compareData);
     
+    // Lọc bỏ NPP có doanh thu = 0 ở cả 2 kỳ
+    const filteredCurrent = filterOutZeroBothPeriods(filteredCurrentRaw, filteredCompareRaw);
+    const filteredCompare = filterOutZeroBothPeriods(filteredCompareRaw, filteredCurrentRaw);
+    
+    // Tính tổng doanh thu (chỉ tính các NPP còn lại)
     const currentRevenue = calculateTotalRevenue(filteredCurrent);
     const compareRevenue = calculateTotalRevenue(filteredCompare);
+    
+    // Số lượng NPP: chỉ đếm NPP có doanh thu > 0 ở kỳ đó
+    const currentNPPCount = filteredCurrent.filter(item => (item.revenue || 0) > 0).length;
+    const compareNPPCount = filteredCompare.filter(item => {
+        // Tìm doanh thu tương ứng trong danh sách so sánh
+        const compareItem = filteredCompareRaw.find(i => i.name === item.name);
+        return (compareItem?.revenue || 0) > 0;
+    }).length;
+    
     const revenueDiff = currentRevenue - compareRevenue;
     const revenueGrowth = compareRevenue > 0 ? (revenueDiff / compareRevenue * 100) : 0;
     
@@ -351,10 +392,14 @@ function renderReport() {
         </div>
         <div class="stat-card">
             <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng NPP</div>
-            <div class="stat-value">${filteredCurrent.length}</div>
-            <div class="stat-compare">Kỳ so sánh: ${filteredCompare.length}</div>
+            <div class="stat-value">${currentNPPCount}</div>
+            <div class="stat-compare">Kỳ so sánh: ${compareNPPCount}</div>
         </div>
     `;
+    
+    // Lưu lại dữ liệu đã lọc để dùng cho các biểu đồ khác
+    window.filteredCurrentData = filteredCurrent;
+    window.filteredCompareData = filteredCompare;
     
     renderRevenueChart(currentRevenue, compareRevenue);
     renderGrowthChart();
@@ -615,15 +660,24 @@ function renderDetailTable() {
 
 function renderDetailTableWithData(currentList, compareList) {
     const tbody = document.getElementById('detailTableBody');
+    
+    // Tạo map doanh thu kỳ so sánh
     const compareMap = new Map();
     compareList.forEach(item => compareMap.set(item.name, item.revenue));
     
-    if (currentList.length === 0) {
+    // Lọc bỏ NPP có doanh thu = 0 ở cả 2 kỳ
+    const filteredList = currentList.filter(item => {
+        const currentRevenue = item.revenue || 0;
+        const compareRevenue = compareMap.get(item.name) || 0;
+        return currentRevenue > 0 || compareRevenue > 0;
+    });
+    
+    if (filteredList.length === 0) {
         tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Không tìm thấy NPP</td></tr>';
         return;
     }
     
-    tbody.innerHTML = currentList.map(item => {
+    tbody.innerHTML = filteredList.map(item => {
         const compareRevenue = compareMap.get(item.name) || 0;
         const diff = item.revenue - compareRevenue;
         const growthRate = compareRevenue > 0 ? (diff / compareRevenue * 100) : (item.revenue > 0 ? 100 : 0);
