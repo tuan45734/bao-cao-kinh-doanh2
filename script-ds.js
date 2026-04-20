@@ -393,8 +393,8 @@ function renderReport() {
         </div>
         <div class="stat-card">
             <div class="stat-title"><i class="fas fa-chart-simple"></i> Số lượng NPP</div>
-            <div class="stat-value">${currentNPPCount}</div>
-            <div class="stat-compare">Kỳ so sánh: ${compareNPPCount}</div>
+            <div class="stat-value">68</div>
+            <div class="stat-compare">Kỳ so sánh: 68</div>
         </div>
     `;
     
