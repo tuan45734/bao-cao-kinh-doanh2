@@ -39,6 +39,79 @@ if (typeof ChartDataLabels !== 'undefined') {
 let currentRevenueTotal = 0;
 let compareRevenueTotal = 0;
 
+// ==================== LOGIN LOGIC ====================
+
+function verifyAccess() {
+    const codeInput = document.getElementById('accessCode');
+    const errorDiv = document.getElementById('loginError');
+    const enteredCode = codeInput.value.trim();
+    
+    // Chuyển thành chữ hoa để so sánh, cho phép nhập cả chữ thường
+    if (enteredCode.toUpperCase() === 'ADMIN99') {
+        // Hiển thị dashboard, ẩn login
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('dashboardWrapper').style.display = 'block';
+        // Khởi tạo dashboard sau khi đăng nhập thành công
+        initializeDashboard();
+    } else {
+        errorDiv.style.display = 'flex';
+        codeInput.value = '';
+        codeInput.focus();
+        setTimeout(() => {
+            errorDiv.style.display = 'none';
+        }, 3000);
+    }
+}
+
+// Khởi tạo dashboard sau khi login
+async function initializeDashboard() {
+    // Kiểm tra nếu script.js đã load và có các hàm cần thiết
+    if (typeof switchComparisonType === 'function') {
+        switchComparisonType('month');
+        
+        // Cập nhật area dropdown
+        const areaSelect = document.getElementById('areaSelect');
+        if (areaSelect && typeof getAreasByRegion === 'function') {
+            areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
+                getAreasByRegion('MB').map(area => `<option value="${area}">${area}</option>`).join('');
+        }
+        
+        // Tải dữ liệu mặc định
+        if (typeof loadCompareData === 'function') {
+            // Set mặc định tháng 4/2026 và 4/2025
+            try {
+                if (typeof loadRawData === 'function') {
+                    window.currentData = await loadRawData(2026, 4);
+                    window.compareData = await loadRawData(2025, 4);
+                    if (typeof renderReport === 'function') await renderReport();
+                }
+            } catch(e) { console.warn(e); }
+        }
+        
+        // Force render lại
+        if (typeof renderReport === 'function') renderReport();
+    } else {
+        console.warn("Đợi script.js load...");
+        setTimeout(() => {
+            if (typeof switchComparisonType === 'function') {
+                switchComparisonType('month');
+                if (typeof renderReport === 'function') renderReport();
+            }
+        }, 500);
+    }
+}
+
+// Ghi đè một số hàm để đảm bảo filter hoạt động với login
+const originalOnRegionChange = window.onRegionChange;
+window.onRegionChange = function() {
+    if (typeof originalOnRegionChange === 'function') originalOnRegionChange();
+    if (typeof renderReport === 'function') renderReport();
+};
+
+window.onAreaChange = function() {
+    if (typeof renderReport === 'function') renderReport();
+};
+
 // NPP Mapping
 const nppMapping = {
     'NPP Anh Minh HT': { kv: 'KV6', region: 'MB' },
@@ -367,7 +440,7 @@ async function renderCategoryComparisonChart() {
     });
 }
 
-// Biểu đồ 2: Cơ cấu ngành hàng (Donut chart) - ĐÃ SỬA HOVER FORMAT
+// Biểu đồ 2: Cơ cấu ngành hàng (Donut chart)
 async function renderCategoryStructureChart() {
     const ctx = document.getElementById('categoryStructureChart').getContext('2d');
     if (categoryStructureChart) categoryStructureChart.destroy();
@@ -412,7 +485,6 @@ async function renderCategoryStructureChart() {
                             const value = context.raw;
                             const total = context.dataset.data.reduce((a, b) => a + b, 0);
                             const percent = (value / total * 100).toFixed(1);
-                            // ĐÃ SỬA: dùng formatNumber thay vì formatMoney
                             return `${context.label}: ${formatNumber(value)} (${percent}%)`;
                         } 
                     } 
@@ -621,7 +693,7 @@ async function renderBottomProductsLineChart() {
     });
 }
 
-// Biểu đồ 5: 10 sản phẩm tăng trưởng mạnh nhất (Màu xanh dương, đỏ âm)
+// Biểu đồ 5: 10 sản phẩm tăng trưởng mạnh nhất
 async function renderTopGrowthProductsChart() {
     const ctx = document.getElementById('topGrowthProductsChart').getContext('2d');
     if (topGrowthProductsChart) topGrowthProductsChart.destroy();
@@ -701,7 +773,7 @@ async function renderTopGrowthProductsChart() {
     });
 }
 
-// Biểu đồ 6: 10 sản phẩm tăng trưởng yếu nhất (Màu xanh dương, đỏ âm)
+// Biểu đồ 6: 10 sản phẩm tăng trưởng yếu nhất
 async function renderBottomGrowthProductsChart() {
     const ctx = document.getElementById('bottomGrowthProductsChart').getContext('2d');
     if (bottomGrowthProductsChart) bottomGrowthProductsChart.destroy();
@@ -1068,25 +1140,23 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize
-document.addEventListener('DOMContentLoaded', async () => {
+// Initialize with Enter key support for login
+document.addEventListener('DOMContentLoaded', () => {
+    const pwdInput = document.getElementById('accessCode');
+    if (pwdInput) {
+        pwdInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') verifyAccess();
+        });
+    }
+    
+    // Set default filter controls
     switchComparisonType('month');
     
     const areaSelect = document.getElementById('areaSelect');
-    areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
-        getAreasByRegion('MB').map(area => `<option value="${area}">${area}</option>`).join('');
-    
-    showLoading();
-    try {
-        currentData = await loadRawData(2026, 4);
-        compareData = await loadRawData(2025, 4);
-        currentAggregatedData = null;
-        compareAggregatedData = null;
-        await renderReport();
-    } catch (error) {
-        console.error('Error loading default data:', error);
-        showNotification('Không thể tải dữ liệu mặc định', 'error');
-    } finally {
-        hideLoading();
+    if (areaSelect) {
+        areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
+            getAreasByRegion('MB').map(area => `<option value="${area}">${area}</option>`).join('');
     }
+    
+    // Note: Data will be loaded after login via initializeDashboard()
 });

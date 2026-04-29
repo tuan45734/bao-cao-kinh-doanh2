@@ -1,159 +1,160 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Đăng nhập | Báo cáo kinh doanh</title>
+    <!-- Chart.js & datalabels -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>
+    <!-- ==================== LOGIN PAGE ==================== -->
+    <div id="loginPage" class="login-container">
+        <div class="login-card">
+            <div class="login-header">
                 <i class="fas fa-chart-line"></i>
-                Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ
-            </h1>
-            <div class="subtitle">Phân tích doanh thu theo ngành hàng | Top sản phẩm | Tăng trưởng sản phẩm</div>
-        </div>
-
-        <a href="index-ds.html" class="report-link">
-            <div><--- Báo cáo doanh thu</div>
-        </a>
-
-        <div class="filter-section">
-            <div class="filter-tabs">
-                <button class="filter-tab active" data-type="month" onclick="switchComparisonType('month')">
-                    <i class="fas fa-calendar-alt"></i> So sánh tháng
-                </button>
-                <button class="filter-tab" data-type="quarter" onclick="switchComparisonType('quarter')">
-                    <i class="fas fa-chart-simple"></i> So sánh quý
-                </button>
-                <button class="filter-tab" data-type="year" onclick="switchComparisonType('year')">
-                    <i class="fas fa-calendar-year"></i> So sánh năm
-                </button>
+                <h2>Báo cáo kinh doanh</h2>
+                <p>Hệ thống phân tích sản phẩm</p>
             </div>
-
-            <div class="filter-controls" id="filterControls">
-                <!-- Dynamic controls will be inserted here -->
-            </div>
-
-            <!-- Region Filter -->
-            <div class="region-filter" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                <div class="filter-controls">
-                    <div class="filter-group">
-                        <label><i class="fas fa-map-marker-alt"></i> Miền</label>
-                        <select id="regionSelect" onchange="onRegionChange()">
-                            <option value="">Tất cả miền</option>
-                            <option value="MB">Miền Bắc (MB)</option>
-                            <option value="MT" disabled style="color: #ccc;">Miền Trung (MT) - Chưa có dữ liệu</option>
-                            <option value="MN" disabled style="color: #ccc;">Miền Nam (MN) - Chưa có dữ liệu</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label><i class="fas fa-building"></i> Khu vực</label>
-                        <select id="areaSelect" onchange="onAreaChange()">
-                            <option value="">Tất cả khu vực</option>
-                        </select>
-                    </div>
+            <div class="login-body">
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="accessCode" placeholder="Mã truy cập" autocomplete="off">
                 </div>
+                <button class="btn-login" onclick="verifyAccess()">
+                    <i class="fas fa-arrow-right-to-bracket"></i> Đăng nhập
+                </button>
+                <div id="loginError" class="error-message" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i> Mã truy cập không chính xác
+                </div>
+                
             </div>
         </div>
+    </div>
 
-        <!-- Report Content -->
-        <div id="reportContent">
-            <!-- Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-btn active" onclick="switchTab('overview')">
-                    <i class="fas fa-chart-pie"></i> Tổng quan
-                </button>
-                <button class="tab-btn" onclick="switchTab('detail')">
-                    <i class="fas fa-table-list"></i> Chi tiết sản phẩm
-                </button>
+    <!-- ==================== MAIN DASHBOARD (ẩn ban đầu) ==================== -->
+    <div id="dashboardWrapper" class="dashboard-wrapper" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <h1>
+                    <i class="fas fa-chart-line"></i>
+                    Báo cáo kinh doanh - Phân tích sản phẩm cùng kỳ
+                </h1>
+                <div class="subtitle">Phân tích doanh thu theo ngành hàng | Top sản phẩm | Tăng trưởng sản phẩm</div>
             </div>
 
-            <!-- Tab Overview -->
-            <div id="tabOverview" class="tab-content active">
-                <!-- Stats Cards -->
-                <div class="stats-grid" id="statsGrid"></div>
+            <a href="index-ds.html" class="report-link">
+                <div><--- Báo cáo doanh thu</div>
+            </a>
 
-                <!-- Charts Row 1: So sánh ngành hàng + Cơ cấu ngành hàng -->
-                <div class="charts-grid">
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-bar"></i> 1. So sánh doanh thu ngành hàng</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="categoryComparisonChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-pie"></i> 2. Cơ cấu doanh thu theo ngành hàng</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="categoryStructureChart"></canvas>
-                        </div>
-                    </div>
+            <div class="filter-section">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-type="month" onclick="switchComparisonType('month')">
+                        <i class="fas fa-calendar-alt"></i> So sánh tháng
+                    </button>
+                    <button class="filter-tab" data-type="quarter" onclick="switchComparisonType('quarter')">
+                        <i class="fas fa-chart-simple"></i> So sánh quý
+                    </button>
+                    <button class="filter-tab" data-type="year" onclick="switchComparisonType('year')">
+                        <i class="fas fa-calendar-year"></i> So sánh năm
+                    </button>
                 </div>
 
-                <!-- Charts Row 2: Top 10 bán chạy + Bottom 10 bán kém -->
-                <div class="charts-grid">
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 3. Top 10 sản phẩm bán chạy nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="topProductsLineChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 4. Top 10 sản phẩm bán kém nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="bottomProductsLineChart"></canvas>
-                        </div>
-                    </div>
-                </div>
+                <div class="filter-controls" id="filterControls"></div>
 
-                <!-- Charts Row 3: Tăng trưởng mạnh nhất + Tăng trưởng yếu nhất -->
-                <div class="charts-grid">
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 5. Top 10 sản phẩm tăng trưởng mạnh nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="topGrowthProductsChart"></canvas>
+                <!-- Region Filter -->
+                <div class="region-filter" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
+                    <div class="filter-controls">
+                        <div class="filter-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Miền</label>
+                            <select id="regionSelect" onchange="onRegionChange()">
+                                <option value="">Tất cả miền</option>
+                                <option value="MB">Miền Bắc (MB)</option>
+                                <option value="MT" disabled style="color: #ccc;">Miền Trung (MT) - Chưa có dữ liệu</option>
+                                <option value="MN" disabled style="color: #ccc;">Miền Nam (MN) - Chưa có dữ liệu</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="chart-card">
-                        <h3><i class="fas fa-chart-line"></i> 6. Top 10 sản phẩm tăng trưởng yếu nhất</h3>
-                        <div class="chart-wrapper">
-                            <canvas id="bottomGrowthProductsChart"></canvas>
+                        <div class="filter-group">
+                            <label><i class="fas fa-building"></i> Khu vực</label>
+                            <select id="areaSelect" onchange="onAreaChange()">
+                                <option value="">Tất cả khu vực</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab Detail - Sản phẩm -->
-            <div id="tabDetail" class="tab-content">
-                <div class="table-card">
-                    <div class="table-header"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-                        <h3><i class="fas fa-table-list"></i> Chi tiết doanh thu theo sản phẩm</h3>
-                        <div class="filter-group" style="min-width: 300px; margin-bottom: 0;">
-                            <input type="text" id="searchProduct" placeholder="Nhập tên sản phẩm cần tìm..."
-                                onkeyup="searchProduct()">
+            <!-- Report Content -->
+            <div id="reportContent">
+                <div class="tab-navigation">
+                    <button class="tab-btn active" onclick="switchTab('overview')">
+                        <i class="fas fa-chart-pie"></i> Tổng quan
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('detail')">
+                        <i class="fas fa-table-list"></i> Chi tiết sản phẩm
+                    </button>
+                </div>
+
+                <!-- Tab Overview -->
+                <div id="tabOverview" class="tab-content active">
+                    <div class="stats-grid" id="statsGrid"></div>
+
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-bar"></i> 1. So sánh doanh thu ngành hàng</h3>
+                            <div class="chart-wrapper"><canvas id="categoryComparisonChart"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-pie"></i> 2. Cơ cấu doanh thu theo ngành hàng</h3>
+                            <div class="chart-wrapper"><canvas id="categoryStructureChart"></canvas></div>
                         </div>
                     </div>
-                    <div style="overflow-x: auto;">
-                        <table class="data-table" id="detailTable">
-                            <thead>
-                                <tr>
-                                    <th>Sản phẩm</th>
-                                    <th>Doanh thu kỳ hiện tại</th>
-                                    <th>Doanh thu kỳ so sánh</th>
-                                    <th>Chênh lệch</th>
-                                    <th>Tỷ lệ tăng trưởng</th>
-                                </tr>
-                            </thead>
-                            <tbody id="detailTableBody"></tbody>
-                        </table>
+
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-line"></i> 3. Top 10 sản phẩm bán chạy nhất</h3>
+                            <div class="chart-wrapper"><canvas id="topProductsLineChart"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-line"></i> 4. Top 10 sản phẩm bán kém nhất</h3>
+                            <div class="chart-wrapper"><canvas id="bottomProductsLineChart"></canvas></div>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-line"></i> 5. Top 10 sản phẩm tăng trưởng mạnh nhất</h3>
+                            <div class="chart-wrapper"><canvas id="topGrowthProductsChart"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-line"></i> 6. Top 10 sản phẩm tăng trưởng yếu nhất</h3>
+                            <div class="chart-wrapper"><canvas id="bottomGrowthProductsChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Detail -->
+                <div id="tabDetail" class="tab-content">
+                    <div class="table-card">
+                        <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                            <h3><i class="fas fa-table-list"></i> Chi tiết doanh thu theo sản phẩm</h3>
+                            <div class="filter-group" style="min-width: 300px; margin-bottom: 0;">
+                                <input type="text" id="searchProduct" placeholder="Nhập tên sản phẩm cần tìm..." onkeyup="searchProduct()">
+                            </div>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr><th>Sản phẩm</th><th>Doanh thu kỳ hiện tại</th><th>Doanh thu kỳ so sánh</th><th>Chênh lệch</th><th>Tỷ lệ tăng trưởng</th></tr>
+                                </thead>
+                                <tbody id="detailTableBody"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,5 +164,4 @@
     <script src="data-loader.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
