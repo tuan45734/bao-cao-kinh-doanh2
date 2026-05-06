@@ -2,9 +2,9 @@
   "metadata": {
     "year": 2026,
     "month": 4,
-    "total_records": 233136,
-    "total_products": 1570,
-    "exported_at": "2026-05-04T06:29:01.331Z"
+    "total_records": 233542,
+    "total_products": 1586,
+    "exported_at": "2026-05-06T00:55:13.763Z"
   },
   "data": [
     {
@@ -10184,6 +10184,30 @@
       "count": 119
     },
     {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 8995000,
+      "npp": "NPP Thanh Bình",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 44
+    },
+    {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 8995000,
+      "npp": "NPP Thành Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 37
+    },
+    {
       "ma_sp": "HH00063",
       "ten_sp": "Bim bim mái ngói (25gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -10340,6 +10364,18 @@
       "count": 338
     },
     {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 8785000,
+      "npp": "NPP Thanh Bình",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 42
+    },
+    {
       "ma_sp": "HH00079",
       "ten_sp": "Snack Bò kobe (25gram*300 gói/thùng)",
       "category": "Hàng Ướt",
@@ -10470,6 +10506,18 @@
       "year": 2026,
       "month": 4,
       "count": 177
+    },
+    {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 8645000,
+      "npp": "NPP Thành Thanh",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 37
     },
     {
       "ma_sp": "HH00078",
@@ -13352,6 +13400,18 @@
       "count": 21
     },
     {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 5670000,
+      "npp": "NPP Nhung Tùng",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 21
+    },
+    {
       "ma_sp": "HH00058",
       "ten_sp": "Đùi gà bơ sữa (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -13772,6 +13832,18 @@
       "count": 25
     },
     {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 5250000,
+      "npp": "NPP Nhung Tùng",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 20
+    },
+    {
       "ma_sp": "HH00055",
       "ten_sp": "Đùi gà rong biển (32gram*120 gói/thùng)",
       "category": "Bim Quẩy",
@@ -14082,6 +14154,30 @@
       "year": 2026,
       "month": 4,
       "count": 106
+    },
+    {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 4900000,
+      "npp": "NPP Minh Lộc",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 22
+    },
+    {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 4900000,
+      "npp": "NPP Minh Lộc",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 22
     },
     {
       "ma_sp": "HH00101",
@@ -15800,6 +15896,18 @@
       "count": 38
     },
     {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 3465000,
+      "npp": "NPP Sơn Lâm",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 18
+    },
+    {
       "ma_sp": "HH00073",
       "ten_sp": "Bim Bim tam thể (50gram*60 gói/thùng)",
       "category": "Bim Quẩy",
@@ -15810,6 +15918,18 @@
       "year": 2026,
       "month": 4,
       "count": 36
+    },
+    {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 3430000,
+      "npp": "NPP Hải Hằng",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 40
     },
     {
       "ma_sp": "HH00079",
@@ -15858,6 +15978,18 @@
       "year": 2026,
       "month": 4,
       "count": 33
+    },
+    {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 3360000,
+      "npp": "NPP Hải Hằng",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 40
     },
     {
       "ma_sp": "HH00057",
@@ -15954,6 +16086,18 @@
       "year": 2026,
       "month": 4,
       "count": 24
+    },
+    {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 3255000,
+      "npp": "NPP Sơn Lâm",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 18
     },
     {
       "ma_sp": "HH00074",
@@ -16472,6 +16616,18 @@
       "count": 14
     },
     {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 2765000,
+      "npp": "NPP Thái Hoà",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 22
+    },
+    {
       "ma_sp": "HH00099",
       "ten_sp": "Chân gà có xương bà Tuyết (40gram*90 gói/thùng) kèm sốt",
       "category": "Chân gà",
@@ -16926,6 +17082,18 @@
       "year": 2026,
       "month": 4,
       "count": 34
+    },
+    {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 2345000,
+      "npp": "NPP Thái Hoà",
+      "kv": "KV5",
+      "year": 2026,
+      "month": 4,
+      "count": 21
     },
     {
       "ma_sp": "HH00069",
@@ -18714,6 +18882,30 @@
       "year": 2026,
       "month": 4,
       "count": 3
+    },
+    {
+      "ma_sp": "HH00106",
+      "ten_sp": "Việt Quất hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 105000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "ma_sp": "HH00107",
+      "ten_sp": "Nho hóa thạch",
+      "category": "Phụ",
+      "cases": 0,
+      "revenue": 105000,
+      "npp": "NPP Mạnh Hà 1",
+      "kv": "KV6",
+      "year": 2026,
+      "month": 4,
+      "count": 1
     },
     {
       "ma_sp": "HH00062",
