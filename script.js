@@ -47,7 +47,7 @@ function verifyAccess() {
     const enteredCode = codeInput.value.trim();
     
     // Chuyển thành chữ hoa để so sánh, cho phép nhập cả chữ thường
-    if (enteredCode.toUpperCase() === 'ANCUNGBATUYET99') {
+    if (enteredCode.toUpperCase() === '99') {
         // Hiển thị dashboard, ẩn login
         document.getElementById('loginPage').style.display = 'none';
         document.getElementById('dashboardWrapper').style.display = 'block';
