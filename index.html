@@ -63,6 +63,9 @@
                     <button class="filter-tab" data-type="year" onclick="switchComparisonType('year')">
                         <i class="fas fa-calendar-year"></i> So sánh năm
                     </button>
+                    <button class="filter-tab" data-type="total" onclick="switchComparisonType('total')">
+                        <i class="fas fa-chart-bar"></i> So sánh tổng
+                    </button>
                 </div>
 
                 <div class="filter-controls" id="filterControls"></div>
@@ -134,6 +137,14 @@
                         <div class="chart-card">
                             <h3><i class="fas fa-chart-line"></i> 6. Top 10 sản phẩm tăng trưởng yếu nhất</h3>
                             <div class="chart-wrapper"><canvas id="bottomGrowthProductsChart"></canvas></div>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid" id="totalComparisonSection">
+                        <div class="chart-card">
+                            <h3><i class="fas fa-chart-bar"></i> So sánh tổng - Sản phẩm bán chạy nhất theo tháng</h3>
+                            <div class="chart-wrapper"><canvas id="totalComparisonChart"></canvas></div>
+                            <div class="month-selector" id="monthSelector" style="margin-top: 15px; text-align: center; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;"></div>
                         </div>
                     </div>
                 </div>

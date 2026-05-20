@@ -98,6 +98,7 @@ async function loadDataByProduct(year, month) {
     const productMap = new Map();
     rawData.data.forEach(item => {
         const productName = item.ten_sp;
+        if (!productName || typeof productName !== 'string') return;
         const revenue = item.revenue || 0;
         const cases = item.cases || 0;
         productMap.set(productName, {
@@ -124,7 +125,7 @@ async function loadDataByProductInCategory(year, month, category) {
     
     const productMap = new Map();
     rawData.data
-        .filter(item => item.category === category)
+        .filter(item => item.category === category && item.ten_sp && typeof item.ten_sp === 'string')
         .forEach(item => {
             const productName = item.ten_sp;
             const revenue = item.revenue || 0;
