@@ -355,14 +355,21 @@ const STATIC_DATA = {
     "2026_03": {
         "NPP Anh Minh HT": 1389103304, "NPP Anh Đức (Nghỉ)": 891833951, "NPP Bảo Cường": 1462417909, "NPP Bảo Lâm": 2001700943, "NPP Công Giang": 1046230355, "NPP Cường Thịnh": 783222415, "NPP Duy Anh": 1014763508, "NPP Dũng Béo": 1385307718, "NPP Dũng Cúc": 531861985, "NPP Dương Minh": 1949574690, "NPP Hikoji": 1831757940, "NPP Hiền Cường": 1201656920, "NPP Hoa Việt": 1510813020, "NPP Hoàng Minh": 2010117065, "NPP Hà Thanh": 1292746986, "NPP Hùng Huệ": 915491523, "NPP Hưng Thịnh": 1354596490, "NPP Hải Hằng": 1581595892, "NPP Hồng Đức": 441485849, "NPP Linh Trang": 992491690, "NPP Long Châm": 1011417445, "NPP Long Hải": 1303099235, "NPP Long Liên": 1405523486, "NPP Lâm Hạ": 765995680, "NPP Minh Châu": 1152196274, "NPP Minh Lộc": 553375330, "NPP Mạnh Hà 1": 1268462960, "NPP Mạnh Hà 2": 649262080, "NPP Nguyên Vũ": 1498245827, "NPP Nguyễn Đình Hân": 1750333416, "NPP Ngọc Kiên": 1460892504, "NPP Ngọc Phúc": 1152724533, "NPP Ngọc Thêu": 1622122000, "NPP Nhung Tùng": 1687974283, "NPP Oanh Định": 652427432, "NPP Phong Hiền": 1011655746, "NPP Phúc Thịnh": 1027103332, "NPP Phương Hà": 1456853544, "NPP Phương Đông": 4303654698, "NPP Sơn Lâm": 931012404, "NPP Thanh Bình": 780277460, "NPP Thành Hân": 2262811340, "NPP Thành Lụa": 909980042, "NPP Thành Thanh": 1402199490, "NPP Thái Hoà": 1920714204, "NPP Thông Thơm": 514609870, "NPP Thăng Hương": 403882510, "NPP Thảo Nam": 1354197720, "NPP Thảo Thắng": 1296359793, "NPP Thảo Xuân": 1134200310, "NPP Thắng Lợi": 1652392430, "NPP Tiên Lan (Nghỉ)": 1197372228, "NPP Tiến Thịnh": 1323221136, "NPP Trường Hằng": 700193260, "NPP Tuấn Huyền": 827166740, "NPP Tuấn Huê": 1680711372, "NPP Tuấn Vân": 1052112920, "NPP Tuấn Yến": 974492310, "NPP Tân Bích An": 543040630, "NPP Tân Hoa": 1324697616, "NPP Tân Thúy": 2887703668, "NPP Tây Đô": 1780877800, "NPP Tùng Phương": 953639009, "NPP Vũ Tấm": 1369910045, "NPP Vũ Đức Nam": 755751626, "NPP Ánh Thu": 1976281630, "NPP Đức Nam Tiến": 1056611722, "NPP Đức Oanh": 1274571260
     },
-    "2026_04": { "NPP Anh Minh HT": 1090665123, "NPP Anh Viên": 0, "NPP Bảo Cường": 2509421393, "NPP Bảo Lâm": 1372713860, "NPP Công Giang": 1290137688, "NPP Cường Thịnh": 650586084, "NPP Duy Anh": 1227409088, "NPP Duy Khoa": 1234150220, "NPP Dũng Béo": 1177822747, "NPP Dũng Cúc": 548592560, "NPP Dương Minh": 2265434935, "NPP Dương Thiên Nhi": 0, "NPP Hikoji": 2314954804, "NPP Hiền Cường": 1421102385, "NPP Hiền Thuận": 0, "NPP Hoa Việt": 1481489630, "NPP Hoàng Gia Bảo": 0, "NPP Hoàng Minh": 1817786143, "NPP Hà Thanh": 1826548255, "NPP Hùng Huệ": 825100917, "NPP Hưng Thịnh": 1441152820, "NPP Hải Hằng": 1454720283, "NPP Hồng Đức": 601274150, "NPP Linh Trang": 1000959730, "NPP Long Châm": 806096046, "NPP Long Hải": 1444365706, "NPP Long Liên": 1393419905, "NPP Lâm Hạ": 511242420, "NPP Minh Châu": 1362468940, "NPP Minh Huy": 0, "NPP Minh Lộc": 368028760, "NPP Mạnh Hà 1": 1302670940, "NPP Mạnh Hà 2": 506727180, "NPP NAKOA": 0, "NPP Nguyên Vũ": 1748760199, "NPP Nguyễn Đình Hân": 1712403106, "NPP Ngọc Kiên": 1419616230, "NPP Ngọc Phúc": 1505556473, "NPP Ngọc Thêu": 1729065520, "NPP Nhung Tùng": 1810547291, "NPP Oanh Định": 481492610, "NPP Phong Hiền": 1267917889, "NPP Phúc Thịnh": 1002929313, "NPP Phương Hà": 1904481616, "NPP Phương Đông": 3945849840, "NPP Sơn Lâm": 1450560430, "NPP Thanh Bình": 705097235, "NPP Thành Hân": 2790484180, "NPP Thành Lụa": 620258138, "NPP Thành Thanh": 1233028750, "NPP Thái Hoà": 1516452084, "NPP Thông Thơm": 266517200, "NPP Thúy Diễm": 0, "NPP Thăng Hương": 528938504, "NPP Thảo Nam": 1186802990, "NPP Thảo Thắng": 1406228342, "NPP Thảo Xuân": 739056008, "NPP Thắng Lợi": 2160928435, "NPP Tiến Thịnh": 1757982053, "NPP Trung Nam": 0, "NPP Trường Hằng": 730664230, "NPP Tuấn Huyền": 641073430, "NPP Tuấn Huê": 1726797060, "NPP Tuấn Vân": 1029667564, "NPP Tuấn Yến": 870403644, "NPP Tâm Bảo Hân": 0, "NPP Tân Bích An": 353777440, "NPP Tân Hoa": 1319335470, "NPP Tân Thúy": 2902157760, "NPP Tây Đô": 2212619385, "NPP Tùng Phương": 859907515, "NPP Vũ Tấm": 1054752620, "NPP Vũ Đức Nam": 1046339778, "NPP Ánh Thu": 2161976606, "NPP Đồng Lợi": 847868575, "NPP Đức Nam Tiến": 942317592, "NPP Đức Oanh": 944465400, "NPP Tiên Lan (Nghỉ)": 0, "NPP Anh Đức (Nghỉ)": 0 },
-    "2026_05": 
- {   "NPP Anh Minh HT": 742688770,   "NPP Anh Viên": 202985600,   "NPP Bảo Cường": 1046240815,   "NPP Bảo Lâm": 508308484,   "NPP Công Giang": 548462200,   "NPP Cường Thịnh": 215456577,   "NPP Duy Anh": 727566500,   "NPP Duy Khoa": 614916950,   "NPP Dũng Béo": 915327695,   "NPP Dũng Cúc": 68957220,   "NPP Dương Minh": 1292765405,   "NPP Dương Thiên Nhi": 209775158,   "NPP Hikoji": 642014918,   "NPP Hiền Cường": 384294850,   "NPP Hiền Thuận": 11437000,   "NPP Hoa Việt": 658373560,   "NPP Hoàng Gia Bảo": 36533100,   "NPP Hoàng Minh": 825954201,   "NPP Hà Thanh": 799457380,   "NPP Hùng Huệ": 316674170,   "NPP Hưng Thịnh": 597645390,   "NPP Hải Hằng": 633743850,   "NPP Hồng Đức": 84958700,   "NPP Linh Trang": 821965890,   "NPP Long Châm": 523556589,   "NPP Long Hải": 684717350,   "NPP Long Liên": 715318514,   "NPP Lâm Hạ": 334005735,   "NPP Minh Châu": 725483680,   "NPP Minh Huy": 26358500,   "NPP Minh Lộc": 290815360,   "NPP Mạnh Hà 1": 749059250,   "NPP Mạnh Hà 2": 318917040,   "NPP NAKOA": 69659420,   "NPP Nguyên Vũ": 925490400,   "NPP Nguyễn Đình Hân": 996500280,   "NPP Ngọc Kiên": 508861676,   "NPP Ngọc Phúc": 601014674,   "NPP Ngọc Thêu": 809613880,   "NPP Nhung Tùng": 997943680,   "NPP Oanh Định": 244701720,   "NPP Phong Hiền": 450669740,   "NPP Phúc Thịnh": 337402060,   "NPP Phương Hà": 1004805520,   "NPP Phương Đông": 1852039580,   "NPP Sơn Lâm": 684584622,   "NPP Thanh Bình": 293191880,   "NPP Thành Hân": 1693554790,   "NPP Thành Lụa": 332867960,   "NPP Thành Thanh": 703170330,   "NPP Thái Hoà": 799843188,   "NPP Thông Thơm": 80928680,   "NPP Thúy Diễm": 10375220,   "NPP Thăng Hương": 449777520,   "NPP Thảo Nam": 532651870,   "NPP Thảo Thắng": 561884810,   "NPP Thảo Xuân": 216316260,   "NPP Thắng Lợi": 1017327630,   "NPP Tiến Thịnh": 308843470,   "NPP Trung Nam": 186814240,   "NPP Trường Hằng": 230487555,   "NPP Tuấn Huyền": 458572910,   "NPP Tuấn Huê": 780119673,   "NPP Tuấn Vân": 708742740,   "NPP Tuấn Yến": 524902293,   "NPP Tâm Bảo Hân": 104899306,   "NPP Tân Bích An": 237774490,   "NPP Tân Hoa": 693462780,   "NPP Tân Thúy": 1673626030,   "NPP Tây Đô": 1307428880,   "NPP Tùng Phương": 473358890,   "NPP Tường Vy": 1705300,   "NPP Vũ Tấm": 628345445,   "NPP Vũ Đức Nam": 479480185,   "NPP Ánh Thu": 1180966674,   "NPP Đồng Lợi": 231084200,   "NPP Đức Nam Tiến": 410900520,   "NPP Đức Oanh": 259062550,   "NPP Tiên Lan (Nghỉ)": 0,   "NPP Anh Đức (Nghỉ)": 0 }
- 
+    "2026_04": { "NPP Anh Minh HT": 1090665123, "NPP Anh Viên": 0, "NPP Bảo Cường": 2509421393, "NPP Bảo Lâm": 1372713860, "NPP Công Giang": 1290137688, "NPP Cường Thịnh": 650586084, "NPP Duy Anh": 1227409088, "NPP Duy Khoa": 1234150220, "NPP Dũng Béo": 1177822747, "NPP Dũng Cúc": 548592560, "NPP Dương Minh": 2265434935, "NPP Dương Thiên Nhi": 0, "NPP Hikoji": 2314954804, "NPP Hiền Cường": 1421102385, "NPP Hiền Thuận": 0, "NPP Hoa Việt": 1481489630, "NPP Hoàng Gia Bảo": 0, "NPP Hoàng Minh": 1817786143, "NPP Hà Thanh": 1826548255, "NPP Hùng Huệ": 825100917, "NPP Hưng Thịnh": 1441152820, "NPP Hải Hằng": 1454720283, "NPP Hồng Đức": 601274150, "NPP Linh Trang": 1000959730, "NPP Long Châm": 806096046, "NPP Long Hải": 1444365706, "NPP Long Liên": 1393419905, "NPP Lâm Hạ": 511242420, "NPP Minh Châu": 1362468940, "NPP Minh Huy": 0, "NPP Minh Lộc": 368028760, "NPP Mạnh Hà 1": 1302670940, "NPP Mạnh Hà 2": 506727180, "NPP NAKOA": 0, "NPP Nguyên Vũ": 1748760199, "NPP Nguyễn Đình Hân": 1712403106, "NPP Ngọc Kiên": 1419616230, "NPP Ngọc Phúc": 1505556473, "NPP Ngọc Thêu": 1729065520, "NPP Nhung Tùng": 1810547291, "NPP Oanh Định": 481492610, "NPP Phong Hiền": 1267917889, "NPP Phúc Thịnh": 1002929313, "NPP Phương Hà": 1904481616, "NPP Phương Đông": 3945849840, "NPP Sơn Lâm": 1450560430, "NPP Thanh Bình": 705097235, "NPP Thành Hân": 2790484180, "NPP Thành Lụa": 620258138, "NPP Thành Thanh": 1233028750, "NPP Thái Hoà": 1516452084, "NPP Thông Thơm": 266517200, "NPP Thúy Diễm": 0, "NPP Thăng Hương": 528938504, "NPP Thảo Nam": 1186802990, "NPP Thảo Thắng": 1406228342, "NPP Thảo Xuân": 739056008, "NPP Thắng Lợi": 2160928435, "NPP Tiến Thịnh": 1757982053, "NPP Trung Nam": 0, "NPP Trường Hằng": 730664230, "NPP Tuấn Huyền": 641073430, "NPP Tuấn Huê": 1726797060, "NPP Tuấn Vân": 1029667564, "NPP Tuấn Yến": 870403644, "NPP Tâm Bảo Hân": 0, "NPP Tân Bích An": 353777440, "NPP Tân Hoa": 1319335470, "NPP Tân Thúy": 2902157760, "NPP Tây Đô": 2212619385, "NPP Tùng Phương": 859907515, "NPP Vũ Tấm": 1054752620, "NPP Vũ Đức Nam": 1046339778, "NPP Ánh Thu": 2161976606, "NPP Đồng Lợi": 847868575, "NPP Đức Nam Tiến": 942317592, "NPP Đức Oanh": 944465400, "NPP Tiên Lan (Nghỉ)": 0, "NPP Anh Đức (Nghỉ)": 0 }
+    // 2026_05: lấy từ API (xem api-live.js)
 };
 
-// Helper functions to extract data
-function getDataByMonth(year, month) {
+// Helper functions — tháng LIVE: KPI API chỉ khi options.fromApi (bấm So sánh)
+async function getDataByMonth(year, month, options = {}) {
+    const fromApi = options.fromApi === true;
+
+    if (typeof isLiveMonth === 'function' && isLiveMonth(year, month)) {
+        if (!fromApi) return [];
+        if (typeof clearKpiCache === 'function') clearKpiCache(year, month);
+        const map = await fetchKpiRevenueMap(year, month, true);
+        return kpiMapToArray(map);
+    }
+
     const key = `${year}_${month.toString().padStart(2, '0')}`;
     const monthData = STATIC_DATA[key];
     if (!monthData) return [];
@@ -373,7 +380,7 @@ function getDataByMonth(year, month) {
     }));
 }
 
-function getDataByQuarter(year, quarter) {
+async function getDataByQuarter(year, quarter, options = {}) {
     const months = {
         1: ['01', '02', '03'],
         2: ['04', '05', '06'],
@@ -382,15 +389,16 @@ function getDataByQuarter(year, quarter) {
     };
 
     const revenueMap = new Map();
-    months[quarter].forEach(month => {
-        const key = `${year}_${month}`;
-        const monthData = STATIC_DATA[key];
-        if (monthData) {
-            Object.entries(monthData).forEach(([name, revenue]) => {
-                revenueMap.set(name, (revenueMap.get(name) || 0) + (revenue || 0));
-            });
-        }
-    });
+    for (const month of months[quarter]) {
+        const m = parseInt(month, 10);
+        const monthOpts = {
+            fromApi: options.fromApi === true && typeof isLiveMonth === 'function' && isLiveMonth(year, m)
+        };
+        const monthData = await getDataByMonth(year, m, monthOpts);
+        monthData.forEach(({ name, revenue }) => {
+            revenueMap.set(name, (revenueMap.get(name) || 0) + (revenue || 0));
+        });
+    }
 
     return Array.from(revenueMap.entries()).map(([name, revenue]) => ({
         name: name,
@@ -398,16 +406,16 @@ function getDataByQuarter(year, quarter) {
     }));
 }
 
-function getDataByYear(year) {
+async function getDataByYear(year, options = {}) {
     const revenueMap = new Map();
     for (let month = 1; month <= 12; month++) {
-        const key = `${year}_${month.toString().padStart(2, '0')}`;
-        const monthData = STATIC_DATA[key];
-        if (monthData) {
-            Object.entries(monthData).forEach(([name, revenue]) => {
-                revenueMap.set(name, (revenueMap.get(name) || 0) + (revenue || 0));
-            });
-        }
+        const monthOpts = {
+            fromApi: options.fromApi === true && typeof isLiveMonth === 'function' && isLiveMonth(year, month)
+        };
+        const monthData = await getDataByMonth(year, month, monthOpts);
+        monthData.forEach(({ name, revenue }) => {
+            revenueMap.set(name, (revenueMap.get(name) || 0) + (revenue || 0));
+        });
     }
 
     return Array.from(revenueMap.entries()).map(([name, revenue]) => ({

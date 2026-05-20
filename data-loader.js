@@ -11,23 +11,37 @@ const AVAILABLE_MONTHS = [
 /**
  * Load raw data từ file JSON
  */
-async function loadRawData(year, month) {
+async function loadRawData(year, month, options = {}) {
     const key = `${year}_${month.toString().padStart(2, '0')}`;
+    const fromApi = options.fromApi === true;
+    const cacheKey = fromApi ? `${key}_api` : key;
     
-    if (dataCache.has(key)) {
-        return dataCache.get(key);
+    if (dataCache.has(cacheKey)) {
+        return dataCache.get(cacheKey);
     }
     
     if (!AVAILABLE_MONTHS.includes(key)) {
         console.warn(`Không có dữ liệu cho ${key}`);
         return null;
     }
+
+    // Bill API chỉ khi bấm "So sánh" (fromApi), không gọi lúc mở trang
+    if (fromApi && typeof isLiveMonth === 'function' && isLiveMonth(year, month)) {
+        if (typeof clearBillCache === 'function') clearBillCache(year, month);
+        try {
+            const jsonData = await fetchBillMonthJson(year, month, true);
+            dataCache.set(cacheKey, jsonData);
+            return jsonData;
+        } catch (error) {
+            console.warn(`API Bill thất bại cho ${key}, thử file JSON dự phòng:`, error);
+        }
+    }
     
     try {
         const response = await fetch(`data/${key}.json`);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const jsonData = await response.json();
-        dataCache.set(key, jsonData);
+        dataCache.set(cacheKey, jsonData);
         return jsonData;
     } catch (error) {
         console.error(`Lỗi khi load dữ liệu ${key}:`, error);

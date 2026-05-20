@@ -784,37 +784,59 @@ function switchComparisonType(type) {
     }
 }
 
-function loadCompareData() {
-    const currentYear = parseInt(document.getElementById('currentYear').value);
-    const compareYear = parseInt(document.getElementById('compareYear').value);
-    
-    if (currentType === 'month') {
-        const currentMonth = parseInt(document.getElementById('currentMonth').value);
-        const compareMonth = parseInt(document.getElementById('compareMonth').value);
-        currentData = getDataByMonth(currentYear, currentMonth);
-        compareData = getDataByMonth(compareYear, compareMonth);
-    } else if (currentType === 'quarter') {
-        const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
-        const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
-        currentData = getDataByQuarter(currentYear, currentQuarter);
-        compareData = getDataByQuarter(compareYear, compareQuarter);
-    } else {
-        currentData = getDataByYear(currentYear);
-        compareData = getDataByYear(compareYear);
+async function loadCompareData() {
+    const btn = document.querySelector('.btn-compare');
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tải...';
     }
-    
-    renderReport();
+
+    try {
+        const currentYear = parseInt(document.getElementById('currentYear').value);
+        const compareYear = parseInt(document.getElementById('compareYear').value);
+        
+        const needsApi = (y, m) => typeof isLiveMonth === 'function' && isLiveMonth(y, m);
+
+        if (currentType === 'month') {
+            const currentMonth = parseInt(document.getElementById('currentMonth').value);
+            const compareMonth = parseInt(document.getElementById('compareMonth').value);
+            currentData = await getDataByMonth(currentYear, currentMonth, { fromApi: needsApi(currentYear, currentMonth) });
+            compareData = await getDataByMonth(compareYear, compareMonth, { fromApi: needsApi(compareYear, compareMonth) });
+        } else if (currentType === 'quarter') {
+            const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
+            const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
+            currentData = await getDataByQuarter(currentYear, currentQuarter, { fromApi: true });
+            compareData = await getDataByQuarter(compareYear, compareQuarter, { fromApi: true });
+        } else {
+            currentData = await getDataByYear(currentYear, { fromApi: true });
+            compareData = await getDataByYear(compareYear, { fromApi: true });
+        }
+        
+        renderReport();
+    } catch (err) {
+        console.error(err);
+        alert('Không tải được dữ liệu từ API. Kiểm tra mạng hoặc mở qua http://localhost (không dùng file://).');
+    } finally {
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-chart-line"></i> So sánh ngay';
+        }
+    }
 }
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     switchComparisonType('month');
     const areaSelect = document.getElementById('areaSelect');
     areaSelect.innerHTML = '<option value="">Tất cả khu vực</option>' + 
         getAreasByRegion('MB').map(area => `<option value="${area}">${area}</option>`).join('');
     
-    // Load default data (latest month)
-    currentData = getDataByMonth(2026, 2);
-    compareData = getDataByMonth(2025, 2);
-    renderReport();
+    // Mặc định: file cố định (không gọi API). Chọn tháng 5/2026 + bấm "So sánh" để lấy API.
+    try {
+        currentData = await getDataByMonth(2026, 4);
+        compareData = await getDataByMonth(2026, 3);
+        renderReport();
+    } catch (err) {
+        console.error(err);
+    }
 });

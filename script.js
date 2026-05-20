@@ -78,11 +78,11 @@ async function initializeDashboard() {
         
         // Tải dữ liệu mặc định
         if (typeof loadCompareData === 'function') {
-            // Set mặc định tháng 4/2026 và 4/2025
+            // Mặc định: file JSON (không gọi Bill API). Tháng 5/2026 + "So sánh" mới gọi API.
             try {
                 if (typeof loadRawData === 'function') {
                     window.currentData = await loadRawData(2026, 4);
-                    window.compareData = await loadRawData(2025, 4);
+                    window.compareData = await loadRawData(2026, 3);
                     if (typeof renderReport === 'function') await renderReport();
                 }
             } catch(e) { console.warn(e); }
@@ -1066,24 +1066,26 @@ async function loadCompareData() {
     const currentYear = parseInt(document.getElementById('currentYear').value);
     const compareYear = parseInt(document.getElementById('compareYear').value);
     
+    const needsBillApi = (y, m) => typeof isLiveMonth === 'function' && isLiveMonth(y, m);
+
     try {
         if (currentType === 'month') {
             const currentMonth = parseInt(document.getElementById('currentMonth').value);
             const compareMonth = parseInt(document.getElementById('compareMonth').value);
-            currentData = await loadRawData(currentYear, currentMonth);
-            compareData = await loadRawData(compareYear, compareMonth);
+            currentData = await loadRawData(currentYear, currentMonth, { fromApi: needsBillApi(currentYear, currentMonth) });
+            compareData = await loadRawData(compareYear, compareMonth, { fromApi: needsBillApi(compareYear, compareMonth) });
             currentAggregatedData = null;
             compareAggregatedData = null;
         } else if (currentType === 'quarter') {
             const currentQuarter = parseInt(document.getElementById('currentQuarter').value);
             const compareQuarter = parseInt(document.getElementById('compareQuarter').value);
-            currentAggregatedData = await loadRawDataForQuarter(currentYear, currentQuarter);
-            compareAggregatedData = await loadRawDataForQuarter(compareYear, compareQuarter);
+            currentAggregatedData = await loadRawDataForQuarter(currentYear, currentQuarter, { fromApi: true });
+            compareAggregatedData = await loadRawDataForQuarter(compareYear, compareQuarter, { fromApi: true });
             currentData = null;
             compareData = null;
         } else {
-            currentAggregatedData = await loadRawDataForYear(currentYear);
-            compareAggregatedData = await loadRawDataForYear(compareYear);
+            currentAggregatedData = await loadRawDataForYear(currentYear, { fromApi: true });
+            compareAggregatedData = await loadRawDataForYear(compareYear, { fromApi: true });
             currentData = null;
             compareData = null;
         }
@@ -1097,7 +1099,7 @@ async function loadCompareData() {
     }
 }
 
-async function loadRawDataForQuarter(year, quarter) {
+async function loadRawDataForQuarter(year, quarter, options = {}) {
     const months = {
         1: [1, 2, 3],
         2: [4, 5, 6],
@@ -1107,7 +1109,9 @@ async function loadRawDataForQuarter(year, quarter) {
     
     const allData = { data: [] };
     for (const month of months[quarter]) {
-        const rawData = await loadRawData(year, month);
+        const rawData = await loadRawData(year, month, {
+            fromApi: options.fromApi === true && typeof isLiveMonth === 'function' && isLiveMonth(year, month)
+        });
         if (rawData && rawData.data) {
             allData.data.push(...rawData.data);
         }
@@ -1115,10 +1119,12 @@ async function loadRawDataForQuarter(year, quarter) {
     return allData;
 }
 
-async function loadRawDataForYear(year) {
+async function loadRawDataForYear(year, options = {}) {
     const allData = { data: [] };
     for (let month = 1; month <= 12; month++) {
-        const rawData = await loadRawData(year, month);
+        const rawData = await loadRawData(year, month, {
+            fromApi: options.fromApi === true && typeof isLiveMonth === 'function' && isLiveMonth(year, month)
+        });
         if (rawData && rawData.data) {
             allData.data.push(...rawData.data);
         }
